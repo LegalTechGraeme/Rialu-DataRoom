@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Legora-inspired: warm neutrals, refined teal, approachable UI */
+:root {
+  --surface: 250 249 246;
+  --surface-muted: 243 241 236;
+  --surface-elevated: 255 255 253;
+  --ink: 26 35 48;
+  --ink-muted: 82 96 112;
+  --ink-faint: 130 145 160;
+  --line: 222 218 210;
+  --accent: 45 95 93;
+  --accent-muted: 58 118 115;
+  --brand: 45 95 93;
+  --brand-soft: 234 242 241;
+  --warn: 180 120 45;
+  --danger: 185 72 72;
+  --ok: 52 120 88;
+}
+
+.dark {
+  --surface: 18 22 28;
+  --surface-muted: 24 30 38;
+  --surface-elevated: 30 36 46;
+  --ink: 236 240 245;
+  --ink-muted: 165 178 192;
+  --ink-faint: 115 128 145;
+  --line: 48 58 72;
+  --accent: 94 165 160;
+  --accent-muted: 120 185 180;
+  --brand: 94 165 160;
+  --brand-soft: 28 42 44;
+  --warn: 220 170 90;
+  --danger: 230 120 120;
+  --ok: 100 190 140;
+}
+
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+
+  body {
+    @apply bg-surface text-ink antialiased;
+    font-feature-settings: "kern" 1, "liga" 1;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-lg bg-brand px-4 py-2 text-sm font-medium text-white shadow-sm transition hover:bg-accent-muted;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-lg border border-line bg-surface-elevated px-4 py-2 text-sm font-medium text-ink-muted shadow-sm transition hover:border-brand/35 hover:bg-brand-soft hover:text-brand;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center rounded-lg px-3 py-2 text-sm font-medium text-ink-muted transition hover:bg-surface-muted hover:text-ink;
+  }
+
+  .card {
+    @apply rounded-xl border border-line/80 bg-surface-elevated shadow-card dark:shadow-card-dark;
+  }
+
+  .nav-link {
+    @apply flex w-full items-center gap-2.5 rounded-lg px-3 py-2 text-sm font-medium text-ink-muted transition-colors hover:bg-surface-muted hover:text-ink;
+  }
+
+  .nav-link-active {
+    @apply bg-brand-soft text-brand shadow-sm;
+  }
+
+  .page-title {
+    @apply text-2xl font-semibold tracking-tight text-ink md:text-[1.75rem];
+  }
+
+  .page-subtitle {
+    @apply mt-2 text-sm leading-relaxed text-ink-muted;
+  }
+
+  .section-label {
+    @apply text-xs font-semibold uppercase tracking-wide text-brand;
+  }
+
+  .pill {
+    @apply inline-flex items-center rounded-full border border-brand/25 bg-brand-soft px-3 py-1 text-xs font-medium text-brand;
+  }
+}
