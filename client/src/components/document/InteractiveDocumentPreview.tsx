@@ -2,7 +2,7 @@ import { useCallback, useEffect, useRef } from "react";
 import { renderFormattedDocument } from "../../lib/documentTextFormat";
 import type { TextHighlight } from "../../lib/documentTextFormat";
 import type { DocumentRecord } from "../../types";
-import { apiUrl } from "../../services/apiClient";
+import { documentFileUrl } from "../../services/apiClient";
 
 export interface TextSelection {
   text: string;
@@ -86,7 +86,7 @@ export function InteractiveDocumentPreview({
       <div className="flex h-full min-h-[280px] flex-1 flex-col items-center justify-center gap-2 p-6 text-center">
         <p className="text-sm text-ink-muted">{error ?? "Preview unavailable"}</p>
         <a
-          href={apiUrl(`/api/matters/${matterId}/documents/${doc.id}/file`)}
+          href={documentFileUrl(matterId, doc.id, null)}
           target="_blank"
           rel="noreferrer"
           className="text-xs font-medium text-brand hover:underline"

@@ -46,7 +46,8 @@ export function DocumentTable({
         <h2 className="text-sm font-semibold text-ink">Documents</h2>
         <p className="text-xs text-ink-muted">
           Folder: <span className="font-medium text-ink">{folderName}</span> ·{" "}
-          {documents.length} item{documents.length === 1 ? "" : "s"}
+          {documents.length} item{documents.length === 1 ? "" : "s"} · Click a row to preview
+          below · Double-click or use View for the full viewer
         </p>
       </div>
       <div className="min-h-0 flex-1 overflow-auto">

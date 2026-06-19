@@ -1,10 +1,11 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { CreateTaskModal } from "../components/workflow/CreateTaskModal";
 import { useUser } from "../contexts/UserContext";
 import { DocumentTable } from "../components/explorer/DocumentTable";
 import { FolderTree } from "../components/explorer/FolderTree";
 import { UploadDropzone } from "../components/room/UploadDropzone";
+import { DocumentPreview } from "../components/document/DocumentPreview";
 import { AiAnalysisPanel } from "../features/ai/AiAnalysisPanel";
 import { findFolderById } from "../lib/folderUtils";
 import {
@@ -99,6 +100,11 @@ export function DataRoomExplorerPage() {
       cancelled = true;
     };
   }, [matterId, selectedFolderId, tree]);
+
+  const selectedDocument = useMemo(
+    () => docsList?.find((d) => d.id === selectedDocumentId) ?? null,
+    [docsList, selectedDocumentId]
+  );
 
   const gridTemplate = useMemo(() => {
     const left = leftOpen ? "minmax(0,260px)" : "40px";
@@ -203,15 +209,45 @@ export function DataRoomExplorerPage() {
           ) : null}
         </section>
 
-        <section className="min-h-0 min-w-0 bg-surface">
-          <DocumentTable
-            matterId={matterId}
-            folderName={folderName}
-            documents={docsList}
-            reviews={reviews}
-            selectedDocumentId={selectedDocumentId}
-            onSelectDocument={(d) => setSelectedDocumentId(d.id)}
-          />
+        <section className="flex min-h-0 min-w-0 flex-col bg-surface">
+          <div className="min-h-0 flex-[0_0_42%] border-b border-line">
+            <DocumentTable
+              matterId={matterId}
+              folderName={folderName}
+              documents={docsList}
+              reviews={reviews}
+              selectedDocumentId={selectedDocumentId}
+              onSelectDocument={(d) => setSelectedDocumentId(d.id)}
+            />
+          </div>
+          <div className="flex min-h-0 flex-1 flex-col">
+            {selectedDocument ? (
+              <>
+                <div className="flex shrink-0 items-center justify-between gap-3 border-b border-line bg-surface-elevated px-4 py-2">
+                  <p className="min-w-0 truncate text-xs font-medium text-ink">
+                    {selectedDocument.fileName}
+                  </p>
+                  <Link
+                    to={`/matters/${matterId}/documents/${selectedDocument.id}`}
+                    className="shrink-0 rounded-md border border-brand/30 bg-brand-soft px-2.5 py-1 text-[11px] font-medium text-brand hover:bg-brand/20"
+                  >
+                    Open full viewer
+                  </Link>
+                </div>
+                <div className="min-h-0 flex-1">
+                  <DocumentPreview
+                    matterId={matterId}
+                    document={selectedDocument}
+                    fileUrl={null}
+                  />
+                </div>
+              </>
+            ) : (
+              <div className="flex flex-1 items-center justify-center p-6 text-center text-sm text-ink-muted">
+                Select a document above to preview it here.
+              </div>
+            )}
+          </div>
         </section>
 
         <section className="flex min-h-0 min-w-0 flex-col bg-surface-elevated">

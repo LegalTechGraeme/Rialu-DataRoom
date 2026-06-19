@@ -5,6 +5,19 @@ export function apiUrl(path: string): string {
   return `${API_BASE}${path}`;
 }
 
+/** Resolve document file download/preview URL (API may return a relative /api/... path). */
+export function documentFileUrl(
+  matterId: string,
+  documentId: string,
+  fileUrl?: string | null
+): string {
+  if (fileUrl?.startsWith("http://") || fileUrl?.startsWith("https://")) {
+    return fileUrl;
+  }
+  const path = fileUrl ?? `/api/matters/${matterId}/documents/${documentId}/file`;
+  return apiUrl(path);
+}
+
 async function parseJson<T>(res: Response): Promise<T> {
   if (!res.ok) {
     const text = await res.text();

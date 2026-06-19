@@ -51,7 +51,9 @@ export function DocumentViewer({
   const { user, users } = useUser();
   const { text: docText, loading: textLoading, error: textError } = useDocumentText(matterId, doc);
   const [sideTab, setSideTab] = useState<SideTab>(focusTaskId ? "workflow" : "review");
-  const [previewMode, setPreviewMode] = useState<PreviewMode>("interactive");
+  const [previewMode, setPreviewMode] = useState<PreviewMode>(
+    focusTaskId ? "interactive" : "original"
+  );
   const [currentReview, setCurrentReview] = useState<DocumentReview | null>(review);
   const [aiAnalysis, setAiAnalysis] = useState<DocumentAnalysis | null>(null);
   const [selection, setSelection] = useState<TextSelection | null>(null);
@@ -63,7 +65,7 @@ export function DocumentViewer({
     setCurrentReview(review);
     setSelection(null);
     setBannerDismissed(false);
-    setPreviewMode("interactive");
+    setPreviewMode(focusTaskId ? "interactive" : "original");
     setSideTab(focusTaskId ? "workflow" : "review");
 
     if (focusTaskId) {
@@ -162,17 +164,17 @@ export function DocumentViewer({
             <div className="flex rounded-md border border-line p-0.5 text-[11px]">
               <button
                 type="button"
-                onClick={() => setPreviewMode("interactive")}
-                className={previewMode === "interactive" ? "rounded bg-brand px-2 py-0.5 text-white" : "px-2 py-0.5 text-ink-muted"}
-              >
-                Review
-              </button>
-              <button
-                type="button"
                 onClick={() => setPreviewMode("original")}
                 className={previewMode === "original" ? "rounded bg-brand px-2 py-0.5 text-white" : "px-2 py-0.5 text-ink-muted"}
               >
                 PDF
+              </button>
+              <button
+                type="button"
+                onClick={() => setPreviewMode("interactive")}
+                className={previewMode === "interactive" ? "rounded bg-brand px-2 py-0.5 text-white" : "px-2 py-0.5 text-ink-muted"}
+              >
+                Review
               </button>
             </div>
           </div>
