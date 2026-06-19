@@ -1,3 +1,5 @@
+import { apiJson } from "./apiClient";
+
 export type AiJobType =
   | "full-review"
   | "batch-analyze"
@@ -23,16 +25,14 @@ export interface AiJob {
 }
 
 export async function fetchAiJobs(matterId: string): Promise<AiJob[]> {
-  const res = await fetch(`/api/matters/${matterId}/ai-jobs`);
-  if (!res.ok) throw new Error(await res.text());
-  const data = (await res.json()) as { jobs: AiJob[] };
+  const data = await apiJson<{ jobs: AiJob[] }>(`/api/matters/${matterId}/ai-jobs`);
   return data.jobs;
 }
 
 export async function cancelAiJob(jobId: string): Promise<AiJob> {
-  const res = await fetch(`/api/ai-jobs/${jobId}/cancel`, { method: "POST" });
-  if (!res.ok) throw new Error(await res.text());
-  const data = (await res.json()) as { job: AiJob };
+  const data = await apiJson<{ job: AiJob }>(`/api/ai-jobs/${jobId}/cancel`, {
+    method: "POST",
+  });
   return data.job;
 }
 

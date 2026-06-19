@@ -1,3 +1,5 @@
+import { apiJson } from "./apiClient";
+
 export interface DocumentTextPayload {
   text: string;
   truncated: boolean;
@@ -10,7 +12,7 @@ export async function fetchDocumentText(
   matterId: string,
   documentId: string
 ): Promise<DocumentTextPayload> {
-  const res = await fetch(`/api/matters/${matterId}/documents/${documentId}/text`);
-  if (!res.ok) throw new Error(await res.text());
-  return (await res.json()) as DocumentTextPayload;
+  return apiJson<DocumentTextPayload>(
+    `/api/matters/${matterId}/documents/${documentId}/text`
+  );
 }

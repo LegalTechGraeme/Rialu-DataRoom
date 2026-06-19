@@ -1,3 +1,5 @@
+import { apiJson, apiUrl } from "./apiClient";
+
 export interface UploadResult {
   uploaded: number;
   autoClassify: boolean;
@@ -26,13 +28,11 @@ export async function createMatter(input: {
   clientRef?: string;
   dealType?: string;
 }) {
-  const res = await fetch("/api/matters", {
+  const data = await apiJson<{ matter: import("../types").Matter }>("/api/matters", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(input),
   });
-  if (!res.ok) throw new Error(await res.text());
-  const data = (await res.json()) as { matter: import("../types").Matter };
   return data.matter;
 }
 
@@ -45,41 +45,38 @@ export async function uploadDocuments(
   for (const f of files) form.append("files", f);
   if (!autoClassify) form.append("autoClassify", "false");
 
-  const res = await fetch(`/api/matters/${matterId}/upload`, {
+  return apiJson<UploadResult>(`/api/matters/${matterId}/upload`, {
     method: "POST",
     body: form,
   });
-  if (!res.ok) throw new Error(await res.text());
-  return res.json() as Promise<UploadResult>;
 }
 
 export async function startFullReview(matterId: string) {
-  const res = await fetch(`/api/matters/${matterId}/full-review`, {
+  const data = await apiJson<{ job: FullReviewJob }>(`/api/matters/${matterId}/full-review`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({}),
   });
-  if (!res.ok) throw new Error(await res.text());
-  const data = (await res.json()) as { job: FullReviewJob };
   return data.job;
 }
 
 export async function fetchFullReviewStatus(matterId: string) {
-  const res = await fetch(`/api/matters/${matterId}/full-review/status`);
-  if (!res.ok) throw new Error(await res.text());
-  const data = (await res.json()) as { job: FullReviewJob };
+  const data = await apiJson<{ job: FullReviewJob }>(
+    `/api/matters/${matterId}/full-review/status`
+  );
   return data.job;
 }
 
 export async function refileDocuments(matterId: string) {
-  const res = await fetch(`/api/matters/${matterId}/refile-documents`, { method: "POST" });
-  if (!res.ok) throw new Error(await res.text());
-  return res.json() as Promise<{ updated: number; total: number }>;
+  return apiJson<{ updated: number; total: number }>(
+    `/api/matters/${matterId}/refile-documents`,
+    { method: "POST" }
+  );
 }
 
 export function downloadExport(matterId: string, format: "pptx" | "xlsx") {
   const a = document.createElement("a");
-  a.href = `/api/matters/${matterId}/export/${format}`;
+  a.href = apiUrl(`/api/matters/${matterId}/export/${format}`);
   a.download = "";
   document.body.appendChild(a);
   a.click();

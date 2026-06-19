@@ -1,4 +1,4 @@
-import { apiGet } from "./apiClient";
+import { apiGet, apiJson } from "./apiClient";
 import type { DocumentReview, DiligenceReportPayload } from "../types";
 
 export async function fetchMatterReviews(
@@ -19,20 +19,14 @@ export async function saveDocumentReview(
     pertinentNotes: string;
   }
 ): Promise<DocumentReview> {
-  const res = await fetch(
+  return apiJson<{ review: DocumentReview }>(
     `/api/matters/${matterId}/documents/${documentId}/review`,
     {
       method: "PUT",
       headers: { "Content-Type": "application/json", Accept: "application/json" },
       body: JSON.stringify(body),
     }
-  );
-  if (!res.ok) {
-    const text = await res.text();
-    throw new Error(text || res.statusText);
-  }
-  const data = (await res.json()) as { review: DocumentReview };
-  return data.review;
+  ).then((data) => data.review);
 }
 
 export async function fetchDiligenceReport(

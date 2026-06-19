@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import type { DocumentRecord } from "../../types";
+import { apiUrl } from "../../services/apiClient";
 
 interface DocumentPreviewProps {
   matterId: string;
@@ -39,7 +40,7 @@ function MessagePanel({
 
 export function DocumentPreview({ matterId, document: doc, fileUrl }: DocumentPreviewProps) {
   const downloadHref =
-    fileUrl ?? `/api/matters/${matterId}/documents/${doc.id}/file`;
+    fileUrl ?? apiUrl(`/api/matters/${matterId}/documents/${doc.id}/file`);
 
   if (!fileUrl && !doc.storagePath) {
     return (

@@ -1,4 +1,4 @@
-import { apiGet } from "./apiClient";
+import { apiGet, apiJson } from "./apiClient";
 import type {
   ChatResponse,
   DocumentAnalysis,
@@ -6,6 +6,7 @@ import type {
   MatterSynthesis,
   AiRiskIssue,
 } from "../types";
+import type { AiJob } from "./aiJobsApi";
 
 export async function fetchAiStatus() {
   return apiGet<{ configured: boolean; provider: string; ok?: boolean; error?: string }>(
@@ -25,13 +26,14 @@ export async function analyzeDocument(
   documentId: string,
   force = false
 ) {
-  const res = await fetch(`/api/matters/${matterId}/documents/${documentId}/analyze`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ force, async: false }),
-  });
-  if (!res.ok) throw new Error(await res.text());
-  const data = (await res.json()) as { analysis: DocumentAnalysis };
+  const data = await apiJson<{ analysis: DocumentAnalysis }>(
+    `/api/matters/${matterId}/documents/${documentId}/analyze`,
+    {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ force, async: false }),
+    }
+  );
   return data.analysis;
 }
 
@@ -41,13 +43,14 @@ export async function startDocumentAnalysis(
   documentId: string,
   force = false
 ) {
-  const res = await fetch(`/api/matters/${matterId}/documents/${documentId}/analyze`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ force, async: true }),
-  });
-  if (!res.ok) throw new Error(await res.text());
-  const data = (await res.json()) as { job: import("./aiJobsApi").AiJob };
+  const data = await apiJson<{ job: AiJob }>(
+    `/api/matters/${matterId}/documents/${documentId}/analyze`,
+    {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ force, async: true }),
+    }
+  );
   return data.job;
 }
 
@@ -79,36 +82,33 @@ export async function runDocumentAnalysis(
 }
 
 export async function suggestReview(matterId: string, documentId: string) {
-  const res = await fetch(
-    `/api/matters/${matterId}/documents/${documentId}/suggest-review`,
-    { method: "POST", headers: { "Content-Type": "application/json" } }
-  );
-  if (!res.ok) throw new Error(await res.text());
-  return res.json() as Promise<{
+  return apiJson<{
     diligenceFlag: "green" | "amber" | "red";
     summary: string;
     pertinentNotes: string;
-  }>;
+  }>(`/api/matters/${matterId}/documents/${documentId}/suggest-review`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+  });
 }
 
 export async function analyzeBatch(matterId: string, limit = 8) {
-  const res = await fetch(`/api/matters/${matterId}/analyze-batch`, {
+  return apiJson<{ job: AiJob }>(`/api/matters/${matterId}/analyze-batch`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ limit }),
   });
-  if (!res.ok) throw new Error(await res.text());
-  return res.json() as Promise<{ job: import("./aiJobsApi").AiJob }>;
 }
 
 export async function synthesizeMatter(matterId: string, force = false) {
-  const res = await fetch(`/api/matters/${matterId}/synthesize`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ force }),
-  });
-  if (!res.ok) throw new Error(await res.text());
-  const data = (await res.json()) as { synthesis: MatterSynthesis };
+  const data = await apiJson<{ synthesis: MatterSynthesis }>(
+    `/api/matters/${matterId}/synthesize`,
+    {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ force }),
+    }
+  );
   return data.synthesis;
 }
 
@@ -129,21 +129,17 @@ export async function sendChat(
   message: string,
   history: { role: "user" | "assistant"; content: string }[]
 ) {
-  const res = await fetch(`/api/matters/${matterId}/chat`, {
+  const data = await apiJson<{ response: ChatResponse }>(`/api/matters/${matterId}/chat`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ message, history }),
   });
-  if (!res.ok) throw new Error(await res.text());
-  const data = (await res.json()) as { response: ChatResponse };
   return data.response;
 }
 
 export async function generateReport(matterId: string) {
-  const res = await fetch(`/api/matters/${matterId}/generate-report`, {
+  return apiJson<GeneratedReport>(`/api/matters/${matterId}/generate-report`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
   });
-  if (!res.ok) throw new Error(await res.text());
-  return res.json() as Promise<GeneratedReport>;
 }
