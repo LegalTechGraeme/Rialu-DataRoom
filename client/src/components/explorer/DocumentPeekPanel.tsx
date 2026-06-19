@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { DocumentPreview } from "../document/DocumentPreview";
 import { DiligenceFlagBadge } from "../diligence/DiligenceFlagBadge";
+import { useDocumentPeekBlurb } from "../../hooks/useDocumentPeekBlurb";
 import type { DocumentRecord, DocumentReview } from "../../types";
 
 function formatBytes(n: number) {
@@ -16,6 +17,8 @@ interface DocumentPeekPanelProps {
 }
 
 export function DocumentPeekPanel({ matterId, document: doc, review }: DocumentPeekPanelProps) {
+  const blurb = useDocumentPeekBlurb(matterId, doc);
+
   if (!doc) {
     return (
       <div className="flex h-full min-h-0 flex-col">
@@ -57,8 +60,30 @@ export function DocumentPeekPanel({ matterId, document: doc, review }: DocumentP
           <span className="font-mono text-[10px] text-ink-faint">{formatBytes(doc.sizeBytes)}</span>
         </div>
         <p className="mt-2 line-clamp-2 text-[11px] text-ink-muted">{doc.categoryLabel}</p>
-        {review?.summary ? (
-          <p className="mt-2 line-clamp-2 text-[11px] leading-relaxed text-ink-muted">{review.summary}</p>
+
+        <div className="mt-2.5 rounded-md border border-brand/20 bg-brand-soft/25 px-2.5 py-2">
+          <p className="text-[10px] font-semibold uppercase tracking-wide text-brand">
+            {blurb.source === "ai" ? "AI summary" : blurb.source === "catalog" ? "About this document" : "Summary"}
+          </p>
+          {blurb.loading && !blurb.text ? (
+            <p className="mt-1 text-[11px] text-ink-faint animate-pulse">Generating summary…</p>
+          ) : blurb.text ? (
+            <p className="mt-1 line-clamp-4 text-[11px] leading-relaxed text-ink-muted">{blurb.text}</p>
+          ) : blurb.error ? (
+            <p className="mt-1 text-[11px] leading-relaxed text-ink-faint">{blurb.error}</p>
+          ) : (
+            <p className="mt-1 text-[11px] text-ink-faint">No summary available.</p>
+          )}
+          {blurb.loading && blurb.text ? (
+            <p className="mt-1 text-[10px] text-ink-faint animate-pulse">Refreshing with AI…</p>
+          ) : null}
+        </div>
+
+        {review?.summary && review.summary !== blurb.text ? (
+          <p className="mt-2 line-clamp-2 text-[11px] leading-relaxed text-ink-muted">
+            <span className="font-medium text-ink-faint">Reviewer: </span>
+            {review.summary}
+          </p>
         ) : null}
         <p className="mt-2 text-[10px] text-ink-faint">
           Double-click the row for the full workspace — PDF, clause review, tasks &amp; AI.
