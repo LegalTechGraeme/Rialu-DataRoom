@@ -45,9 +45,8 @@ export function DocumentTable({
       <div className="border-b border-line px-4 py-3">
         <h2 className="text-sm font-semibold text-ink">Documents</h2>
         <p className="text-xs text-ink-muted">
-          Folder: <span className="font-medium text-ink">{folderName}</span> ·{" "}
-          {documents.length} item{documents.length === 1 ? "" : "s"} · Click a row to preview
-          below · Double-click or use View for the full viewer
+          {documents.length} document{documents.length === 1 ? "" : "s"} in{" "}
+          <span className="font-medium text-ink">{folderName}</span>
         </p>
       </div>
       <div className="min-h-0 flex-1 overflow-auto">
@@ -102,10 +101,11 @@ export function DocumentTable({
                   <td className="whitespace-nowrap px-4 py-2.5 text-right">
                     <Link
                       to={`/matters/${matterId}/documents/${d.id}`}
-                      className="btn-ghost !px-2 !py-1 text-xs text-brand"
+                      className="rounded-md border border-brand/25 bg-brand-soft/50 px-2 py-1 text-xs font-medium text-brand hover:bg-brand/15"
                       onClick={(e) => e.stopPropagation()}
+                      title="Open full viewer (or double-click row)"
                     >
-                      View
+                      Open
                     </Link>
                   </td>
                 </tr>

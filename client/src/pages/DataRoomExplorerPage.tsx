@@ -1,12 +1,11 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { CreateTaskModal } from "../components/workflow/CreateTaskModal";
 import { useUser } from "../contexts/UserContext";
 import { DocumentTable } from "../components/explorer/DocumentTable";
+import { DocumentPeekPanel } from "../components/explorer/DocumentPeekPanel";
 import { FolderTree } from "../components/explorer/FolderTree";
 import { UploadDropzone } from "../components/room/UploadDropzone";
-import { DocumentPreview } from "../components/document/DocumentPreview";
-import { AiAnalysisPanel } from "../features/ai/AiAnalysisPanel";
 import { findFolderById } from "../lib/folderUtils";
 import {
   fetchFolderDocuments,
@@ -50,7 +49,6 @@ export function DataRoomExplorerPage() {
     const [m, t] = await Promise.all([fetchMatter(matterId), fetchFolderTree(matterId)]);
     setMatter(m);
     setTree(t);
-    // Default to root index so all uploaded documents are visible (recursive listing).
     setSelectedFolderId(t.id);
   }, [matterId]);
 
@@ -89,7 +87,7 @@ export function DataRoomExplorerPage() {
           setFolderName(payload.folderName);
           setDocsList(payload.documents);
           setSelectedDocumentId((prev) =>
-            payload.documents.some((d) => d.id === prev) ? prev : payload.documents[0]?.id ?? null
+            prev && payload.documents.some((d) => d.id === prev) ? prev : null
           );
         }
       })
@@ -106,9 +104,11 @@ export function DataRoomExplorerPage() {
     [docsList, selectedDocumentId]
   );
 
+  const selectedReview = selectedDocument ? reviews[selectedDocument.id] ?? null : null;
+
   const gridTemplate = useMemo(() => {
-    const left = leftOpen ? "minmax(0,260px)" : "40px";
-    const right = rightOpen ? "minmax(0,280px)" : "40px";
+    const left = leftOpen ? "minmax(0,240px)" : "40px";
+    const right = rightOpen ? "minmax(0,360px)" : "40px";
     return `${left} minmax(0,1fr) ${right}`;
   }, [leftOpen, rightOpen]);
 
@@ -139,7 +139,7 @@ export function DataRoomExplorerPage() {
             <span className="text-ink-faint"> · </span>
             {folderName ? (
               <>
-                Viewing <strong className="text-ink">{folderName}</strong>
+                <strong className="text-ink">{folderName}</strong>
                 {user ? (
                   <button
                     type="button"
@@ -152,7 +152,7 @@ export function DataRoomExplorerPage() {
                 <span className="text-ink-faint"> · </span>
               </>
             ) : null}
-            Select documents to review, or assign an entire section to a team member.
+            Click to preview on the right · double-click for full review workspace
           </p>
           {matterId !== "matter-acme" ? (
             <div className="w-full max-w-xs sm:w-auto">
@@ -209,56 +209,24 @@ export function DataRoomExplorerPage() {
           ) : null}
         </section>
 
-        <section className="flex min-h-0 min-w-0 flex-col bg-surface">
-          <div className="min-h-0 flex-[0_0_42%] border-b border-line">
-            <DocumentTable
-              matterId={matterId}
-              folderName={folderName}
-              documents={docsList}
-              reviews={reviews}
-              selectedDocumentId={selectedDocumentId}
-              onSelectDocument={(d) => setSelectedDocumentId(d.id)}
-            />
-          </div>
-          <div className="flex min-h-0 flex-1 flex-col">
-            {selectedDocument ? (
-              <>
-                <div className="flex shrink-0 items-center justify-between gap-3 border-b border-line bg-surface-elevated px-4 py-2">
-                  <p className="min-w-0 truncate text-xs font-medium text-ink">
-                    {selectedDocument.fileName}
-                  </p>
-                  <Link
-                    to={`/matters/${matterId}/documents/${selectedDocument.id}`}
-                    className="shrink-0 rounded-md border border-brand/30 bg-brand-soft px-2.5 py-1 text-[11px] font-medium text-brand hover:bg-brand/20"
-                  >
-                    Open full viewer
-                  </Link>
-                </div>
-                <div className="min-h-0 flex-1">
-                  <DocumentPreview
-                    matterId={matterId}
-                    document={selectedDocument}
-                    fileUrl={null}
-                  />
-                </div>
-              </>
-            ) : (
-              <div className="flex flex-1 items-center justify-center p-6 text-center text-sm text-ink-muted">
-                Select a document above to preview it here.
-              </div>
-            )}
-          </div>
+        <section className="min-h-0 min-w-0 bg-surface">
+          <DocumentTable
+            matterId={matterId}
+            folderName={folderName}
+            documents={docsList}
+            reviews={reviews}
+            selectedDocumentId={selectedDocumentId}
+            onSelectDocument={(d) => setSelectedDocumentId(d.id)}
+          />
         </section>
 
         <section className="flex min-h-0 min-w-0 flex-col bg-surface-elevated">
           <div className="flex min-h-0 flex-1 flex-col">
             {rightOpen ? (
-              <AiAnalysisPanel
+              <DocumentPeekPanel
                 matterId={matterId}
-                selectedDocument={
-                  docsList.find((d) => d.id === selectedDocumentId) ?? null
-                }
-                documentsInFolder={docsList}
+                document={selectedDocument}
+                review={selectedReview}
               />
             ) : (
               <div className="flex h-full min-h-[120px] flex-col items-center justify-center py-3">
@@ -266,9 +234,9 @@ export function DataRoomExplorerPage() {
                   type="button"
                   className="rounded-md border border-line px-2 py-1 text-[10px] font-semibold uppercase tracking-wide text-ink-muted hover:bg-surface-muted"
                   onClick={() => setRightOpen(true)}
-                  aria-label="Show AI panel"
+                  aria-label="Show document preview"
                 >
-                  AI
+                  Preview
                 </button>
               </div>
             )}
@@ -279,7 +247,7 @@ export function DataRoomExplorerPage() {
               className="shrink-0 border-t border-line py-2 text-center text-[11px] font-medium text-ink-muted hover:bg-surface-muted"
               onClick={() => setRightOpen(false)}
             >
-              Hide panel
+              Hide preview
             </button>
           ) : null}
         </section>
