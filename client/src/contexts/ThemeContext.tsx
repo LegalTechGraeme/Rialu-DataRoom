@@ -17,7 +17,7 @@ interface ThemeContextValue {
 }
 
 const ThemeContext = createContext<ThemeContextValue | null>(null);
-const STORAGE_KEY = "ldr-theme";
+const STORAGE_KEY = "rialu-theme";
 
 function applyClass(theme: Theme) {
   const root = document.documentElement;
@@ -30,9 +30,7 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     if (typeof window === "undefined") return "light";
     const stored = localStorage.getItem(STORAGE_KEY) as Theme | null;
     if (stored === "dark" || stored === "light") return stored;
-    return window.matchMedia("(prefers-color-scheme: dark)").matches
-      ? "dark"
-      : "light";
+    return "light";
   });
 
   useEffect(() => {
