@@ -1,9 +1,10 @@
 import type { ReactNode } from "react";
 import { Navigate, Route, Routes, useParams } from "react-router-dom";
+import { BackendWakeScreen } from "./components/auth/BackendWakeScreen";
 import { RoleLoginGate } from "./components/auth/RoleLoginGate";
 import { AppShell } from "./components/layout/AppShell";
 import { ThemeProvider } from "./contexts/ThemeContext";
-import { UserProvider, useUser } from "./contexts/UserContext";
+import { USES_REMOTE_API, UserProvider, useUser } from "./contexts/UserContext";
 import { DataRoomExplorerPage } from "./pages/DataRoomExplorerPage";
 import { DocumentPage } from "./pages/DocumentPage";
 import { HomePage } from "./pages/HomePage";
@@ -14,11 +15,11 @@ import { RiskRegisterPage } from "./pages/RiskRegisterPage";
 import { WorkflowPage } from "./pages/WorkflowPage";
 
 function MatterShell({
-  title,
+  title = "",
   fullBleed,
   children,
 }: {
-  title: string;
+  title?: string;
   fullBleed?: boolean;
   children: ReactNode;
 }) {
@@ -61,9 +62,21 @@ function WorkflowRoute() {
 }
 
 function AuthenticatedApp() {
-  const { user, users, login } = useUser();
+  const { user, users, usersReady, usersBooting, usersError, retryUsers, login } = useUser();
 
   if (!user) {
+    if (USES_REMOTE_API && (!usersReady || usersBooting || usersError)) {
+      return (
+        <BackendWakeScreen
+          booting={usersBooting || !usersReady}
+          error={usersError}
+          onRetry={retryUsers}
+        />
+      );
+    }
+    if (!usersReady) {
+      return <div className="min-h-screen bg-surface" aria-busy="true" />;
+    }
     return <RoleLoginGate users={users} onSelect={login} />;
   }
 
@@ -80,7 +93,7 @@ function AuthenticatedApp() {
       <Route
         path="/matters/:matterId"
         element={
-          <MatterShell title="Overview">
+          <MatterShell title="">
             <MatterDashboardPage />
           </MatterShell>
         }
