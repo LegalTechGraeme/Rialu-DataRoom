@@ -62,7 +62,7 @@ export function ChatPage() {
   };
 
   return (
-    <div className="mx-auto flex h-full max-w-4xl flex-col">
+    <div className="mx-auto flex h-full w-full max-w-4xl flex-col max-lg:max-w-full">
       <div className="mb-4 flex flex-col gap-3 max-lg:gap-2 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between">
         <p className="text-sm text-ink-muted">
           Natural language assistant over analyzed documents. Answers cite source files.

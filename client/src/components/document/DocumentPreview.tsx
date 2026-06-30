@@ -56,21 +56,25 @@ export function DocumentPreview({ matterId, document: doc, fileUrl, compact = fa
 
   if (isPdf(doc.mimeType)) {
     return (
-      <iframe
-        title={doc.fileName}
-        src={downloadHref}
-        className={frameClass}
-      />
+      <div className="h-full min-h-0 w-full max-w-full overflow-hidden">
+        <iframe
+          title={doc.fileName}
+          src={downloadHref}
+          className={frameClass}
+        />
+      </div>
     );
   }
 
   if (doc.mimeType.startsWith("text/") || doc.fileName.endsWith(".txt")) {
     return (
-      <iframe
-        title={doc.fileName}
-        src={downloadHref}
-        className={frameClass}
-      />
+      <div className="h-full min-h-0 w-full max-w-full overflow-hidden">
+        <iframe
+          title={doc.fileName}
+          src={downloadHref}
+          className={frameClass}
+        />
+      </div>
     );
   }
 

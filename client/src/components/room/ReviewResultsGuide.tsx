@@ -31,7 +31,7 @@ export function ReviewResultsGuide({ matterId, summary, onDismiss }: ReviewResul
   };
 
   return (
-    <div className="space-y-4 rounded-lg border border-brand/25 bg-brand-soft/20 p-5">
+    <div className="space-y-4 rounded-lg border border-brand/25 bg-brand-soft/20 p-5 max-lg:p-4">
       <div className="flex items-center justify-between gap-3">
         <p className="text-sm font-semibold text-ink">Your AI review is ready</p>
         <div className="flex gap-1">

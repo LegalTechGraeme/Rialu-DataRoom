@@ -59,7 +59,7 @@ export function MatterDashboardPage() {
   ];
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-8 max-lg:space-y-6">
       <div>
         <h1 className="page-title">Overview</h1>
         <p className="page-subtitle">
@@ -80,7 +80,7 @@ export function MatterDashboardPage() {
 
       <StatsCards items={stats} pulse={statsPulse} />
 
-      <div className="grid gap-6 lg:grid-cols-[1fr_18rem]">
+      <div className="grid gap-6 max-lg:gap-5 lg:grid-cols-[1fr_18rem]">
         <RecentActivity items={dash.recentActivity} />
         <div className="space-y-6">
           <HowToUsePanel />

@@ -101,7 +101,7 @@ export function InteractiveDocumentPreview({
     <div
       ref={containerRef}
       onMouseUp={handleMouseUp}
-      className="min-h-0 flex-1 overflow-auto bg-surface px-8 py-8 dark:bg-surface"
+      className="min-h-0 flex-1 overflow-y-auto overflow-x-hidden bg-surface px-4 py-5 max-lg:px-4 lg:px-8 lg:py-8 dark:bg-surface"
     >
       <div className="mx-auto max-w-[42rem] font-serif text-[15px] leading-[1.85] text-ink selection:bg-black/10 dark:selection:bg-white/15">
         {renderFormattedDocument(text, highlights, scrollToHighlightId)}

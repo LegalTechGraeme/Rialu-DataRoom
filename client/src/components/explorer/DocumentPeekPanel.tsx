@@ -38,12 +38,12 @@ export function DocumentPeekPanel({ matterId, document: doc, review }: DocumentP
   }
 
   return (
-    <div className="flex h-full min-h-0 flex-col">
-      <div className="shrink-0 border-b border-line px-4 py-3">
+    <div className="flex h-full min-h-0 w-full max-w-full flex-col overflow-x-hidden">
+      <div className="shrink-0 border-b border-line px-4 py-3 max-lg:px-3">
         <div className="flex items-start justify-between gap-2">
-          <div className="min-w-0">
+          <div className="min-w-0 flex-1">
             <h2 className="text-sm font-semibold text-ink">Preview</h2>
-            <p className="mt-1 line-clamp-2 text-xs font-medium leading-snug text-ink">{doc.fileName}</p>
+            <p className="mt-1 break-words text-xs font-medium leading-snug text-ink">{doc.fileName}</p>
           </div>
           <Link
             to={`/matters/${matterId}/documents/${doc.id}`}
@@ -90,7 +90,7 @@ export function DocumentPeekPanel({ matterId, document: doc, review }: DocumentP
         </p>
       </div>
 
-      <div className="min-h-0 flex-1 bg-surface-muted/30">
+      <div className="min-h-0 min-w-0 flex-1 overflow-hidden bg-surface-muted/30">
         <DocumentPreview matterId={matterId} document={doc} fileUrl={null} compact />
       </div>
     </div>

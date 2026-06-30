@@ -70,7 +70,7 @@ export function DiligenceReportPage() {
   const { counts, total } = report;
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 max-lg:space-y-5 max-lg:overflow-x-hidden">
       <div>
         <h1 className="text-2xl font-semibold text-ink">Due diligence report</h1>
         <p className="mt-2 max-w-2xl text-sm text-ink-muted">

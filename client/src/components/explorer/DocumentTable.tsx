@@ -41,7 +41,7 @@ export function DocumentTable({
   const navigate = useNavigate();
 
   return (
-    <div className="flex h-full min-h-0 flex-col">
+    <div className="flex h-full min-h-0 w-full max-w-full flex-col overflow-x-hidden">
       <div className="border-b border-line px-4 py-3">
         <h2 className="text-sm font-semibold text-ink">Documents</h2>
         <p className="text-xs text-ink-muted">
@@ -51,7 +51,7 @@ export function DocumentTable({
       </div>
 
       {/* Mobile card list */}
-      <div className="min-h-0 flex-1 overflow-auto lg:hidden">
+      <div className="min-h-0 flex-1 overflow-y-auto overflow-x-hidden lg:hidden">
         {documents.length === 0 ? (
           <p className="px-4 py-10 text-center text-sm text-ink-muted">No documents in this folder.</p>
         ) : (
@@ -67,7 +67,7 @@ export function DocumentTable({
                   onClick={() => onSelectDocument?.(d)}
                 >
                   <div className="flex items-start justify-between gap-2">
-                    <p className="min-w-0 flex-1 font-medium text-ink">{d.fileName}</p>
+                    <p className="min-w-0 flex-1 break-words font-medium text-ink">{d.fileName}</p>
                     <DiligenceFlagBadge flag={reviews[d.id]?.diligenceFlag ?? null} />
                   </div>
                   <p className="mt-1 text-xs text-ink-muted">{d.categoryLabel}</p>

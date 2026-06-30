@@ -14,7 +14,7 @@ export function MobileTopBar({ title }: MobileTopBarProps) {
 
   return (
     <header className="sticky top-0 z-40 shrink-0 border-b border-line bg-surface-elevated pt-[env(safe-area-inset-top)] lg:hidden">
-      <div className="flex h-12 items-center justify-between gap-3 px-4">
+      <div className="flex h-12 max-w-full items-center justify-between gap-2 overflow-hidden px-[max(1rem,env(safe-area-inset-left))] pr-[max(1rem,env(safe-area-inset-right))]">
         <Link to="/" className="shrink-0 font-serif text-base font-semibold text-ink">
           {BRAND_NAME}
         </Link>

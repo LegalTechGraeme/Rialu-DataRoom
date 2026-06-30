@@ -44,7 +44,7 @@ export function RiskRegisterPage() {
   };
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 max-lg:space-y-5 max-lg:overflow-x-hidden">
       <div className="flex flex-wrap items-end justify-between gap-4">
         <div>
           <p className="text-[11px] font-semibold uppercase tracking-widest text-brand">

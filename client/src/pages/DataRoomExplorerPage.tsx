@@ -149,9 +149,9 @@ export function DataRoomExplorerPage() {
   }
 
   const explorerHeader = (
-    <div className="shrink-0 space-y-2 border-b border-line bg-surface-elevated px-4 py-2 max-lg:px-3">
-      <div className="flex flex-wrap items-center justify-between gap-3">
-        <p className="text-xs text-ink-muted max-lg:w-full">
+    <div className="shrink-0 border-b border-line bg-surface-elevated px-4 py-2.5 max-lg:px-3 max-lg:py-3">
+      <div className="flex flex-col gap-2 lg:flex-row lg:flex-wrap lg:items-center lg:justify-between lg:gap-3">
+        <p className="hidden text-xs text-ink-muted lg:block">
           <span className="font-medium text-ink">{matter.name}</span>
           <span className="text-ink-faint"> · </span>
           {folderName ? (
@@ -166,14 +166,16 @@ export function DataRoomExplorerPage() {
                   Assign folder review
                 </button>
               ) : null}
-              <span className="hidden text-ink-faint lg:inline"> · </span>
+              <span className="text-ink-faint"> · </span>
             </>
           ) : null}
-          <span className="hidden lg:inline">Click a row to preview · double-click for full review workspace</span>
-          <span className="lg:hidden">Tap a document to preview</span>
+          Click a row to preview · double-click for full review workspace
+        </p>
+        <p className="text-xs text-ink-muted lg:hidden">
+          <span className="font-medium text-ink">{matter.name}</span>
         </p>
         {matterId !== "matter-acme" ? (
-          <div className="w-full max-w-xs sm:w-auto max-lg:max-w-none">
+          <div className="w-full max-w-xs sm:w-auto max-lg:max-w-full">
             <UploadDropzone
               matterId={matterId}
               onUploaded={() => {
@@ -194,11 +196,11 @@ export function DataRoomExplorerPage() {
   );
 
   return (
-    <div className="flex h-full min-h-0 flex-col">
+    <div className="flex h-full min-h-0 w-full max-w-full flex-col overflow-x-hidden">
       {explorerHeader}
 
       {/* Mobile: single-pane flow */}
-      <div className="flex min-h-0 flex-1 flex-col lg:hidden">
+      <div className="flex min-h-0 w-full max-w-full flex-1 flex-col overflow-x-hidden lg:hidden">
         {mobilePane === "folders" ? (
           <>
             <div className="flex shrink-0 items-center gap-2 border-b border-line px-3 py-2">
@@ -211,7 +213,7 @@ export function DataRoomExplorerPage() {
               </button>
               <span className="text-sm font-medium text-ink">Folders</span>
             </div>
-            <div className="min-h-0 flex-1 overflow-auto bg-surface-elevated">
+            <div className="min-h-0 flex-1 overflow-y-auto overflow-x-hidden bg-surface-elevated">
               <FolderTree
                 root={tree}
                 selectedFolderId={selectedFolderId}
@@ -238,7 +240,7 @@ export function DataRoomExplorerPage() {
                 {selectedDocument.fileName}
               </span>
             </div>
-            <div className="min-h-0 flex-1 overflow-auto bg-surface-elevated">
+            <div className="min-h-0 flex-1 overflow-y-auto overflow-x-hidden bg-surface-elevated">
               <DocumentPeekPanel
                 matterId={matterId}
                 document={selectedDocument}
@@ -259,7 +261,7 @@ export function DataRoomExplorerPage() {
                 Folder: {folderName}
               </button>
             </div>
-            <section className="min-h-0 flex-1 bg-surface">
+            <section className="min-h-0 min-w-0 flex-1 overflow-x-hidden bg-surface">
               <DocumentTable
                 matterId={matterId}
                 folderName={folderName}
