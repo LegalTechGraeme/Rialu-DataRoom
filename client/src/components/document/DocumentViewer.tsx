@@ -122,7 +122,11 @@ export function DocumentViewer({
   const shell =
     variant === "modal"
       ? "flex max-h-[90vh] w-full max-w-6xl flex-col overflow-hidden rounded-xl border border-line bg-surface-elevated shadow-card"
-      : "flex h-full min-h-0 flex-1 flex-col overflow-hidden rounded-xl border border-line bg-surface-elevated shadow-card";
+      : [
+          "flex flex-col",
+          "max-lg:min-h-0 max-lg:flex-1 max-lg:overflow-y-auto max-lg:overscroll-y-contain max-lg:bg-surface",
+          "lg:h-full lg:min-h-0 lg:flex-1 lg:overflow-hidden lg:rounded-xl lg:border lg:border-line lg:bg-surface-elevated lg:shadow-card",
+        ].join(" ");
 
   return (
     <div className={shell}>
@@ -158,67 +162,58 @@ export function DocumentViewer({
         <TaskReviewBanner task={focusTask} onDismiss={() => setBannerDismissed(true)} />
       ) : null}
 
-      <div className="grid min-h-0 flex-1 grid-rows-1 lg:grid-cols-[1fr_340px]">
-        <div className="relative flex min-h-[280px] flex-col border-b border-line lg:border-b-0 lg:border-r">
-          <div className="flex justify-end border-b border-line px-3 py-1.5">
+      <div className="flex flex-col lg:grid lg:min-h-0 lg:flex-1 lg:grid-cols-[1fr_340px] lg:grid-rows-1">
+        <div className="flex flex-col border-b border-line max-lg:shrink-0 lg:min-h-[280px] lg:border-b-0 lg:border-r">
+          <div className="flex justify-end border-b border-line px-4 py-2 max-lg:px-5">
             <div className="flex rounded-md border border-line p-0.5 text-[11px]">
               <button
                 type="button"
                 onClick={() => setPreviewMode("original")}
-                className={previewMode === "original" ? "rounded bg-brand px-2 py-0.5 text-white" : "px-2 py-0.5 text-ink-muted"}
+                className={previewMode === "original" ? "rounded bg-brand px-3 py-1 text-white" : "px-3 py-1 text-ink-muted"}
               >
                 PDF
               </button>
               <button
                 type="button"
                 onClick={() => setPreviewMode("interactive")}
-                className={previewMode === "interactive" ? "rounded bg-brand px-2 py-0.5 text-white" : "px-2 py-0.5 text-ink-muted"}
+                className={previewMode === "interactive" ? "rounded bg-brand px-3 py-1 text-white" : "px-3 py-1 text-ink-muted"}
               >
                 Review
               </button>
             </div>
           </div>
-          <div className="relative flex min-h-0 flex-1 flex-col">
-            <div
-              className={[
-                "absolute inset-0 flex min-h-0 flex-col",
-                previewMode === "interactive" ? "z-10" : "pointer-events-none invisible",
-              ].join(" ")}
-              aria-hidden={previewMode !== "interactive"}
-            >
-              <InteractiveDocumentPreview
-                matterId={matterId}
-                document={doc}
-                text={docText}
-                loading={textLoading}
-                error={textError}
-                highlights={highlights}
-                scrollToHighlightId={taskHighlight ? "task-focus" : null}
-                onSelection={setSelection}
-              />
-            </div>
-            <div
-              className={[
-                "absolute inset-0 flex min-h-0 flex-col",
-                previewMode === "original" ? "z-10" : "pointer-events-none invisible",
-              ].join(" ")}
-              aria-hidden={previewMode !== "original"}
-            >
-              <DocumentPreview matterId={matterId} document={doc} fileUrl={fileUrl} />
-            </div>
-            {selection && previewMode === "interactive" ? (
-              <SelectionActionBar
-                selection={selection}
-                users={users}
-                onAssign={() => openTaskModal({ type: "clause_review" })}
-                onEscalate={() => openTaskModal({ type: "escalation", title: "Escalation" })}
-                onClear={() => setSelection(null)}
-              />
-            ) : null}
+          <div className="flex min-h-0 flex-col max-lg:h-[min(52dvh,400px)] lg:flex-1">
+            {previewMode === "interactive" ? (
+              <div className="flex h-full min-h-0 flex-col">
+                <InteractiveDocumentPreview
+                  matterId={matterId}
+                  document={doc}
+                  text={docText}
+                  loading={textLoading}
+                  error={textError}
+                  highlights={highlights}
+                  scrollToHighlightId={taskHighlight ? "task-focus" : null}
+                  onSelection={setSelection}
+                />
+                {selection ? (
+                  <SelectionActionBar
+                    selection={selection}
+                    users={users}
+                    onAssign={() => openTaskModal({ type: "clause_review" })}
+                    onEscalate={() => openTaskModal({ type: "escalation", title: "Escalation" })}
+                    onClear={() => setSelection(null)}
+                  />
+                ) : null}
+              </div>
+            ) : (
+              <div className="h-full min-h-0 overflow-hidden">
+                <DocumentPreview matterId={matterId} document={doc} fileUrl={fileUrl} />
+              </div>
+            )}
           </div>
         </div>
 
-        <aside className="flex min-h-0 flex-col overflow-hidden">
+        <aside className="flex min-h-0 flex-col max-lg:shrink-0 lg:overflow-hidden">
           <div className="flex border-b border-line">
             {(
               [
@@ -241,7 +236,7 @@ export function DocumentViewer({
             ))}
           </div>
 
-          <div className="min-h-0 flex-1 overflow-auto">
+          <div className="min-h-0 flex-1 max-lg:overflow-visible lg:overflow-auto">
             {sideTab === "review" ? (
               <DiligenceReviewPanel
                 matterId={matterId}

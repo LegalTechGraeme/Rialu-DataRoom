@@ -42,7 +42,7 @@ function ExplorerRoute() {
 function DocumentRoute() {
   return (
     <MatterShell title="Document" fullBleed>
-      <div className="flex h-full min-h-0 flex-col overflow-x-hidden px-6 py-4 max-lg:px-3 max-lg:py-3">
+      <div className="flex min-h-0 flex-1 flex-col overflow-y-auto overscroll-y-contain max-lg:px-0 lg:px-6 lg:py-4">
         <DocumentPage />
       </div>
     </MatterShell>
@@ -52,8 +52,8 @@ function DocumentRoute() {
 function WorkflowRoute() {
   return (
     <MatterShell title="Workflow" fullBleed>
-      <div className="h-full overflow-y-auto overflow-x-hidden px-8 py-10 max-lg:px-4 max-lg:py-5 md:px-12">
-        <div className="mx-auto w-full max-w-5xl max-lg:max-w-full">
+      <div className="h-full overflow-y-auto overscroll-y-contain px-8 py-10 max-lg:px-5 max-lg:py-6 md:px-12">
+        <div className="mx-auto w-full max-w-5xl">
           <WorkflowPage />
         </div>
       </div>

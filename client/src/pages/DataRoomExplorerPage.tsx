@@ -149,7 +149,7 @@ export function DataRoomExplorerPage() {
   }
 
   const explorerHeader = (
-    <div className="shrink-0 border-b border-line bg-surface-elevated px-4 py-2.5 max-lg:px-3 max-lg:py-3">
+    <div className="shrink-0 border-b border-line bg-surface px-4 py-3 max-lg:px-5 max-lg:py-4">
       <div className="flex flex-col gap-2 lg:flex-row lg:flex-wrap lg:items-center lg:justify-between lg:gap-3">
         <p className="hidden text-xs text-ink-muted lg:block">
           <span className="font-medium text-ink">{matter.name}</span>
@@ -196,81 +196,74 @@ export function DataRoomExplorerPage() {
   );
 
   return (
-    <div className="flex h-full min-h-0 w-full max-w-full flex-col overflow-x-hidden">
+    <div className="flex h-full min-h-0 flex-col">
       {explorerHeader}
 
-      {/* Mobile: single-pane flow */}
-      <div className="flex min-h-0 w-full max-w-full flex-1 flex-col overflow-x-hidden lg:hidden">
+      {/* Mobile: one scroll surface for the whole pane */}
+      <div className="flex min-h-0 flex-1 flex-col overflow-y-auto overscroll-y-contain lg:hidden">
         {mobilePane === "folders" ? (
           <>
-            <div className="flex shrink-0 items-center gap-2 border-b border-line px-3 py-2">
+            <div className="flex shrink-0 items-center gap-2 border-b border-line px-5 py-3">
               <button
                 type="button"
-                className="min-h-[44px] rounded-md px-2 text-sm font-medium text-brand"
+                className="text-sm font-medium text-brand"
                 onClick={() => setMobilePane("documents")}
               >
-                ← Documents
+                ← Back
               </button>
               <span className="text-sm font-medium text-ink">Folders</span>
             </div>
-            <div className="min-h-0 flex-1 overflow-y-auto overflow-x-hidden bg-surface-elevated">
-              <FolderTree
-                root={tree}
-                selectedFolderId={selectedFolderId}
-                onSelectFolder={(f) => {
-                  setSelectedFolderId(f.id);
-                  setMobilePane("documents");
-                }}
-              />
-            </div>
+            <FolderTree
+              root={tree}
+              selectedFolderId={selectedFolderId}
+              onSelectFolder={(f) => {
+                setSelectedFolderId(f.id);
+                setMobilePane("documents");
+              }}
+            />
           </>
         ) : null}
 
         {mobilePane === "preview" && selectedDocument ? (
           <>
-            <div className="flex shrink-0 items-center gap-2 border-b border-line px-3 py-2">
+            <div className="flex shrink-0 items-center gap-2 border-b border-line px-5 py-3">
               <button
                 type="button"
-                className="min-h-[44px] rounded-md px-2 text-sm font-medium text-brand"
+                className="shrink-0 text-sm font-medium text-brand"
                 onClick={() => setMobilePane("documents")}
               >
                 ← Back
               </button>
-              <span className="min-w-0 truncate text-sm font-medium text-ink">
-                {selectedDocument.fileName}
-              </span>
+              <span className="min-w-0 truncate text-sm text-ink-muted">{selectedDocument.fileName}</span>
             </div>
-            <div className="min-h-0 flex-1 overflow-y-auto overflow-x-hidden bg-surface-elevated">
-              <DocumentPeekPanel
-                matterId={matterId}
-                document={selectedDocument}
-                review={selectedReview}
-              />
-            </div>
+            <DocumentPeekPanel
+              matterId={matterId}
+              document={selectedDocument}
+              review={selectedReview}
+              mobile
+            />
           </>
         ) : null}
 
         {mobilePane === "documents" ? (
           <>
-            <div className="flex shrink-0 items-center gap-2 border-b border-line bg-surface-muted/40 px-3 py-2">
+            <div className="shrink-0 border-b border-line px-5 py-3">
               <button
                 type="button"
-                className="min-h-[44px] flex-1 truncate rounded-lg border border-line bg-surface-elevated px-3 text-left text-sm font-medium text-ink"
+                className="w-full rounded-lg border border-line bg-surface-elevated px-4 py-3 text-left text-sm font-medium text-ink"
                 onClick={() => setMobilePane("folders")}
               >
-                Folder: {folderName}
+                {folderName}
               </button>
             </div>
-            <section className="min-h-0 min-w-0 flex-1 overflow-x-hidden bg-surface">
-              <DocumentTable
-                matterId={matterId}
-                folderName={folderName}
-                documents={docsList}
-                reviews={reviews}
-                selectedDocumentId={selectedDocumentId}
-                onSelectDocument={selectDocument}
-              />
-            </section>
+            <DocumentTable
+              matterId={matterId}
+              folderName={folderName}
+              documents={docsList}
+              reviews={reviews}
+              selectedDocumentId={selectedDocumentId}
+              onSelectDocument={selectDocument}
+            />
           </>
         ) : null}
       </div>

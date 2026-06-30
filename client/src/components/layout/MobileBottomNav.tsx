@@ -10,7 +10,7 @@ import {
 
 function tabClass({ isActive }: { isActive: boolean }) {
   return [
-    "flex min-h-[44px] min-w-0 flex-col items-center justify-center gap-0.5 overflow-hidden px-0.5 py-1 text-[9px] font-medium leading-tight transition-colors sm:text-[10px]",
+    "flex min-h-[48px] flex-col items-center justify-center gap-1 px-1 py-1.5 text-[10px] font-medium leading-none transition-colors",
     isActive ? "text-brand" : "text-ink-muted",
   ].join(" ");
 }
@@ -30,19 +30,14 @@ export function MobileBottomNav() {
 
   return (
     <nav
-      className="fixed bottom-0 left-0 right-0 z-50 w-full max-w-full overflow-hidden border-t border-line bg-surface-elevated pb-[env(safe-area-inset-bottom)] pl-[env(safe-area-inset-left)] pr-[env(safe-area-inset-right)] lg:hidden"
+      className="fixed bottom-0 left-0 right-0 z-50 border-t border-line bg-surface pb-[env(safe-area-inset-bottom)] pl-[env(safe-area-inset-left)] pr-[env(safe-area-inset-right)] lg:hidden"
       aria-label="Main navigation"
     >
-      <div
-        className={[
-          "grid h-14 w-full max-w-full overflow-hidden",
-          matterTabs.length === 5 ? "grid-cols-5" : "grid-cols-1",
-        ].join(" ")}
-      >
+      <div className={matterTabs.length === 5 ? "grid grid-cols-5" : "grid grid-cols-1"}>
         {matterTabs.map((tab) => (
           <NavLink key={tab.to} to={tab.to} end={tab.end} className={tabClass}>
-            <span className="h-5 w-5 shrink-0 [&_svg]:h-5 [&_svg]:w-5">{tab.icon}</span>
-            <span className="w-full truncate text-center">{tab.label}</span>
+            <span className="h-5 w-5 [&_svg]:h-5 [&_svg]:w-5">{tab.icon}</span>
+            <span>{tab.label}</span>
           </NavLink>
         ))}
       </div>

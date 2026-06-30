@@ -23,13 +23,12 @@ export function AppShell({
   children,
 }: AppShellProps) {
   const showTopbar = Boolean(title || subtitle);
-  const mobileTitle = title || undefined;
 
   return (
-    <div className="flex h-full min-h-0 bg-surface max-lg:fixed max-lg:inset-0 max-lg:h-[100dvh] max-lg:w-full max-lg:max-w-full max-lg:overflow-hidden">
+    <div className="flex h-full min-h-0 bg-surface max-lg:min-h-dvh">
       <Sidebar>{sidebarFooter}</Sidebar>
-      <div className="relative flex min-w-0 flex-1 flex-col overflow-hidden max-lg:max-w-full max-lg:pb-[calc(3.5rem+env(safe-area-inset-bottom))]">
-        <MobileTopBar title={mobileTitle} />
+      <div className="relative flex min-w-0 flex-1 flex-col max-lg:pb-[calc(3.5rem+env(safe-area-inset-bottom))]">
+        <MobileTopBar />
         {showTopbar ? (
           <div className="hidden lg:block">
             <Topbar title={title ?? ""} subtitle={subtitle} matterId={matterId} />
@@ -40,12 +39,10 @@ export function AppShell({
           </div>
         )}
         {fullBleed ? (
-          <div className="min-h-0 min-w-0 flex-1 overflow-hidden max-lg:max-w-full">
-            {children ?? <Outlet />}
-          </div>
+          <div className="flex min-h-0 min-w-0 flex-1 flex-col">{children ?? <Outlet />}</div>
         ) : (
-          <main className="min-h-0 min-w-0 flex-1 overflow-y-auto overflow-x-hidden px-8 py-8 max-lg:px-4 max-lg:py-5 md:px-10 md:py-10">
-            <div className="mx-auto w-full max-w-6xl max-lg:max-w-full">{children ?? <Outlet />}</div>
+          <main className="min-h-0 flex-1 overflow-y-auto overflow-x-hidden overscroll-y-contain px-8 py-8 max-lg:px-5 max-lg:py-6 md:px-10 md:py-10">
+            <div className="mx-auto w-full max-w-6xl">{children ?? <Outlet />}</div>
           </main>
         )}
         <MobileBottomNav />

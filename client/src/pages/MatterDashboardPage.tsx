@@ -59,7 +59,7 @@ export function MatterDashboardPage() {
   ];
 
   return (
-    <div className="space-y-8 max-lg:space-y-6">
+    <div className="space-y-8 max-lg:space-y-7">
       <div>
         <h1 className="page-title">Overview</h1>
         <p className="page-subtitle">

@@ -41,57 +41,53 @@ export function DocumentTable({
   const navigate = useNavigate();
 
   return (
-    <div className="flex h-full min-h-0 w-full max-w-full flex-col overflow-x-hidden">
-      <div className="border-b border-line px-4 py-3">
+    <div className="flex h-full min-h-0 flex-col">
+      <div className="border-b border-line px-4 py-3 max-lg:px-5 max-lg:py-4">
         <h2 className="text-sm font-semibold text-ink">Documents</h2>
-        <p className="text-xs text-ink-muted">
+        <p className="mt-1 text-xs text-ink-muted">
           {documents.length} document{documents.length === 1 ? "" : "s"} in{" "}
           <span className="font-medium text-ink">{folderName}</span>
         </p>
       </div>
 
-      {/* Mobile card list */}
-      <div className="min-h-0 flex-1 overflow-y-auto overflow-x-hidden lg:hidden">
+      <ul className="divide-y divide-line lg:hidden">
         {documents.length === 0 ? (
-          <p className="px-4 py-10 text-center text-sm text-ink-muted">No documents in this folder.</p>
+          <li className="px-5 py-12 text-center text-sm text-ink-muted">No documents in this folder.</li>
         ) : (
-          <ul className="divide-y divide-line">
-            {documents.map((d) => (
-              <li key={d.id}>
-                <button
-                  type="button"
-                  className={[
-                    "w-full px-4 py-3 text-left transition-colors",
-                    selectedDocumentId === d.id ? "bg-brand-soft/60" : "hover:bg-surface-muted/80",
-                  ].join(" ")}
-                  onClick={() => onSelectDocument?.(d)}
-                >
-                  <div className="flex items-start justify-between gap-2">
-                    <p className="min-w-0 flex-1 break-words font-medium text-ink">{d.fileName}</p>
-                    <DiligenceFlagBadge flag={reviews[d.id]?.diligenceFlag ?? null} />
-                  </div>
-                  <p className="mt-1 text-xs text-ink-muted">{d.categoryLabel}</p>
-                  <div className="mt-2 flex flex-wrap items-center gap-2">
-                    <span className={statusBadge(d.status)}>{d.status}</span>
-                    <span className="font-mono text-[11px] text-ink-faint">{formatBytes(d.sizeBytes)}</span>
-                  </div>
-                </button>
-                <div className="border-t border-line/60 px-4 pb-3">
-                  <Link
-                    to={`/matters/${matterId}/documents/${d.id}`}
-                    className="inline-flex min-h-[44px] items-center text-xs font-medium text-brand"
-                    onClick={(e) => e.stopPropagation()}
-                  >
-                    Open full viewer →
-                  </Link>
+          documents.map((d) => (
+            <li key={d.id}>
+              <button
+                type="button"
+                className={[
+                  "w-full px-5 py-4 text-left transition-colors",
+                  selectedDocumentId === d.id ? "bg-brand-soft/50" : "hover:bg-surface-muted/60",
+                ].join(" ")}
+                onClick={() => onSelectDocument?.(d)}
+              >
+                <div className="flex items-start justify-between gap-3">
+                  <p className="min-w-0 flex-1 break-words font-medium text-ink">{d.fileName}</p>
+                  <DiligenceFlagBadge flag={reviews[d.id]?.diligenceFlag ?? null} />
                 </div>
-              </li>
-            ))}
-          </ul>
+                <p className="mt-2 text-sm text-ink-muted">{d.categoryLabel}</p>
+                <div className="mt-3 flex flex-wrap items-center gap-2">
+                  <span className={statusBadge(d.status)}>{d.status}</span>
+                  <span className="font-mono text-xs text-ink-faint">{formatBytes(d.sizeBytes)}</span>
+                </div>
+              </button>
+              <div className="px-5 pb-4">
+                <Link
+                  to={`/matters/${matterId}/documents/${d.id}`}
+                  className="text-sm font-medium text-brand"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  Open full viewer →
+                </Link>
+              </div>
+            </li>
+          ))
         )}
-      </div>
+      </ul>
 
-      {/* Desktop table */}
       <div className="hidden min-h-0 flex-1 overflow-auto lg:block">
         <table className="w-full min-w-[960px] table-fixed border-collapse text-left text-sm">
           <thead className="sticky top-0 z-10 bg-surface-elevated shadow-sm dark:bg-surface-elevated">

@@ -14,9 +14,10 @@ interface DocumentPeekPanelProps {
   matterId: string;
   document: DocumentRecord | null;
   review: DocumentReview | null;
+  mobile?: boolean;
 }
 
-export function DocumentPeekPanel({ matterId, document: doc, review }: DocumentPeekPanelProps) {
+export function DocumentPeekPanel({ matterId, document: doc, review, mobile = false }: DocumentPeekPanelProps) {
   const blurb = useDocumentPeekBlurb(matterId, doc);
 
   if (!doc) {
@@ -27,70 +28,52 @@ export function DocumentPeekPanel({ matterId, document: doc, review }: DocumentP
         </div>
         <div className="flex flex-1 flex-col items-center justify-center gap-3 px-6 text-center">
           <p className="text-sm text-ink-muted">Select a document from the list</p>
-          <p className="max-w-[220px] text-xs leading-relaxed text-ink-faint">
-            <span className="font-medium text-ink-muted">Single click</span> — quick preview here
-            <br />
-            <span className="font-medium text-ink-muted">Double click</span> — full viewer with review, tasks &amp; AI
-          </p>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="flex h-full min-h-0 w-full max-w-full flex-col overflow-x-hidden">
-      <div className="shrink-0 border-b border-line px-4 py-3 max-lg:px-3">
-        <div className="flex items-start justify-between gap-2">
-          <div className="min-w-0 flex-1">
-            <h2 className="text-sm font-semibold text-ink">Preview</h2>
-            <p className="mt-1 break-words text-xs font-medium leading-snug text-ink">{doc.fileName}</p>
+    <div className="flex flex-col">
+      <div className="shrink-0 space-y-3 px-5 py-4">
+        {!mobile ? (
+          <div className="flex items-start justify-between gap-2">
+            <div className="min-w-0 flex-1">
+              <h2 className="text-sm font-semibold text-ink">Preview</h2>
+              <p className="mt-1 break-words text-xs font-medium leading-snug text-ink">{doc.fileName}</p>
+            </div>
+            <Link
+              to={`/matters/${matterId}/documents/${doc.id}`}
+              className="shrink-0 rounded-md bg-brand px-2.5 py-1.5 text-[11px] font-semibold text-white hover:bg-brand/90"
+            >
+              Open viewer
+            </Link>
           </div>
+        ) : (
           <Link
             to={`/matters/${matterId}/documents/${doc.id}`}
-            className="shrink-0 rounded-md bg-brand px-2.5 py-1.5 text-[11px] font-semibold text-white hover:bg-brand/90"
+            className="inline-flex rounded-md bg-brand px-3 py-2 text-sm font-medium text-white hover:bg-brand/90"
           >
-            Open viewer
+            Open full viewer
           </Link>
-        </div>
-        <div className="mt-2.5 flex flex-wrap items-center gap-2">
+        )}
+
+        <div className="flex flex-wrap items-center gap-2">
           <DiligenceFlagBadge flag={review?.diligenceFlag ?? null} />
           <span className="rounded-md border border-line bg-surface-muted px-2 py-0.5 text-[10px] font-medium uppercase tracking-wide text-ink-muted">
             {doc.status}
           </span>
-          <span className="font-mono text-[10px] text-ink-faint">{formatBytes(doc.sizeBytes)}</span>
-        </div>
-        <p className="mt-2 line-clamp-2 text-[11px] text-ink-muted">{doc.categoryLabel}</p>
-
-        <div className="mt-2.5 rounded-md border border-brand/20 bg-brand-soft/25 px-2.5 py-2">
-          <p className="text-[10px] font-semibold uppercase tracking-wide text-brand">
-            {blurb.source === "ai" ? "AI summary" : blurb.source === "catalog" ? "About this document" : "Summary"}
-          </p>
-          {blurb.loading && !blurb.text ? (
-            <p className="mt-1 text-[11px] text-ink-faint animate-pulse">Generating summary…</p>
-          ) : blurb.text ? (
-            <p className="mt-1 line-clamp-4 text-[11px] leading-relaxed text-ink-muted">{blurb.text}</p>
-          ) : blurb.error ? (
-            <p className="mt-1 text-[11px] leading-relaxed text-ink-faint">{blurb.error}</p>
-          ) : (
-            <p className="mt-1 text-[11px] text-ink-faint">No summary available.</p>
-          )}
-          {blurb.loading && blurb.text ? (
-            <p className="mt-1 text-[10px] text-ink-faint animate-pulse">Refreshing with AI…</p>
-          ) : null}
+          <span className="font-mono text-xs text-ink-faint">{formatBytes(doc.sizeBytes)}</span>
         </div>
 
-        {review?.summary && review.summary !== blurb.text ? (
-          <p className="mt-2 line-clamp-2 text-[11px] leading-relaxed text-ink-muted">
-            <span className="font-medium text-ink-faint">Reviewer: </span>
-            {review.summary}
-          </p>
+        {blurb.text ? (
+          <p className="text-sm leading-relaxed text-ink-muted">{blurb.text}</p>
+        ) : blurb.loading ? (
+          <p className="text-sm text-ink-faint">Loading summary…</p>
         ) : null}
-        <p className="mt-2 text-[10px] text-ink-faint">
-          Double-click the row for the full workspace — PDF, clause review, tasks &amp; AI.
-        </p>
       </div>
 
-      <div className="min-h-0 min-w-0 flex-1 overflow-hidden bg-surface-muted/30">
+      <div className="h-[min(55dvh,420px)] overflow-hidden border-t border-line bg-surface-elevated">
         <DocumentPreview matterId={matterId} document={doc} fileUrl={null} compact />
       </div>
     </div>

@@ -52,28 +52,17 @@
   @media (max-width: 1023px) {
     html {
       overflow-x: hidden;
-      overscroll-behavior-x: none;
     }
 
     body {
       overflow-x: hidden;
-      overscroll-behavior-x: none;
       width: 100%;
-      max-width: 100%;
+      -webkit-overflow-scrolling: touch;
     }
 
     #root {
-      overflow-x: hidden;
       width: 100%;
-      max-width: 100%;
       min-height: 100dvh;
-      min-height: -webkit-fill-available;
-    }
-
-    button:not(.btn-ghost),
-    a.btn-primary,
-    a.btn-secondary {
-      min-height: 44px;
     }
 
     input,
