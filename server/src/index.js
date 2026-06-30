@@ -14,6 +14,7 @@ import {
   isSimulationMatter,
 } from "./matterStore.js";
 import { loadSimulation, isSimulationReady } from "./simulationLoader.js";
+import { hasDemoAiBundle } from "./ai/demoAi.js";
 import { resolveDocumentFile } from "./fileResolver.js";
 import {
   getAllReviews,
@@ -27,7 +28,7 @@ import {
   reclassifyDocument,
   refileDocumentsByFilename,
 } from "./uploadService.js";
-import { startFullReview, getFullReviewStatus } from "./ddOrchestrator.js";
+import { startFullReview, getFullReviewStatus, cancelJob as cancelFullReviewJob } from "./ddOrchestrator.js";
 import { listJobs, cancelJob, getJob } from "./aiJobManager.js";
 import { generatePptxExport, generateExcelExport } from "./exportService.js";
 import { findFolderInTree } from "./folderTemplate.js";
@@ -86,6 +87,7 @@ app.get("/api/health", (_req, res) => {
   res.json({
     ok: true,
     simulation: isSimulationReady(),
+    demoAiBundle: hasDemoAiBundle("matter-acme"),
     groq: isGroqConfigured(),
     brand: "Rialu",
   });
@@ -240,6 +242,16 @@ app.post("/api/matters/:matterId/full-review", async (req, res) => {
   } catch (e) {
     res.status(400).json({ error: e instanceof Error ? e.message : "Could not start review" });
   }
+});
+
+app.post("/api/matters/:matterId/full-review/cancel", (req, res) => {
+  const m = getMatter(req.params.matterId);
+  if (!m) return res.status(404).json({ error: "Matter not found" });
+  const status = getFullReviewStatus(req.params.matterId);
+  if (!status.jobId) return res.json({ job: status });
+  const result = cancelFullReviewJob(status.jobId);
+  if (!result.ok) return res.status(400).json({ error: result.error });
+  res.json({ job: getFullReviewStatus(req.params.matterId) });
 });
 
 app.get("/api/matters/:matterId/full-review/status", (req, res) => {

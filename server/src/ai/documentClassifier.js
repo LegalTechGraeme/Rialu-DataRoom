@@ -3,6 +3,7 @@ import { DOCUMENT_CLASSIFY_SYSTEM } from "./prompts.js";
 import { extractTextFromFile } from "./textExtract.js";
 import { flattenFolders } from "../folderTemplate.js";
 import { isGroqConfigured } from "../config.js";
+import { useDemoAiOnly } from "./simulationAiPolicy.js";
 
 /**
  * @param {{ fileName: string; mimeType: string }} fileMeta
@@ -21,6 +22,8 @@ export async function classifyDocument(fileMeta, absPath, tree, matterId) {
     confidence: "low",
     reasoning: "Default classification — AI unavailable or insufficient context",
   };
+
+  if (useDemoAiOnly(matterId)) return fallback;
 
   if (!isGroqConfigured()) return fallback;
 
@@ -53,6 +56,7 @@ ${text.slice(0, 4000) || "[No extractable text — classify from filename only]"
       system: DOCUMENT_CLASSIFY_SYSTEM,
       user,
       json: true,
+      matterId,
     });
     const folderId = resolveFolderId(parsed.folder_id, folders, matterId, miscFolder.id);
     const folder = folders.find((f) => f.id === folderId);

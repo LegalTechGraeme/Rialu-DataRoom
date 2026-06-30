@@ -42,7 +42,7 @@ export async function startDemoFullReview(matterId, options = {}) {
     throw new Error("Full review already in progress");
   }
   if (!hasDemoAiBundle(matterId)) {
-    throw new Error("Demo AI bundle not found for this matter");
+    throw new Error("Demo AI bundle failed to load — redeploy the API service");
   }
 
   const opts = {
@@ -99,7 +99,7 @@ async function runDemoFullReview(jobId, matterId, docs, opts) {
         throw new Error(`Missing demo analysis for ${docs[i].fileName}`);
       }
       await sleep(35);
-      updateJob(jobId, { current: i + 1, message: `Analyzed ${i + 1} of ${docs.length}…` });
+      updateJob(jobId, { current: i + 1, message: `Analyzed ${i + 1} of ${docs.length}… (curated demo data)` });
     }
   }
 

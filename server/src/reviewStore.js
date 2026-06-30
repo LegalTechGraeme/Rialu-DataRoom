@@ -1,8 +1,10 @@
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
-import { isSimulationMatter } from "../matterStore.js";
+import { isSimulationMatter } from "./matterStore.js";
 import { getAllDemoDocumentAnalyses, getDemoDocumentAnalysis } from "./ai/demoAi.js";
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const REVIEWS_DIR = path.resolve(__dirname, "../../data/reviews");
 
 function matterPath(matterId) {

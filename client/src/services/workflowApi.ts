@@ -67,6 +67,14 @@ export async function fetchFullReviewStatus(matterId: string) {
   return data.job;
 }
 
+export async function cancelFullReview(matterId: string) {
+  const data = await apiJson<{ job: FullReviewJob }>(
+    `/api/matters/${matterId}/full-review/cancel`,
+    { method: "POST" }
+  );
+  return data.job;
+}
+
 export async function refileDocuments(matterId: string) {
   return apiJson<{ updated: number; total: number }>(
     `/api/matters/${matterId}/refile-documents`,

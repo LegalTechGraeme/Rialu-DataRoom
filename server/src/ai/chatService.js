@@ -2,7 +2,8 @@ import { groqChat } from "./groqClient.js";
 import { CHAT_SYSTEM } from "./prompts.js";
 import { getAllDocumentAnalyses, getMatterSynthesis } from "./analysisStore.js";
 import { isSimulationMatter } from "../matterStore.js";
-import { getDemoChatResponse, hasDemoAiBundle } from "./demoAi.js";
+import { getDemoChatResponse } from "./demoAi.js";
+import { useDemoAiOnly } from "./simulationAiPolicy.js";
 
 /**
  * @param {string} matterId
@@ -11,7 +12,7 @@ import { getDemoChatResponse, hasDemoAiBundle } from "./demoAi.js";
  * @param {{ role: 'user'|'assistant'; content: string }[]} history
  */
 export async function chatOverMatter(matterId, message, documents, history = []) {
-  if (isSimulationMatter(matterId) && hasDemoAiBundle(matterId)) {
+  if (useDemoAiOnly(matterId)) {
     return getDemoChatResponse(message);
   }
 
@@ -54,5 +55,6 @@ ${JSON.stringify(contextDocs, null, 2).slice(0, 35000)}`;
     user,
     json: true,
     temperature: 0.3,
+    matterId,
   });
 }

@@ -49,7 +49,10 @@ export function getFullReviewStatus(matterId) {
  * @param {{ classify?: boolean; analyze?: boolean; synthesize?: boolean; applyReviews?: boolean }} options
  */
 export async function startFullReview(matterId, options = {}) {
-  if (isSimulationMatter(matterId) && hasDemoAiBundle(matterId)) {
+  if (isSimulationMatter(matterId)) {
+    if (!hasDemoAiBundle(matterId)) {
+      throw new Error("Demo AI bundle is missing on the server. Redeploy the latest API build.");
+    }
     return startDemoFullReview(matterId, options);
   }
 

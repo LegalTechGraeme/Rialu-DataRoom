@@ -2,7 +2,6 @@ import { analyzeDocument } from "./ai/documentAnalyzer.js";
 import { getDocumentAnalysis } from "./ai/analysisStore.js";
 import { resolveDocumentFile } from "./fileResolver.js";
 import { isSimulationMatter } from "./matterStore.js";
-import { hasDemoAiBundle } from "./ai/demoAi.js";
 import { startDemoBatchAnalyze } from "./demoFullReview.js";
 import { GROQ_ANALYZE_DELAY_MS } from "./config.js";
 import {
@@ -24,7 +23,7 @@ function sleep(ms) {
  * @param {{ limit?: number; force?: boolean }} options
  */
 export function startBatchAnalyze(matterId, docs, options = {}) {
-  if (isSimulationMatter(matterId) && hasDemoAiBundle(matterId)) {
+  if (isSimulationMatter(matterId)) {
     return startDemoBatchAnalyze(matterId, docs, options);
   }
 

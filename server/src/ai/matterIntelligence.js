@@ -6,7 +6,8 @@ import {
   saveMatterSynthesis,
 } from "./analysisStore.js";
 import { isSimulationMatter } from "../matterStore.js";
-import { getDemoMatterSynthesis, hasDemoAiBundle } from "./demoAi.js";
+import { getDemoMatterSynthesis } from "./demoAi.js";
+import { useDemoAiOnly } from "./simulationAiPolicy.js";
 
 /**
  * @param {string} matterId
@@ -19,9 +20,9 @@ export async function synthesizeMatter(matterId, documents, force = false) {
     if (existing?.synthesizedAt) return existing;
   }
 
-  if (isSimulationMatter(matterId) && hasDemoAiBundle(matterId)) {
+  if (useDemoAiOnly(matterId)) {
     const demo = getDemoMatterSynthesis(matterId);
-    if (!demo) throw new Error("No demo synthesis for this matter");
+    if (!demo) throw new Error("Demo synthesis bundle is missing");
     return saveMatterSynthesis(matterId, demo);
   }
 
@@ -57,6 +58,7 @@ Identify cross-document conflicts, aggregated risks, entity map, and diligence t
     system: MATTER_SYNTHESIS_SYSTEM,
     user,
     json: true,
+    matterId,
   });
 
   return saveMatterSynthesis(matterId, parsed);

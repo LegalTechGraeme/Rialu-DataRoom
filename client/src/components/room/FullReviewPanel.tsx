@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { fetchAiStatus } from "../../services/aiApi";
 import {
+  cancelFullReview,
   fetchFullReviewStatus,
   startFullReview,
   type FullReviewJob,
@@ -51,7 +52,7 @@ export function FullReviewPanel({ matterId, onComplete }: FullReviewPanelProps) 
           if (j.status === "completed") onComplete?.();
         })
         .catch(() => {});
-    }, 2000);
+    }, matterId === "matter-acme" ? 400 : 2000);
     return () => clearInterval(interval);
   }, [job?.status, matterId, onComplete]);
 
@@ -122,6 +123,21 @@ export function FullReviewPanel({ matterId, onComplete }: FullReviewPanelProps) 
             />
           </div>
           <p className="text-xs text-ink-muted">{job.message}</p>
+          {job.message.includes("free tier") || job.message.includes("~12s") ? (
+            <div className="space-y-2 rounded-md border border-warn/30 bg-warn/10 px-3 py-2 text-xs text-warn">
+              <p>
+                This looks like a slow live Groq run — the demo should finish in seconds. Cancel
+                and try again after the API redeploys.
+              </p>
+              <button
+                type="button"
+                className="rounded-md border border-warn/40 px-2 py-1 font-medium hover:bg-warn/10"
+                onClick={() => void cancelFullReview(matterId).then(setJob)}
+              >
+                Cancel stuck review
+              </button>
+            </div>
+          ) : null}
         </div>
       ) : null}
       {job?.status === "completed" ? (

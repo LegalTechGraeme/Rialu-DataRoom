@@ -1,4 +1,5 @@
 import { GROQ_API_KEY, GROQ_MODEL } from "../config.js";
+import { assertLiveGroqAllowed } from "./simulationAiPolicy.js";
 
 const GROQ_URL = "https://api.groq.com/openai/v1/chat/completions";
 const MAX_RETRIES = 6;
@@ -16,9 +17,10 @@ function retryDelayMs(errText) {
 }
 
 /**
- * @param {{ system: string; user: string; json?: boolean; temperature?: number }} opts
+ * @param {{ system: string; user: string; json?: boolean; temperature?: number; matterId?: string }} opts
  */
-export async function groqChat({ system, user, json = true, temperature = 0.2 }) {
+export async function groqChat({ system, user, json = true, temperature = 0.2, matterId }) {
+  if (matterId) assertLiveGroqAllowed(matterId, "API call");
   if (!GROQ_API_KEY) {
     throw new Error("GROQ_API_KEY is not set. Add it to server/.env");
   }

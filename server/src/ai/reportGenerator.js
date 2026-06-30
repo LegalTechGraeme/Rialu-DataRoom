@@ -2,8 +2,8 @@ import { groqChat } from "./groqClient.js";
 import { REPORT_SYSTEM } from "./prompts.js";
 import { getMatterSynthesis, getAllDocumentAnalyses } from "./analysisStore.js";
 import { buildRiskRegister } from "./matterIntelligence.js";
-import { isSimulationMatter } from "../matterStore.js";
-import { getDemoGeneratedReport, hasDemoAiBundle } from "./demoAi.js";
+import { getDemoGeneratedReport } from "./demoAi.js";
+import { useDemoAiOnly } from "./simulationAiPolicy.js";
 
 /**
  * @param {string} matterId
@@ -11,7 +11,7 @@ import { getDemoGeneratedReport, hasDemoAiBundle } from "./demoAi.js";
  * @param {import('../types.js').DocumentRecord[]} documents
  */
 export async function generateDiligenceReport(matterId, matterName, documents) {
-  if (isSimulationMatter(matterId) && hasDemoAiBundle(matterId)) {
+  if (useDemoAiOnly(matterId)) {
     const demo = getDemoGeneratedReport(matterId);
     if (demo) {
       return {
@@ -43,6 +43,7 @@ Partner-ready tone. Note this is a simulation data room.`;
     system: REPORT_SYSTEM,
     user,
     json: true,
+    matterId,
   });
 
   return {

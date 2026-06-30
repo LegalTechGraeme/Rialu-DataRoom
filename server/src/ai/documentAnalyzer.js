@@ -3,8 +3,8 @@ import { DOCUMENT_ANALYSIS_SYSTEM } from "./prompts.js";
 import { extractTextFromFile } from "./textExtract.js";
 import { getCatalogAnalysisText } from "./simulationCatalogText.js";
 import { saveDocumentAnalysis, getDocumentAnalysis } from "./analysisStore.js";
-import { isSimulationMatter } from "../matterStore.js";
-import { getDemoDocumentAnalysis, hasDemoAiBundle } from "./demoAi.js";
+import { getDemoDocumentAnalysis } from "./demoAi.js";
+import { useDemoAiOnly } from "./simulationAiPolicy.js";
 
 /**
  * @param {{ id: string; fileName: string; categoryLabel: string; mimeType: string }} doc
@@ -13,15 +13,19 @@ import { getDemoDocumentAnalysis, hasDemoAiBundle } from "./demoAi.js";
  * @param {boolean} force
  */
 export async function analyzeDocument(doc, absPath, matterId, force = false) {
+  if (useDemoAiOnly(matterId)) {
+    const demo = getDemoDocumentAnalysis(matterId, doc.id);
+    if (!demo) throw new Error(`No demo analysis for ${doc.fileName}`);
+    if (!force) {
+      const existing = getDocumentAnalysis(matterId, doc.id);
+      if (existing?.analyzedAt) return existing;
+    }
+    return saveDocumentAnalysis(matterId, doc.id, demo);
+  }
+
   if (!force) {
     const existing = getDocumentAnalysis(matterId, doc.id);
     if (existing?.analyzedAt) return existing;
-  }
-
-  if (isSimulationMatter(matterId) && hasDemoAiBundle(matterId)) {
-    const demo = getDemoDocumentAnalysis(matterId, doc.id);
-    if (!demo) throw new Error("No demo analysis for this document");
-    return saveDocumentAnalysis(matterId, doc.id, demo);
   }
 
   let text = await extractTextFromFile(absPath, doc.mimeType);
@@ -35,7 +39,6 @@ export async function analyzeDocument(doc, absPath, matterId, force = false) {
     throw new Error("No extractable text for this document");
   }
 
-  // Keep prompts smaller to stay within Groq free-tier tokens-per-minute limits.
   const ANALYSIS_TEXT_CAP = 6_000;
   if (text.length > ANALYSIS_TEXT_CAP) {
     text = `${text.slice(0, ANALYSIS_TEXT_CAP)}\n\n[Truncated for API rate limits — full file retained in data room.]`;
@@ -55,6 +58,7 @@ ${text}
     system: DOCUMENT_ANALYSIS_SYSTEM,
     user,
     json: true,
+    matterId,
   });
 
   return saveDocumentAnalysis(matterId, doc.id, {

@@ -41,9 +41,12 @@ export function saveDocumentAnalysis(matterId, documentId, analysis) {
 }
 
 export function getDocumentAnalysis(matterId, documentId) {
+  if (isSimulationMatter(matterId)) {
+    const demo = getDemoDocumentAnalysis(matterId, documentId);
+    if (demo) return demo;
+  }
   const p = docPath(matterId, documentId);
   if (fs.existsSync(p)) return JSON.parse(fs.readFileSync(p, "utf8"));
-  if (isSimulationMatter(matterId)) return getDemoDocumentAnalysis(matterId, documentId);
   return null;
 }
 
@@ -75,8 +78,11 @@ export function saveMatterSynthesis(matterId, synthesis) {
 }
 
 export function getMatterSynthesis(matterId) {
+  if (isSimulationMatter(matterId)) {
+    const demo = getDemoMatterSynthesis(matterId);
+    if (demo) return demo;
+  }
   const p = matterMetaPath(matterId);
   if (fs.existsSync(p)) return JSON.parse(fs.readFileSync(p, "utf8"));
-  if (isSimulationMatter(matterId)) return getDemoMatterSynthesis(matterId);
   return null;
 }
