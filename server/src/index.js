@@ -29,6 +29,7 @@ import {
   refileDocumentsByFilename,
 } from "./uploadService.js";
 import { startFullReview, getFullReviewStatus, cancelJob as cancelFullReviewJob } from "./ddOrchestrator.js";
+import { runDemoFullReviewImmediate, cancelStaleGroqFullReviews } from "./demoFullReview.js";
 import { listJobs, cancelJob, getJob } from "./aiJobManager.js";
 import { generatePptxExport, generateExcelExport } from "./exportService.js";
 import { findFolderInTree } from "./folderTemplate.js";
@@ -237,7 +238,12 @@ app.post("/api/matters/:matterId/documents/:documentId/classify", async (req, re
 
 app.post("/api/matters/:matterId/full-review", async (req, res) => {
   try {
-    const status = await startFullReview(req.params.matterId, req.body ?? {});
+    const matterId = req.params.matterId;
+    if (isSimulationMatter(matterId)) {
+      const job = await runDemoFullReviewImmediate(matterId, req.body ?? {});
+      return res.json({ job });
+    }
+    const status = await startFullReview(matterId, req.body ?? {});
     res.json({ job: status });
   } catch (e) {
     res.status(400).json({ error: e instanceof Error ? e.message : "Could not start review" });
@@ -257,6 +263,9 @@ app.post("/api/matters/:matterId/full-review/cancel", (req, res) => {
 app.get("/api/matters/:matterId/full-review/status", (req, res) => {
   const m = getMatter(req.params.matterId);
   if (!m) return res.status(404).json({ error: "Matter not found" });
+  if (isSimulationMatter(req.params.matterId)) {
+    cancelStaleGroqFullReviews(req.params.matterId);
+  }
   res.json({ job: getFullReviewStatus(req.params.matterId) });
 });
 

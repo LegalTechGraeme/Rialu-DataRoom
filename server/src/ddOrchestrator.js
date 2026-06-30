@@ -8,7 +8,7 @@ import { reclassifyDocument } from "./uploadService.js";
 import { isGroqConfigured, GROQ_ANALYZE_DELAY_MS } from "./config.js";
 import { isSimulationMatter } from "./matterStore.js";
 import { hasDemoAiBundle } from "./ai/demoAi.js";
-import { startDemoFullReview } from "./demoFullReview.js";
+import { runDemoFullReviewImmediate } from "./demoFullReview.js";
 import {
   createJob,
   updateJob,
@@ -53,7 +53,7 @@ export async function startFullReview(matterId, options = {}) {
     if (!hasDemoAiBundle(matterId)) {
       throw new Error("Demo AI bundle is missing on the server. Redeploy the latest API build.");
     }
-    return startDemoFullReview(matterId, options);
+    return runDemoFullReviewImmediate(matterId, options);
   }
 
   if (!isGroqConfigured()) {

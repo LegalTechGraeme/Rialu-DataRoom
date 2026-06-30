@@ -9,17 +9,30 @@ import {
   isJobCancelled,
   getJob,
   hasRunningJob,
+  listJobs,
+  cancelJob,
 } from "./aiJobManager.js";
 import { hasDemoAiBundle } from "./ai/demoAi.js";
 
-function sleep(ms) {
-  return new Promise((resolve) => setTimeout(resolve, ms));
+/** Messages emitted only by the live Groq orchestrator — never the demo path. */
+export function isLiveGroqReviewMessage(message) {
+  if (!message) return false;
+  return /rate limit|~12s|free tier|retrying doc/i.test(message);
 }
 
-/** @param {string} jobId */
+/** Cancel any in-flight full-review jobs that look like a live Groq run (stale after redeploy). */
+export function cancelStaleGroqFullReviews(matterId) {
+  for (const job of listJobs(matterId)) {
+    if (job.type !== "full-review" || job.status !== "running") continue;
+    if (isLiveGroqReviewMessage(job.message)) {
+      cancelJob(job.id);
+    }
+  }
+}
+
 function jobStatus(jobId) {
   const job = getJob(jobId);
-  if (!job) return { status: "idle", phase: "", current: 0, total: 0, message: "" };
+  if (!job) return { status: "idle", phase: "", current: 0, total: 0, message: "", jobId: null };
   return {
     status: job.status === "running" ? "running" : job.status,
     phase: job.phase,
@@ -33,26 +46,22 @@ function jobStatus(jobId) {
 }
 
 /**
- * Simulated full review using committed demo AI bundle (no Groq).
- * @param {string} matterId
- * @param {{ classify?: boolean; analyze?: boolean; synthesize?: boolean; applyReviews?: boolean }} options
+ * Apply pre-generated demo diligence in one shot (no Groq, no per-doc delays).
+ * Returns a completed job payload — safe to use synchronously in the HTTP handler.
  */
-export async function startDemoFullReview(matterId, options = {}) {
+export async function runDemoFullReviewImmediate(matterId, options = {}) {
+  cancelStaleGroqFullReviews(matterId);
+
   if (hasRunningJob(matterId, "full-review")) {
-    throw new Error("Full review already in progress");
+    throw new Error("Full review already in progress — wait a moment or cancel it");
   }
   if (!hasDemoAiBundle(matterId)) {
     throw new Error("Demo AI bundle failed to load — redeploy the API service");
   }
 
-  const opts = {
-    classify: options.classify !== false,
-    analyze: options.analyze !== false,
-    synthesize: options.synthesize !== false,
-    applyReviews: options.applyReviews !== false,
-  };
-
+  const applyReviews = options.applyReviews !== false;
   const docs = getDocuments(matterId).filter((d) => d.storagePath);
+
   const job = createJob({
     matterId,
     type: "full-review",
@@ -60,72 +69,21 @@ export async function startDemoFullReview(matterId, options = {}) {
     total: docs.length,
   });
 
-  updateJob(job.id, { message: "Loading curated AI diligence outputs…" });
-
-  runDemoFullReview(job.id, matterId, docs, opts).catch((err) => {
-    if (!isJobCancelled(job.id)) {
-      failJob(job.id, err instanceof Error ? err.message : "Review failed");
-    }
-  });
-
-  return jobStatus(job.id);
-}
-
-/**
- * @param {string} jobId
- * @param {string} matterId
- * @param {import('./types.js').DocumentRecord[]} docs
- * @param {{ classify: boolean; analyze: boolean; synthesize: boolean; applyReviews: boolean }} opts
- */
-async function runDemoFullReview(jobId, matterId, docs, opts) {
-  const check = () => {
-    if (isJobCancelled(jobId)) throw new Error("Cancelled");
-  };
-
-  if (opts.classify) {
-    updateJob(jobId, { phase: "classify", message: "Classifying documents…", current: 0, total: docs.length });
-    for (let i = 0; i < docs.length; i++) {
-      check();
-      await sleep(40);
-      updateJob(jobId, { current: i + 1, message: `Classified ${i + 1} of ${docs.length}…` });
-    }
-  }
-
-  if (opts.analyze) {
-    updateJob(jobId, { phase: "analyze", message: "Applying document analyses…", current: 0, total: docs.length });
-    for (let i = 0; i < docs.length; i++) {
-      check();
-      if (!getDocumentAnalysis(matterId, docs[i].id)) {
-        throw new Error(`Missing demo analysis for ${docs[i].fileName}`);
-      }
-      await sleep(35);
-      updateJob(jobId, { current: i + 1, message: `Analyzed ${i + 1} of ${docs.length}… (curated demo data)` });
-    }
-  }
-
-  check();
-
-  if (opts.synthesize) {
-    updateJob(jobId, { phase: "synthesize", message: "Loading cross-document synthesis…", current: 0, total: 1 });
-    await sleep(600);
-    check();
-    updateJob(jobId, { current: 1, message: "Synthesis complete" });
-  }
-
-  check();
-
-  if (opts.applyReviews) {
-    updateJob(jobId, {
+  try {
+    updateJob(job.id, {
       phase: "apply",
-      message: "Applying diligence flags…",
+      message: "Applying curated diligence outputs…",
       current: 0,
       total: docs.length,
     });
-    for (let i = 0; i < docs.length; i++) {
-      check();
-      const doc = docs[i];
-      const analysis = getDocumentAnalysis(matterId, doc.id);
-      if (analysis) {
+
+    if (applyReviews) {
+      for (const doc of docs) {
+        if (isJobCancelled(job.id)) throw new Error("Cancelled");
+        const analysis = getDocumentAnalysis(matterId, doc.id);
+        if (!analysis) {
+          throw new Error(`Missing demo analysis for ${doc.fileName}`);
+        }
         const flag = analysis.suggested_diligence_flag ?? "amber";
         upsertDocumentReview(matterId, doc.id, {
           diligenceFlag: flag,
@@ -134,13 +92,21 @@ async function runDemoFullReview(jobId, matterId, docs, opts) {
         });
         updateDocumentStatusFromReview(matterId, doc.id, flag);
       }
-      await sleep(25);
-      updateJob(jobId, { current: i + 1, message: `Applied findings ${i + 1} of ${docs.length}…` });
     }
+
+    const matter = getMatter(matterId);
+    completeJob(
+      job.id,
+      `Diligence review complete — ${docs.length} documents flagged using pre-generated AI outputs for ${matter?.name ?? matterId}`
+    );
+  } catch (err) {
+    if (!isJobCancelled(job.id)) {
+      failJob(job.id, err instanceof Error ? err.message : "Review failed");
+    }
+    throw err;
   }
 
-  const matter = getMatter(matterId);
-  completeJob(jobId, `Full diligence review complete for ${matter?.name ?? matterId}`);
+  return jobStatus(job.id);
 }
 
 /**
@@ -161,33 +127,25 @@ export function startDemoBatchAnalyze(matterId, docs, options = {}) {
     matterId,
     type: "batch-analyze",
     label: `Batch analyze (${toRun.length} documents, demo)`,
-    total: toRun.length,
+    total: Math.max(toRun.length, 1),
   });
 
-  runDemoBatch(job.id, matterId, toRun).catch((err) => {
-    if (!isJobCancelled(job.id)) {
-      failJob(job.id, err instanceof Error ? err.message : "Batch failed");
+  try {
+    for (const doc of toRun) {
+      if (!getDocumentAnalysis(matterId, doc.id)) {
+        throw new Error(`Missing demo analysis for ${doc.fileName}`);
+      }
     }
-  });
+    completeJob(job.id, `Batch complete — ${toRun.length} documents ready (demo data)`);
+  } catch (err) {
+    failJob(job.id, err instanceof Error ? err.message : "Batch failed");
+    throw err;
+  }
 
   return job;
 }
 
-/** @param {string} jobId @param {string} matterId @param {import('./types.js').DocumentRecord[]} toRun */
-async function runDemoBatch(jobId, matterId, toRun) {
-  for (let i = 0; i < toRun.length; i++) {
-    if (isJobCancelled(jobId)) return;
-    const doc = toRun[i];
-    updateJob(jobId, {
-      phase: "analyze",
-      current: i,
-      message: `Analyzing ${doc.fileName}… (${i + 1}/${toRun.length})`,
-    });
-    if (!getDocumentAnalysis(matterId, doc.id)) {
-      throw new Error(`Missing demo analysis for ${doc.fileName}`);
-    }
-    await sleep(300);
-    updateJob(jobId, { current: i + 1, message: `Analyzed ${i + 1} of ${toRun.length}` });
-  }
-  completeJob(jobId, `Batch complete — ${toRun.length} documents analyzed`);
+/** @deprecated Use runDemoFullReviewImmediate */
+export async function startDemoFullReview(matterId, options = {}) {
+  return runDemoFullReviewImmediate(matterId, options);
 }
