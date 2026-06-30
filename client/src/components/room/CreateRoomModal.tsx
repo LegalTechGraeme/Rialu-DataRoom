@@ -38,8 +38,8 @@ export function CreateRoomModal({ open, onClose, onSubmit }: CreateRoomModalProp
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-ink/40 p-4 backdrop-blur-sm">
-      <div className="card w-full max-w-md p-6 shadow-lg" role="dialog" aria-labelledby="create-room-title">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-ink/40 p-4 backdrop-blur-sm max-lg:items-end max-lg:p-0">
+      <div className="card w-full max-w-md p-6 shadow-lg max-lg:max-h-[92vh] max-lg:overflow-y-auto max-lg:rounded-b-none max-lg:rounded-t-2xl" role="dialog" aria-labelledby="create-room-title">
         <h2 id="create-room-title" className="text-lg font-semibold text-ink">
           Create data room
         </h2>
@@ -86,7 +86,7 @@ export function CreateRoomModal({ open, onClose, onSubmit }: CreateRoomModalProp
               {error}
             </p>
           ) : null}
-          <div className="flex justify-end gap-2 pt-2">
+          <div className="flex justify-end gap-2 pt-2 max-lg:flex-col-reverse max-lg:[&>button]:w-full">
             <button type="button" className="btn-secondary" onClick={onClose} disabled={loading}>
               Cancel
             </button>

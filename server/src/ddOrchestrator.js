@@ -8,7 +8,8 @@ import { reclassifyDocument } from "./uploadService.js";
 import { isGroqConfigured, GROQ_ANALYZE_DELAY_MS } from "./config.js";
 import { isSimulationMatter } from "./matterStore.js";
 import { hasDemoAiBundle } from "./ai/demoAi.js";
-import { runDemoFullReviewImmediate } from "./demoFullReview.js";
+import { startSimulatedFullReview } from "./demoFullReview.js";
+import { buildReviewSummary } from "./reviewSummary.js";
 import {
   createJob,
   updateJob,
@@ -41,6 +42,7 @@ export function getFullReviewStatus(matterId) {
     error: job.error,
     completedAt: job.completedAt,
     jobId: job.id,
+    ...(job.status === "completed" ? { summary: buildReviewSummary(matterId) } : {}),
   };
 }
 
@@ -51,9 +53,9 @@ export function getFullReviewStatus(matterId) {
 export async function startFullReview(matterId, options = {}) {
   if (isSimulationMatter(matterId)) {
     if (!hasDemoAiBundle(matterId)) {
-      throw new Error("Demo AI bundle is missing on the server. Redeploy the latest API build.");
+      throw new Error("AI review data unavailable — redeploy the latest API build.");
     }
-    return runDemoFullReviewImmediate(matterId, options);
+    return startSimulatedFullReview(matterId, options);
   }
 
   if (!isGroqConfigured()) {

@@ -29,7 +29,7 @@ import {
   refileDocumentsByFilename,
 } from "./uploadService.js";
 import { startFullReview, getFullReviewStatus, cancelJob as cancelFullReviewJob } from "./ddOrchestrator.js";
-import { runDemoFullReviewImmediate, cancelStaleGroqFullReviews } from "./demoFullReview.js";
+import { cancelStaleGroqFullReviews } from "./demoFullReview.js";
 import { listJobs, cancelJob, getJob } from "./aiJobManager.js";
 import { generatePptxExport, generateExcelExport } from "./exportService.js";
 import { findFolderInTree } from "./folderTemplate.js";
@@ -238,12 +238,7 @@ app.post("/api/matters/:matterId/documents/:documentId/classify", async (req, re
 
 app.post("/api/matters/:matterId/full-review", async (req, res) => {
   try {
-    const matterId = req.params.matterId;
-    if (isSimulationMatter(matterId)) {
-      const job = await runDemoFullReviewImmediate(matterId, req.body ?? {});
-      return res.json({ job });
-    }
-    const status = await startFullReview(matterId, req.body ?? {});
+    const status = await startFullReview(req.params.matterId, req.body ?? {});
     res.json({ job: status });
   } catch (e) {
     res.status(400).json({ error: e instanceof Error ? e.message : "Could not start review" });

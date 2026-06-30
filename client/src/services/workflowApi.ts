@@ -13,6 +13,16 @@ export interface UploadResult {
   }[];
 }
 
+export interface FullReviewSummary {
+  documentsReviewed: number;
+  flags: { green: number; amber: number; red: number };
+  flaggedIssues: number;
+  reviewedPercent: number;
+  executiveSummary: string;
+  topRisks: { risk: string; severity: string; explanation: string }[];
+  riskRegisterCount: number;
+}
+
 export interface FullReviewJob {
   status: "idle" | "running" | "completed" | "error";
   phase: string;
@@ -21,6 +31,7 @@ export interface FullReviewJob {
   message: string;
   error?: string;
   completedAt?: string;
+  summary?: FullReviewSummary;
 }
 
 export async function createMatter(input: {

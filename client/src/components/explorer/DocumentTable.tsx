@@ -49,16 +49,59 @@ export function DocumentTable({
           <span className="font-medium text-ink">{folderName}</span>
         </p>
       </div>
-      <div className="min-h-0 flex-1 overflow-auto">
-        <table className="w-full min-w-[720px] border-collapse text-left text-sm">
+
+      {/* Mobile card list */}
+      <div className="min-h-0 flex-1 overflow-auto lg:hidden">
+        {documents.length === 0 ? (
+          <p className="px-4 py-10 text-center text-sm text-ink-muted">No documents in this folder.</p>
+        ) : (
+          <ul className="divide-y divide-line">
+            {documents.map((d) => (
+              <li key={d.id}>
+                <button
+                  type="button"
+                  className={[
+                    "w-full px-4 py-3 text-left transition-colors",
+                    selectedDocumentId === d.id ? "bg-brand-soft/60" : "hover:bg-surface-muted/80",
+                  ].join(" ")}
+                  onClick={() => onSelectDocument?.(d)}
+                >
+                  <div className="flex items-start justify-between gap-2">
+                    <p className="min-w-0 flex-1 font-medium text-ink">{d.fileName}</p>
+                    <DiligenceFlagBadge flag={reviews[d.id]?.diligenceFlag ?? null} />
+                  </div>
+                  <p className="mt-1 text-xs text-ink-muted">{d.categoryLabel}</p>
+                  <div className="mt-2 flex flex-wrap items-center gap-2">
+                    <span className={statusBadge(d.status)}>{d.status}</span>
+                    <span className="font-mono text-[11px] text-ink-faint">{formatBytes(d.sizeBytes)}</span>
+                  </div>
+                </button>
+                <div className="border-t border-line/60 px-4 pb-3">
+                  <Link
+                    to={`/matters/${matterId}/documents/${d.id}`}
+                    className="inline-flex min-h-[44px] items-center text-xs font-medium text-brand"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    Open full viewer →
+                  </Link>
+                </div>
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
+
+      {/* Desktop table */}
+      <div className="hidden min-h-0 flex-1 overflow-auto lg:block">
+        <table className="w-full min-w-[960px] table-fixed border-collapse text-left text-sm">
           <thead className="sticky top-0 z-10 bg-surface-elevated shadow-sm dark:bg-surface-elevated">
             <tr className="border-b border-line text-xs uppercase tracking-wide text-ink-faint">
-              <th className="px-4 py-2 font-medium">Name</th>
-              <th className="px-4 py-2 font-medium">Diligence</th>
-              <th className="px-4 py-2 font-medium">Category</th>
-              <th className="px-4 py-2 font-medium">Room status</th>
-              <th className="px-4 py-2 font-medium text-right">Size</th>
-              <th className="px-4 py-2 font-medium text-right"> </th>
+              <th className="w-[34%] min-w-[260px] px-4 py-2 font-medium">Name</th>
+              <th className="w-[11%] min-w-[96px] px-4 py-2 font-medium">Diligence</th>
+              <th className="w-[26%] min-w-[200px] px-4 py-2 font-medium">Category</th>
+              <th className="w-[13%] min-w-[108px] px-4 py-2 font-medium">Room status</th>
+              <th className="w-[8%] min-w-[72px] px-4 py-2 font-medium text-right">Size</th>
+              <th className="w-[8%] min-w-[72px] px-4 py-2 font-medium text-right"> </th>
             </tr>
           </thead>
           <tbody className="divide-y divide-line">
@@ -83,14 +126,18 @@ export function DocumentTable({
                     })
                   }
                 >
-                  <td className="max-w-[280px] px-4 py-2.5">
-                    <span className="block truncate font-medium text-ink">{d.fileName}</span>
-                  </td>
                   <td className="px-4 py-2.5">
+                    <span className="block truncate font-medium text-ink" title={d.fileName}>
+                      {d.fileName}
+                    </span>
+                  </td>
+                  <td className="whitespace-nowrap px-4 py-2.5">
                     <DiligenceFlagBadge flag={reviews[d.id]?.diligenceFlag ?? null} />
                   </td>
-                  <td className="max-w-[180px] px-4 py-2.5 text-ink-muted">
-                    <span className="line-clamp-2">{d.categoryLabel}</span>
+                  <td className="px-4 py-2.5 text-ink-muted">
+                    <span className="line-clamp-2" title={d.categoryLabel}>
+                      {d.categoryLabel}
+                    </span>
                   </td>
                   <td className="px-4 py-2.5">
                     <span className={statusBadge(d.status)}>{d.status}</span>

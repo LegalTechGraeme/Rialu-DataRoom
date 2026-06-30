@@ -30,7 +30,7 @@ export function BackendWakeScreen({ booting, error, onRetry }: BackendWakeScreen
   }, [booting, elapsed]);
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-surface p-6">
+    <div className="flex min-h-screen items-center justify-center bg-surface p-6 max-lg:p-4">
       <div className="w-full max-w-md text-center">
         <h1 className="font-serif text-3xl font-semibold text-ink">{BRAND_NAME}</h1>
         <p className="mt-1 text-sm text-ink-muted">{BRAND_TAGLINE}</p>

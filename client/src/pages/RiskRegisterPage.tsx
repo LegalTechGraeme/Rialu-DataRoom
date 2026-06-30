@@ -55,13 +55,13 @@ export function RiskRegisterPage() {
             runs in the background — track progress in the AI processes widget (bottom-right).
           </p>
         </div>
-        <div className="flex flex-wrap gap-2">
-          <button type="button" className="btn-primary" disabled={working} onClick={() => void runPipeline()}>
+        <div className="flex flex-wrap gap-2 max-lg:flex-col max-lg:[&>button]:w-full">
+          <button type="button" className="btn-primary max-lg:w-full" disabled={working} onClick={() => void runPipeline()}>
             {working ? "Starting…" : "Quick analyze (8 docs)"}
           </button>
           <button
             type="button"
-            className="btn-secondary"
+            className="btn-secondary max-lg:w-full"
             disabled={working}
             onClick={() => {
               setWorking(true);
@@ -86,15 +86,53 @@ export function RiskRegisterPage() {
       ) : null}
 
       <div className="card overflow-hidden">
-        <div className="overflow-x-auto">
-          <table className="w-full min-w-[800px] border-collapse text-left text-sm">
+        {/* Mobile cards */}
+        <div className="divide-y divide-line lg:hidden">
+          {loading ? (
+            <p className="px-4 py-12 text-center text-ink-muted">Loading…</p>
+          ) : issues.length === 0 ? (
+            <p className="px-4 py-12 text-center text-sm text-ink-muted">
+              No AI risks yet. Run quick analyze, then synthesize.
+            </p>
+          ) : (
+            issues.map((row) => (
+              <article key={row.id} className="space-y-2 px-4 py-4">
+                <div className="flex items-start justify-between gap-2">
+                  <p className="font-medium text-ink">{row.issue}</p>
+                  <span className={`shrink-0 text-xs font-semibold uppercase ${severityClass(row.severity)}`}>
+                    {row.severity}
+                  </span>
+                </div>
+                <p className="text-sm leading-relaxed text-ink-muted">{row.explanation}</p>
+                {row.documentId ? (
+                  <Link
+                    to={`/matters/${matterId}/documents/${row.documentId}`}
+                    className="text-sm font-medium text-brand"
+                  >
+                    {row.documentName}
+                  </Link>
+                ) : (
+                  <p className="text-sm text-ink-muted">{row.documentName}</p>
+                )}
+                <div className="flex flex-wrap gap-2 text-xs text-ink-faint">
+                  <span className="capitalize">{row.status}</span>
+                  {row.sourceReference ? <span>· {row.sourceReference}</span> : null}
+                </div>
+              </article>
+            ))
+          )}
+        </div>
+
+        {/* Desktop table */}
+        <div className="hidden overflow-x-auto lg:block">
+          <table className="w-full min-w-[1100px] table-fixed border-collapse text-left text-sm">
             <thead className="bg-brand-soft/50 text-xs uppercase tracking-wide text-ink-faint">
               <tr className="border-b border-line">
-                <th className="px-4 py-3 font-medium">Issue</th>
-                <th className="px-4 py-3 font-medium">Severity</th>
-                <th className="px-4 py-3 font-medium">Document</th>
-                <th className="px-4 py-3 font-medium">Status</th>
-                <th className="px-4 py-3 font-medium">Source ref</th>
+                <th className="w-[38%] min-w-[340px] px-4 py-3 font-medium">Issue</th>
+                <th className="w-[10%] min-w-[96px] px-4 py-3 font-medium">Severity</th>
+                <th className="w-[22%] min-w-[200px] px-4 py-3 font-medium">Document</th>
+                <th className="w-[12%] min-w-[100px] px-4 py-3 font-medium">Status</th>
+                <th className="w-[18%] min-w-[180px] px-4 py-3 font-medium">Source ref</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-line">
@@ -114,27 +152,30 @@ export function RiskRegisterPage() {
               ) : (
                 issues.map((row) => (
                   <tr key={row.id} className="hover:bg-surface-muted/40">
-                    <td className="max-w-[280px] px-4 py-3">
+                    <td className="px-4 py-3">
                       <p className="font-medium text-ink">{row.issue}</p>
-                      <p className="mt-1 text-xs text-ink-muted">{row.explanation}</p>
+                      <p className="mt-1 text-xs leading-relaxed text-ink-muted">{row.explanation}</p>
                     </td>
-                    <td className={`px-4 py-3 font-semibold uppercase ${severityClass(row.severity)}`}>
+                    <td className={`whitespace-nowrap px-4 py-3 font-semibold uppercase ${severityClass(row.severity)}`}>
                       {row.severity}
                     </td>
                     <td className="px-4 py-3">
                       {row.documentId ? (
                         <Link
                           to={`/matters/${matterId}/documents/${row.documentId}`}
-                          className="text-brand hover:underline"
+                          className="line-clamp-2 text-brand hover:underline"
+                          title={row.documentName}
                         >
                           {row.documentName}
                         </Link>
                       ) : (
-                        row.documentName
+                        <span className="line-clamp-2" title={row.documentName}>
+                          {row.documentName}
+                        </span>
                       )}
                     </td>
-                    <td className="px-4 py-3 capitalize text-ink-muted">{row.status}</td>
-                    <td className="max-w-[200px] px-4 py-3 text-xs text-ink-faint">
+                    <td className="whitespace-nowrap px-4 py-3 capitalize text-ink-muted">{row.status}</td>
+                    <td className="px-4 py-3 text-xs leading-relaxed text-ink-faint">
                       {row.sourceReference || "—"}
                     </td>
                   </tr>

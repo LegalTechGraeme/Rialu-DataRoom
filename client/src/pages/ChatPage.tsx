@@ -63,13 +63,13 @@ export function ChatPage() {
 
   return (
     <div className="mx-auto flex h-full max-w-4xl flex-col">
-      <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
+      <div className="mb-4 flex flex-col gap-3 max-lg:gap-2 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between">
         <p className="text-sm text-ink-muted">
           Natural language assistant over analyzed documents. Answers cite source files.
         </p>
         <button
           type="button"
-          className="btn-secondary text-xs"
+          className="btn-secondary text-xs max-lg:w-full max-lg:justify-center"
           onClick={() => void synthesizeMatter(matterId, false).catch(() => {})}
         >
           Refresh matter intelligence
@@ -145,7 +145,7 @@ export function ChatPage() {
           <div ref={bottomRef} />
         </div>
         <form
-          className="flex gap-2 border-t border-line/70 p-3"
+          className="flex gap-2 border-t border-line/70 p-3 max-lg:flex-col"
           onSubmit={(e) => {
             e.preventDefault();
             void send(input);
@@ -157,7 +157,7 @@ export function ChatPage() {
             placeholder="Ask about risks, clauses, employment, valuation…"
             className="flex-1 rounded-lg border border-line bg-surface px-3 py-2 text-sm focus:border-brand focus:outline-none focus:ring-1 focus:ring-brand"
           />
-          <button type="submit" disabled={loading} className="btn-primary shrink-0">
+          <button type="submit" disabled={loading} className="btn-primary shrink-0 max-lg:w-full">
             Send
           </button>
         </form>

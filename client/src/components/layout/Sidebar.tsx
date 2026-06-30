@@ -1,65 +1,91 @@
 import type { ReactNode } from "react";
 import { Link, NavLink, useParams } from "react-router-dom";
 import { BRAND_NAME, BRAND_TAGLINE } from "../../brand";
+import {
+  IconChat,
+  IconDocuments,
+  IconMatters,
+  IconOverview,
+  IconReport,
+  IconRisks,
+  IconWorkflow,
+} from "./NavIcons";
+import { SidebarStats } from "./SidebarStats";
 
 function navClass({ isActive }: { isActive: boolean }) {
   return ["nav-link", isActive ? "nav-link-active" : ""].join(" ");
+}
+
+function NavItem({
+  to,
+  end,
+  icon,
+  children,
+}: {
+  to: string;
+  end?: boolean;
+  icon: ReactNode;
+  children: ReactNode;
+}) {
+  return (
+    <NavLink to={to} end={end} className={navClass}>
+      <span className="h-4 w-4 shrink-0 opacity-80 [&_svg]:h-4 [&_svg]:w-4">{icon}</span>
+      {children}
+    </NavLink>
+  );
 }
 
 export function Sidebar({ children }: { children?: ReactNode }) {
   const { matterId } = useParams<{ matterId?: string }>();
 
   return (
-    <aside className="flex w-60 shrink-0 flex-col border-r border-line/80 bg-surface-elevated">
-      <div className="border-b border-line/70 px-4 py-5">
-        <Link to="/" className="block rounded-lg p-1 transition hover:bg-brand-soft/50">
-          <div className="mb-2 flex items-center gap-2">
-            <span className="h-2 w-2 rounded-full bg-brand shadow-sm" aria-hidden />
-            <span className="text-[10px] font-semibold uppercase tracking-[0.15em] text-brand">
-              {BRAND_TAGLINE}
-            </span>
-          </div>
-          <span className="text-base font-semibold tracking-tight text-ink">{BRAND_NAME}</span>
+    <aside className="hidden w-[15.5rem] shrink-0 flex-col border-r border-line bg-surface lg:flex">
+      <div className="px-5 py-6">
+        <Link to="/" className="block transition hover:opacity-80">
+          <h1 className="font-serif text-xl font-semibold tracking-tight text-ink">{BRAND_NAME}</h1>
+          <p className="mt-1 text-xs text-ink-muted">{BRAND_TAGLINE}</p>
         </Link>
       </div>
 
-      <nav className="flex-1 space-y-0.5 p-3">
-        <NavLink to="/" end className={navClass}>
+      <nav className="flex-1 space-y-0.5 px-3">
+        <NavItem to="/" end icon={<IconMatters />}>
           All matters
-        </NavLink>
+        </NavItem>
 
         {matterId ? (
           <>
-            <p className="mb-1 mt-4 px-3 text-[10px] font-semibold uppercase tracking-wider text-ink-faint">
+            <p className="mb-1 mt-5 px-3 text-[10px] font-medium uppercase tracking-wider text-ink-faint">
               This matter
             </p>
-            <NavLink to={`/matters/${matterId}`} end className={navClass}>
+            <NavItem to={`/matters/${matterId}`} end icon={<IconOverview />}>
               Overview
-            </NavLink>
-            <NavLink to={`/matters/${matterId}/room`} className={navClass}>
+            </NavItem>
+            <NavItem to={`/matters/${matterId}/room`} icon={<IconDocuments />}>
               Data room
-            </NavLink>
-            <NavLink to={`/matters/${matterId}/workflow`} className={navClass}>
+            </NavItem>
+            <NavItem to={`/matters/${matterId}/workflow`} icon={<IconWorkflow />}>
               Workflow
-            </NavLink>
-            <NavLink to={`/matters/${matterId}/report`} className={navClass}>
+            </NavItem>
+            <NavItem to={`/matters/${matterId}/report`} icon={<IconReport />}>
               Diligence report
-            </NavLink>
-            <NavLink to={`/matters/${matterId}/risks`} className={navClass}>
+            </NavItem>
+            <NavItem to={`/matters/${matterId}/risks`} icon={<IconRisks />}>
               Risk register
-            </NavLink>
-            <NavLink to={`/matters/${matterId}/chat`} className={navClass}>
+            </NavItem>
+            <NavItem to={`/matters/${matterId}/chat`} icon={<IconChat />}>
               Legal assistant
-            </NavLink>
+            </NavItem>
           </>
         ) : (
-          <p className="px-3 py-2 text-xs leading-relaxed text-ink-faint">
+          <p className="px-3 py-3 text-xs leading-relaxed text-ink-faint">
             Open a matter to access the data room and diligence tools.
           </p>
         )}
       </nav>
 
-      {children ? <div className="border-t border-line/70 p-3">{children}</div> : null}
+      <div className="border-t border-line px-5 py-4">
+        {children ?? <SidebarStats />}
+      </div>
     </aside>
   );
 }

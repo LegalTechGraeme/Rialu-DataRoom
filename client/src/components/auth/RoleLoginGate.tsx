@@ -16,17 +16,12 @@ export function RoleLoginGate({ users, onSelect }: RoleLoginGateProps) {
   })).filter((g) => g.members.length > 0);
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-surface via-surface to-brand-soft/40 p-6">
+    <div className="flex min-h-screen items-center justify-center bg-surface p-6 max-lg:p-4">
       <div className="w-full max-w-xl">
         <div className="mb-10 text-center">
-          <div className="mb-3 flex items-center justify-center gap-2">
-            <span className="h-2 w-2 rounded-full bg-brand" aria-hidden />
-            <span className="text-[10px] font-semibold uppercase tracking-[0.15em] text-brand">
-              {BRAND_TAGLINE}
-            </span>
-          </div>
-          <h1 className="page-title">{BRAND_NAME}</h1>
-          <p className="page-subtitle">Select your role to enter the deal team workspace</p>
+          <h1 className="font-serif text-3xl font-semibold text-ink">{BRAND_NAME}</h1>
+          <p className="mt-1 text-sm text-ink-muted">{BRAND_TAGLINE}</p>
+          <p className="page-subtitle mt-4">Select your role to enter the deal team workspace</p>
         </div>
 
         <div className="space-y-6">
@@ -35,13 +30,13 @@ export function RoleLoginGate({ users, onSelect }: RoleLoginGateProps) {
               <p className="mb-2 px-1 text-xs font-semibold uppercase tracking-wide text-ink-faint">
                 {roleLabel(role)}
               </p>
-              <div className="grid gap-2 sm:grid-cols-2">
+              <div className="grid gap-2 sm:grid-cols-2 max-lg:grid-cols-1">
                 {members.map((user) => (
                   <button
                     key={user.id}
                     type="button"
                     onClick={() => onSelect(user)}
-                    className="card flex items-center gap-3 p-4 text-left transition hover:border-brand/40 hover:shadow-md"
+                    className="card flex items-center gap-3 p-4 text-left transition hover:border-brand/25"
                   >
                     <span
                       className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-xs font-semibold text-white"

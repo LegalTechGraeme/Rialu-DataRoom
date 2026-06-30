@@ -98,10 +98,10 @@ export function CreateTaskModal({
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-ink/40 p-4 backdrop-blur-sm">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-ink/40 p-4 backdrop-blur-sm max-lg:items-end max-lg:p-0">
       <form
         onSubmit={(e) => void handleSubmit(e)}
-        className="w-full max-w-lg rounded-xl border border-line bg-surface-elevated shadow-xl"
+        className="w-full max-w-lg rounded-xl border border-line bg-surface-elevated shadow-xl max-lg:max-h-[92vh] max-lg:overflow-y-auto max-lg:rounded-b-none max-lg:rounded-t-2xl"
       >
         <div className="border-b border-line px-5 py-4">
           <h2 className="text-lg font-semibold text-ink">Assign review task</h2>
@@ -139,7 +139,7 @@ export function CreateTaskModal({
             />
           </label>
 
-          <div className="grid grid-cols-2 gap-3">
+          <div className="grid grid-cols-2 gap-3 max-lg:grid-cols-1">
             <label className="block">
               <span className="text-xs font-medium text-ink-muted">Type</span>
               <select
@@ -191,7 +191,7 @@ export function CreateTaskModal({
           ) : null}
         </div>
 
-        <div className="flex justify-end gap-2 border-t border-line px-5 py-4">
+        <div className="flex justify-end gap-2 border-t border-line px-5 py-4 max-lg:flex-col-reverse max-lg:[&>button]:w-full">
           <button
             type="button"
             onClick={onClose}

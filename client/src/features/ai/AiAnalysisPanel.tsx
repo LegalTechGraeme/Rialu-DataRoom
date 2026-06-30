@@ -68,7 +68,7 @@ export function AiAnalysisPanel({
   };
 
   return (
-    <div className="flex h-full min-h-0 flex-col border-l border-line/70 bg-brand-soft/20">
+    <div className="flex h-full min-h-0 flex-col border-l border-line bg-surface-muted/50">
       <div className="border-b border-line/70 px-3 py-3">
         <h2 className="text-xs font-semibold uppercase tracking-wide text-brand">AI copilot</h2>
         <p className="text-[11px] text-ink-muted">Powered by Groq · track jobs bottom-right</p>

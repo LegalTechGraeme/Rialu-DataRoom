@@ -15,6 +15,8 @@ import {
 import { fetchMatterReviews } from "../services/reviewsApi";
 import type { DocumentRecord, DocumentReview, FolderNode, Matter } from "../types";
 
+type MobilePane = "documents" | "folders" | "preview";
+
 export function DataRoomExplorerPage() {
   const { matterId = "" } = useParams();
   const { user, users } = useUser();
@@ -24,7 +26,8 @@ export function DataRoomExplorerPage() {
   const [folderName, setFolderName] = useState("");
   const [docsList, setDocsList] = useState<DocumentRecord[] | null>(null);
   const [leftOpen, setLeftOpen] = useState(true);
-  const [rightOpen, setRightOpen] = useState(true);
+  const [rightOpen, setRightOpen] = useState(false);
+  const [mobilePane, setMobilePane] = useState<MobilePane>("documents");
   const [error, setError] = useState<string | null>(null);
   const [reviews, setReviews] = useState<Record<string, DocumentReview>>({});
   const [reviewsWarning, setReviewsWarning] = useState<string | null>(null);
@@ -86,9 +89,15 @@ export function DataRoomExplorerPage() {
         if (!cancelled) {
           setFolderName(payload.folderName);
           setDocsList(payload.documents);
-          setSelectedDocumentId((prev) =>
-            prev && payload.documents.some((d) => d.id === prev) ? prev : null
-          );
+          setSelectedDocumentId((prev) => {
+            const next =
+              prev && payload.documents.some((d) => d.id === prev) ? prev : null;
+            if (!next) {
+              setRightOpen(false);
+              setMobilePane("documents");
+            }
+            return next;
+          });
         }
       })
       .catch((e: unknown) => {
@@ -108,9 +117,18 @@ export function DataRoomExplorerPage() {
 
   const gridTemplate = useMemo(() => {
     const left = leftOpen ? "minmax(0,240px)" : "40px";
-    const right = rightOpen ? "minmax(0,360px)" : "40px";
-    return `${left} minmax(0,1fr) ${right}`;
+    const right = "minmax(0,360px)";
+    if (rightOpen) {
+      return `${left} minmax(0,1fr) ${right}`;
+    }
+    return `${left} minmax(0,1fr)`;
   }, [leftOpen, rightOpen]);
+
+  const selectDocument = (d: DocumentRecord) => {
+    setSelectedDocumentId(d.id);
+    setRightOpen(true);
+    setMobilePane("preview");
+  };
 
   if (error) {
     return (
@@ -130,51 +148,134 @@ export function DataRoomExplorerPage() {
     );
   }
 
-  return (
-    <div className="flex h-full min-h-0 flex-col">
-      <div className="shrink-0 space-y-2 border-b border-line bg-surface-elevated px-4 py-2">
-        <div className="flex flex-wrap items-center justify-between gap-3">
-          <p className="text-xs text-ink-muted">
-            <span className="font-medium text-ink">{matter.name}</span>
-            <span className="text-ink-faint"> · </span>
-            {folderName ? (
-              <>
-                <strong className="text-ink">{folderName}</strong>
-                {user ? (
-                  <button
-                    type="button"
-                    onClick={() => setShowFolderTask(true)}
-                    className="ml-2 rounded-md border border-brand/30 bg-brand-soft px-2 py-0.5 text-[11px] font-medium text-brand hover:bg-brand/20"
-                  >
-                    Assign folder review
-                  </button>
-                ) : null}
-                <span className="text-ink-faint"> · </span>
-              </>
-            ) : null}
-            Click to preview on the right · double-click for full review workspace
-          </p>
-          {matterId !== "matter-acme" ? (
-            <div className="w-full max-w-xs sm:w-auto">
-              <UploadDropzone
-                matterId={matterId}
-                onUploaded={() => {
-                  if (tree) setSelectedFolderId(tree.id);
-                  reloadDocs();
-                }}
-                compact
-              />
-            </div>
+  const explorerHeader = (
+    <div className="shrink-0 space-y-2 border-b border-line bg-surface-elevated px-4 py-2 max-lg:px-3">
+      <div className="flex flex-wrap items-center justify-between gap-3">
+        <p className="text-xs text-ink-muted max-lg:w-full">
+          <span className="font-medium text-ink">{matter.name}</span>
+          <span className="text-ink-faint"> · </span>
+          {folderName ? (
+            <>
+              <strong className="text-ink">{folderName}</strong>
+              {user ? (
+                <button
+                  type="button"
+                  onClick={() => setShowFolderTask(true)}
+                  className="ml-2 rounded-md border border-brand/30 bg-brand-soft px-2 py-0.5 text-[11px] font-medium text-brand hover:bg-brand/20"
+                >
+                  Assign folder review
+                </button>
+              ) : null}
+              <span className="hidden text-ink-faint lg:inline"> · </span>
+            </>
           ) : null}
-        </div>
-        {reviewsWarning ? (
-          <p className="rounded-md border border-warn/30 bg-warn/10 px-2 py-1.5 text-xs text-warn">
-            {reviewsWarning}
-          </p>
+          <span className="hidden lg:inline">Click a row to preview · double-click for full review workspace</span>
+          <span className="lg:hidden">Tap a document to preview</span>
+        </p>
+        {matterId !== "matter-acme" ? (
+          <div className="w-full max-w-xs sm:w-auto max-lg:max-w-none">
+            <UploadDropzone
+              matterId={matterId}
+              onUploaded={() => {
+                if (tree) setSelectedFolderId(tree.id);
+                reloadDocs();
+              }}
+              compact
+            />
+          </div>
         ) : null}
       </div>
+      {reviewsWarning ? (
+        <p className="rounded-md border border-warn/30 bg-warn/10 px-2 py-1.5 text-xs text-warn">
+          {reviewsWarning}
+        </p>
+      ) : null}
+    </div>
+  );
+
+  return (
+    <div className="flex h-full min-h-0 flex-col">
+      {explorerHeader}
+
+      {/* Mobile: single-pane flow */}
+      <div className="flex min-h-0 flex-1 flex-col lg:hidden">
+        {mobilePane === "folders" ? (
+          <>
+            <div className="flex shrink-0 items-center gap-2 border-b border-line px-3 py-2">
+              <button
+                type="button"
+                className="min-h-[44px] rounded-md px-2 text-sm font-medium text-brand"
+                onClick={() => setMobilePane("documents")}
+              >
+                ← Documents
+              </button>
+              <span className="text-sm font-medium text-ink">Folders</span>
+            </div>
+            <div className="min-h-0 flex-1 overflow-auto bg-surface-elevated">
+              <FolderTree
+                root={tree}
+                selectedFolderId={selectedFolderId}
+                onSelectFolder={(f) => {
+                  setSelectedFolderId(f.id);
+                  setMobilePane("documents");
+                }}
+              />
+            </div>
+          </>
+        ) : null}
+
+        {mobilePane === "preview" && selectedDocument ? (
+          <>
+            <div className="flex shrink-0 items-center gap-2 border-b border-line px-3 py-2">
+              <button
+                type="button"
+                className="min-h-[44px] rounded-md px-2 text-sm font-medium text-brand"
+                onClick={() => setMobilePane("documents")}
+              >
+                ← Back
+              </button>
+              <span className="min-w-0 truncate text-sm font-medium text-ink">
+                {selectedDocument.fileName}
+              </span>
+            </div>
+            <div className="min-h-0 flex-1 overflow-auto bg-surface-elevated">
+              <DocumentPeekPanel
+                matterId={matterId}
+                document={selectedDocument}
+                review={selectedReview}
+              />
+            </div>
+          </>
+        ) : null}
+
+        {mobilePane === "documents" ? (
+          <>
+            <div className="flex shrink-0 items-center gap-2 border-b border-line bg-surface-muted/40 px-3 py-2">
+              <button
+                type="button"
+                className="min-h-[44px] flex-1 truncate rounded-lg border border-line bg-surface-elevated px-3 text-left text-sm font-medium text-ink"
+                onClick={() => setMobilePane("folders")}
+              >
+                Folder: {folderName}
+              </button>
+            </div>
+            <section className="min-h-0 flex-1 bg-surface">
+              <DocumentTable
+                matterId={matterId}
+                folderName={folderName}
+                documents={docsList}
+                reviews={reviews}
+                selectedDocumentId={selectedDocumentId}
+                onSelectDocument={selectDocument}
+              />
+            </section>
+          </>
+        ) : null}
+      </div>
+
+      {/* Desktop: three-pane grid (unchanged) */}
       <div
-        className="grid min-h-0 min-w-[720px] flex-1 divide-x divide-line overflow-x-auto"
+        className="hidden min-h-0 min-w-[720px] flex-1 grid divide-x divide-line overflow-x-auto lg:grid"
         style={{ gridTemplateColumns: gridTemplate }}
       >
         <section className="flex min-h-0 min-w-0 flex-col bg-surface-elevated">
@@ -216,32 +317,22 @@ export function DataRoomExplorerPage() {
             documents={docsList}
             reviews={reviews}
             selectedDocumentId={selectedDocumentId}
-            onSelectDocument={(d) => setSelectedDocumentId(d.id)}
+            onSelectDocument={(d) => {
+              setSelectedDocumentId(d.id);
+              setRightOpen(true);
+            }}
           />
         </section>
 
-        <section className="flex min-h-0 min-w-0 flex-col bg-surface-elevated">
-          <div className="flex min-h-0 flex-1 flex-col">
-            {rightOpen ? (
+        {rightOpen ? (
+          <section className="flex min-h-0 min-w-0 flex-col bg-surface-elevated">
+            <div className="flex min-h-0 flex-1 flex-col">
               <DocumentPeekPanel
                 matterId={matterId}
                 document={selectedDocument}
                 review={selectedReview}
               />
-            ) : (
-              <div className="flex h-full min-h-[120px] flex-col items-center justify-center py-3">
-                <button
-                  type="button"
-                  className="rounded-md border border-line px-2 py-1 text-[10px] font-semibold uppercase tracking-wide text-ink-muted hover:bg-surface-muted"
-                  onClick={() => setRightOpen(true)}
-                  aria-label="Show document preview"
-                >
-                  Preview
-                </button>
-              </div>
-            )}
-          </div>
-          {rightOpen ? (
+            </div>
             <button
               type="button"
               className="shrink-0 border-t border-line py-2 text-center text-[11px] font-medium text-ink-muted hover:bg-surface-muted"
@@ -249,8 +340,8 @@ export function DataRoomExplorerPage() {
             >
               Hide preview
             </button>
-          ) : null}
-        </section>
+          </section>
+        ) : null}
       </div>
 
       {showFolderTask && selectedFolderId ? (

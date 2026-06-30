@@ -77,10 +77,10 @@ export function DiligenceReportPage() {
           Working report across all data room documents. Open any row to review the file and
           edit flags and notes, or generate an AI partner memo below.
         </p>
-        <div className="mt-4 flex flex-wrap gap-2">
+        <div className="mt-4 flex flex-wrap gap-2 max-lg:flex-col max-lg:[&>button]:w-full max-lg:[&>a]:w-full">
           <button
             type="button"
-            className="btn-primary"
+            className="btn-primary max-lg:w-full"
             disabled={generating}
             onClick={() => {
               setGenerating(true);
@@ -228,7 +228,37 @@ export function DiligenceReportPage() {
       </div>
 
       <div className="overflow-hidden rounded-xl border border-line bg-surface-elevated shadow-card dark:shadow-card-dark">
-        <div className="overflow-x-auto">
+        {/* Mobile cards */}
+        <div className="divide-y divide-line lg:hidden">
+          {filtered.length === 0 ? (
+            <p className="px-4 py-10 text-center text-sm text-ink-muted">No documents match this filter.</p>
+          ) : (
+            filtered.map((row) => (
+              <article key={row.document.id} className="space-y-2 px-4 py-4">
+                <div className="flex items-start justify-between gap-2">
+                  <Link
+                    to={`/matters/${matterId}/documents/${row.document.id}`}
+                    className="min-w-0 flex-1 font-medium text-brand"
+                  >
+                    {row.document.fileName}
+                  </Link>
+                  <DiligenceFlagBadge flag={row.review?.diligenceFlag ?? null} />
+                </div>
+                <p className="text-xs text-ink-muted">{row.document.categoryLabel}</p>
+                <p className="text-xs text-ink-faint">{row.folderName}</p>
+                {row.review?.summary ? (
+                  <p className="text-sm text-ink-muted">{row.review.summary}</p>
+                ) : null}
+                {row.review?.pertinentNotes ? (
+                  <p className="text-xs text-ink-faint">{row.review.pertinentNotes}</p>
+                ) : null}
+              </article>
+            ))
+          )}
+        </div>
+
+        {/* Desktop table */}
+        <div className="hidden overflow-x-auto lg:block">
           <table className="w-full min-w-[900px] border-collapse text-left text-sm">
             <thead className="bg-surface-muted/60 text-xs uppercase tracking-wide text-ink-faint">
               <tr className="border-b border-line">
