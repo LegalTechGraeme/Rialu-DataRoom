@@ -1,8 +1,8 @@
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
-
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
+import { isSimulationMatter } from "../matterStore.js";
+import { getAllDemoDocumentAnalyses, getDemoDocumentAnalysis } from "./ai/demoAi.js";
 const REVIEWS_DIR = path.resolve(__dirname, "../../data/reviews");
 
 function matterPath(matterId) {
@@ -38,15 +38,41 @@ function writeMatter(matterId, store) {
   );
 }
 
+function demoReviewFromAnalysis(matterId, documentId, analysis) {
+  return {
+    documentId,
+    matterId,
+    diligenceFlag: analysis.suggested_diligence_flag ?? null,
+    summary: analysis.suggested_summary ?? analysis.summary ?? "",
+    pertinentNotes: analysis.suggested_pertinent_notes ?? "",
+    updatedAt: analysis.analyzedAt ?? new Date().toISOString(),
+  };
+}
+
 /** @param {string} matterId */
 export function getAllReviews(matterId) {
-  return readMatter(matterId).reviews;
+  const store = readMatter(matterId).reviews;
+  if (!isSimulationMatter(matterId)) return store;
+
+  const merged = { ...store };
+  for (const [documentId, analysis] of Object.entries(getAllDemoDocumentAnalyses(matterId))) {
+    if (!merged[documentId]) {
+      merged[documentId] = demoReviewFromAnalysis(matterId, documentId, analysis);
+    }
+  }
+  return merged;
 }
 
 /** @param {string} matterId @param {string} documentId */
 export function getDocumentReview(matterId, documentId) {
   const reviews = getAllReviews(matterId);
-  return reviews[documentId] ?? null;
+  if (reviews[documentId]) return reviews[documentId];
+
+  if (isSimulationMatter(matterId)) {
+    const analysis = getDemoDocumentAnalysis(matterId, documentId);
+    if (analysis) return demoReviewFromAnalysis(matterId, documentId, analysis);
+  }
+  return null;
 }
 
 /**

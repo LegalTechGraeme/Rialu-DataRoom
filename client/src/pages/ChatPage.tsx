@@ -76,7 +76,7 @@ export function ChatPage() {
         </button>
       </div>
 
-      {aiReady === false ? (
+      {aiReady === false && matterId !== "matter-acme" ? (
         <p className="mb-4 rounded-lg border border-warn/30 bg-warn/10 p-3 text-sm text-warn">
           Groq API not configured. Add GROQ_API_KEY to server/.env and restart the API.
         </p>

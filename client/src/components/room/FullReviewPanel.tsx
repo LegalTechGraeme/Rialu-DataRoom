@@ -77,29 +77,40 @@ export function FullReviewPanel({ matterId, onComplete }: FullReviewPanelProps) 
       <div>
         <h3 className="font-semibold text-ink">Full due diligence review</h3>
         <p className="mt-1 text-sm text-ink-muted">
-          Runs AI analysis on every document, synthesizes cross-document risks, and populates
-          diligence flags automatically. Track progress in the <strong>AI processes</strong> widget
-          (bottom-right). On Groq&apos;s free tier this takes ~15–20 minutes.
+          {matterId === "matter-acme" ? (
+            <>
+              Runs curated AI analysis across all 94 demo documents, applies diligence flags, and
+              loads cross-document risk synthesis. Completes in seconds using pre-built outputs.
+            </>
+          ) : (
+            <>
+              Runs AI analysis on every document, synthesizes cross-document risks, and populates
+              diligence flags automatically. On Groq&apos;s free tier this can take 15–20 minutes.
+            </>
+          )}
         </p>
       </div>
 
-      {aiReady === false ? (
+      {aiReady === false && matterId !== "matter-acme" ? (
         <p className="rounded-md border border-warn/30 bg-warn/10 px-3 py-2 text-xs text-warn">
           {aiError ??
             "Groq API key missing. Add GROQ_API_KEY to server/.env and restart the server."}
         </p>
       ) : null}
 
+      {matterId === "matter-acme" ? (
+        <p className="rounded-md border border-brand/20 bg-brand-soft/30 px-3 py-2 text-xs text-ink-muted">
+          Demo matter — uses pre-generated diligence intelligence (no live Groq run).
+        </p>
+      ) : null}
+
       <details className="rounded-md border border-line bg-surface-muted/40 px-3 py-2 text-xs text-ink-muted">
-        <summary className="cursor-pointer font-medium text-ink">How to analyze a single document</summary>
+        <summary className="cursor-pointer font-medium text-ink">How to review a single document</summary>
         <ol className="mt-2 list-decimal space-y-1 pl-4">
           <li>Open the <strong>data room explorer</strong></li>
-          <li>Select a document in the table</li>
-          <li>In the right <strong>AI copilot</strong> panel, click <strong>Analyze doc</strong></li>
+          <li>Single-click for preview and AI summary on the right</li>
+          <li>Double-click for the full viewer — PDF, review, tasks &amp; AI</li>
         </ol>
-        <p className="mt-2">
-          Or use <strong>Risk register → Quick analyze</strong> for a batch of 8 documents.
-        </p>
       </details>
 
       {job?.status === "running" ? (
@@ -126,7 +137,7 @@ export function FullReviewPanel({ matterId, onComplete }: FullReviewPanelProps) 
       <button
         type="button"
         className="btn-primary"
-        disabled={running || aiReady === false}
+        disabled={running || (aiReady === false && matterId !== "matter-acme")}
         onClick={() => void run()}
       >
         {running ? "Review in progress…" : "Run full AI diligence review"}

@@ -1,0 +1,3107 @@
+{
+  "doc-ai-001": {
+    "documentId": "doc-ai-001",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "Certificate_of_Incorporation_Acme_AI_Ltd_2019_FINAL.pdf",
+    "document_type": "Constitution",
+    "summary": "Certificate of Incorporation Acme AI Limited · Company Registration No. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "Certificate of Incorporation\n\nAcme AI Limited · Company Registration No. 678901\n\nCompany name: Acme AI Limited\n\nRegistered office: 3rd Floor, The Merchants Building, Sir John Rogerson's Quay, Dublin 2, D02 X576, Ireland\n\nType: Private company limited by shares\n\nAuthorised share c…",
+        "source_reference": "Certificate_of_Incorporation_Acme_AI_Ltd_2019_FINAL.pdf"
+      }
+    ],
+    "obligations": [],
+    "risks": [],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "green",
+    "suggested_summary": "Certificate of Incorporation Acme AI Limited · Company Registration No. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "No immediate red flags from document review."
+  },
+  "doc-ai-002": {
+    "documentId": "doc-ai-002",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "Constitution_Acme_AI_Ltd_Amended_2024_v3_SIGNED.pdf",
+    "document_type": "Constitution",
+    "summary": "Amended and Restated Constitution Acme AI Limited Background (A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "Amended and Restated Constitution\n\nAcme AI Limited\n\nBackground\n\n(A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. 678901) whose registered office is at 3rd Floor, The Merchants Building, Sir John Rogerson's Quay, Dublin 2…",
+        "source_reference": "Constitution_Acme_AI_Ltd_Amended_2024_v3_SIGNED.pdf"
+      }
+    ],
+    "obligations": [],
+    "risks": [
+      {
+        "risk": "Standard diligence follow-up recommended",
+        "severity": "medium",
+        "explanation": "Review Corporate — Constitution provisions for change-of-control, liability caps, and disclosure schedule alignment.",
+        "source_reference": "Constitution_Acme_AI_Ltd_Amended_2024_v3_SIGNED.pdf"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "amber",
+    "suggested_summary": "Amended and Restated Constitution Acme AI Limited Background (A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "Confirm against disclosure letter and management responses."
+  },
+  "doc-ai-003": {
+    "documentId": "doc-ai-003",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "Register_of_Directors_and_Secretaries_2025.pdf",
+    "document_type": "Registers",
+    "summary": "Register of Directors and Secretaries Dr. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "Register of Directors and Secretaries\n\nDr. Siobhán O'Connell — Chief Executive Officer — appointed 2019 — address on file\n\nJames Murphy — Chief Financial Officer — appointed 2021 — address on file\n\nElena Vasquez — Chief Technology Officer — appointed 2020 — address on file\n\nPatri…",
+        "source_reference": "Register_of_Directors_and_Secretaries_2025.pdf"
+      }
+    ],
+    "obligations": [],
+    "risks": [],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "green",
+    "suggested_summary": "Register of Directors and Secretaries Dr. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "No immediate red flags from document review."
+  },
+  "doc-ai-004": {
+    "documentId": "doc-ai-004",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "Board_Minutes_2024_09_15_FINAL.pdf",
+    "document_type": "Board Minutes",
+    "summary": "Minutes of Board Meeting Acme AI Limited · 2024-09-15 MINUTES OF MEETING OF THE BOARD OF DIRECTORS COMPANY: Acme AI Limited (Company Registration No. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "Minutes of Board Meeting\n\nAcme AI Limited · 2024-09-15\n\nMINUTES OF MEETING OF THE BOARD OF DIRECTORS\n\nCOMPANY: Acme AI Limited (Company Registration No. 678901)\n\nDATE: 2024-09-15\n\nTIME: 10:00 a.m. GMT\n\nPLACE: 3rd Floor, The Merchants Building, Sir John Rogerson's Quay, Dublin 2,…",
+        "source_reference": "Board_Minutes_2024_09_15_FINAL.pdf"
+      }
+    ],
+    "obligations": [],
+    "risks": [],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "green",
+    "suggested_summary": "Minutes of Board Meeting Acme AI Limited · 2024-09-15 MINUTES OF MEETING OF THE BOARD OF DIRECTORS COMPANY: Acme AI Limited (Company Registration No. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "No immediate red flags from document review."
+  },
+  "doc-ai-005": {
+    "documentId": "doc-ai-005",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "Board_Minutes_2024_12_10_FINAL.pdf",
+    "document_type": "Board Minutes",
+    "summary": "Minutes of Board Meeting Acme AI Limited · 2024-12-10 MINUTES OF MEETING OF THE BOARD OF DIRECTORS COMPANY: Acme AI Limited (Company Registration No. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "Minutes of Board Meeting\n\nAcme AI Limited · 2024-12-10\n\nMINUTES OF MEETING OF THE BOARD OF DIRECTORS\n\nCOMPANY: Acme AI Limited (Company Registration No. 678901)\n\nDATE: 2024-12-10\n\nTIME: 10:00 a.m. GMT\n\nPLACE: 3rd Floor, The Merchants Building, Sir John Rogerson's Quay, Dublin 2,…",
+        "source_reference": "Board_Minutes_2024_12_10_FINAL.pdf"
+      }
+    ],
+    "obligations": [],
+    "risks": [],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "green",
+    "suggested_summary": "Minutes of Board Meeting Acme AI Limited · 2024-12-10 MINUTES OF MEETING OF THE BOARD OF DIRECTORS COMPANY: Acme AI Limited (Company Registration No. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "No immediate red flags from document review."
+  },
+  "doc-ai-006": {
+    "documentId": "doc-ai-006",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "Board_Minutes_2025_03_20_FINAL.pdf",
+    "document_type": "Board Minutes",
+    "summary": "Minutes of Board Meeting Acme AI Limited · 2025-03-20 MINUTES OF MEETING OF THE BOARD OF DIRECTORS COMPANY: Acme AI Limited (Company Registration No. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "Minutes of Board Meeting\n\nAcme AI Limited · 2025-03-20\n\nMINUTES OF MEETING OF THE BOARD OF DIRECTORS\n\nCOMPANY: Acme AI Limited (Company Registration No. 678901)\n\nDATE: 2025-03-20\n\nTIME: 10:00 a.m. GMT\n\nPLACE: 3rd Floor, The Merchants Building, Sir John Rogerson's Quay, Dublin 2,…",
+        "source_reference": "Board_Minutes_2025_03_20_FINAL.pdf"
+      }
+    ],
+    "obligations": [],
+    "risks": [],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "green",
+    "suggested_summary": "Minutes of Board Meeting Acme AI Limited · 2025-03-20 MINUTES OF MEETING OF THE BOARD OF DIRECTORS COMPANY: Acme AI Limited (Company Registration No. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "No immediate red flags from document review."
+  },
+  "doc-ai-007": {
+    "documentId": "doc-ai-007",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "Board_Minutes_2025_06_18_FINAL.pdf",
+    "document_type": "Board Minutes",
+    "summary": "Minutes of Board Meeting Acme AI Limited · 2025-06-18 MINUTES OF MEETING OF THE BOARD OF DIRECTORS COMPANY: Acme AI Limited (Company Registration No. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "Minutes of Board Meeting\n\nAcme AI Limited · 2025-06-18\n\nMINUTES OF MEETING OF THE BOARD OF DIRECTORS\n\nCOMPANY: Acme AI Limited (Company Registration No. 678901)\n\nDATE: 2025-06-18\n\nTIME: 10:00 a.m. GMT\n\nPLACE: 3rd Floor, The Merchants Building, Sir John Rogerson's Quay, Dublin 2,…",
+        "source_reference": "Board_Minutes_2025_06_18_FINAL.pdf"
+      }
+    ],
+    "obligations": [],
+    "risks": [],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "green",
+    "suggested_summary": "Minutes of Board Meeting Acme AI Limited · 2025-06-18 MINUTES OF MEETING OF THE BOARD OF DIRECTORS COMPANY: Acme AI Limited (Company Registration No. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "No immediate red flags from document review."
+  },
+  "doc-ai-008": {
+    "documentId": "doc-ai-008",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "Board_Minutes_2025_09_30_FINAL.pdf",
+    "document_type": "Board Minutes",
+    "summary": "Minutes of Board Meeting Acme AI Limited · 2025-09-30 MINUTES OF MEETING OF THE BOARD OF DIRECTORS COMPANY: Acme AI Limited (Company Registration No. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "Minutes of Board Meeting\n\nAcme AI Limited · 2025-09-30\n\nMINUTES OF MEETING OF THE BOARD OF DIRECTORS\n\nCOMPANY: Acme AI Limited (Company Registration No. 678901)\n\nDATE: 2025-09-30\n\nTIME: 10:00 a.m. GMT\n\nPLACE: 3rd Floor, The Merchants Building, Sir John Rogerson's Quay, Dublin 2,…",
+        "source_reference": "Board_Minutes_2025_09_30_FINAL.pdf"
+      }
+    ],
+    "obligations": [],
+    "risks": [],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "green",
+    "suggested_summary": "Minutes of Board Meeting Acme AI Limited · 2025-09-30 MINUTES OF MEETING OF THE BOARD OF DIRECTORS COMPANY: Acme AI Limited (Company Registration No. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "No immediate red flags from document review."
+  },
+  "doc-ai-009": {
+    "documentId": "doc-ai-009",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "Written_Resolution_Shareholders_Series_B_2024_SIGNED.pdf",
+    "document_type": "Shareholder Resolutions",
+    "summary": "Written Shareholder Resolution WE, the undersigned shareholders of Acme AI Limited, hereby pass the following resolutions as special and ordinary resolutions: RESOLVED as a special Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "Written Shareholder Resolution\n\nWE, the undersigned shareholders of Acme AI Limited, hereby pass the following resolutions as special and ordinary resolutions:\n\nRESOLVED as a special resolution that the Constitution be amended in the form circulated.\n\nRESOLVED as an ordinary reso…",
+        "source_reference": "Written_Resolution_Shareholders_Series_B_2024_SIGNED.pdf"
+      }
+    ],
+    "obligations": [],
+    "risks": [],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "green",
+    "suggested_summary": "Written Shareholder Resolution WE, the undersigned shareholders of Acme AI Limited, hereby pass the following resolutions as special and ordinary resolutions: RESOLVED as a special Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "No immediate red flags from document review."
+  },
+  "doc-ai-010": {
+    "documentId": "doc-ai-010",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "Acme_AI_UK_Ltd_Certificate_of_Incorporation.pdf",
+    "document_type": "Subsidiaries",
+    "summary": "Certificate of Incorporation — Acme AI UK Ltd Company No. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "Certificate of Incorporation — Acme AI UK Ltd\n\nCompany No. 12847563. Registered office London, England. Wholly owned subsidiary.",
+        "source_reference": "Acme_AI_UK_Ltd_Certificate_of_Incorporation.pdf"
+      }
+    ],
+    "obligations": [],
+    "risks": [],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "green",
+    "suggested_summary": "Certificate of Incorporation — Acme AI UK Ltd Company No. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "No immediate red flags from document review."
+  },
+  "doc-ai-011": {
+    "documentId": "doc-ai-011",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "Acme_AI_GmbH_Commercial_Register_Extract.pdf",
+    "document_type": "Subsidiaries",
+    "summary": "Handelsregisterauszug — Acme AI GmbH HRB 284719 B, Berlin. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "Handelsregisterauszug — Acme AI GmbH\n\nHRB 284719 B, Berlin. Branch office for DACH sales.",
+        "source_reference": "Acme_AI_GmbH_Commercial_Register_Extract.pdf"
+      }
+    ],
+    "obligations": [],
+    "risks": [
+      {
+        "risk": "Standard diligence follow-up recommended",
+        "severity": "medium",
+        "explanation": "Review Corporate — Subsidiaries provisions for change-of-control, liability caps, and disclosure schedule alignment.",
+        "source_reference": "Acme_AI_GmbH_Commercial_Register_Extract.pdf"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "amber",
+    "suggested_summary": "Handelsregisterauszug — Acme AI GmbH HRB 284719 B, Berlin. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "Confirm against disclosure letter and management responses."
+  },
+  "doc-ai-012": {
+    "documentId": "doc-ai-012",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "Shareholders_Agreement_Acme_AI_Ltd_v4_SIGNED.pdf",
+    "document_type": "Shareholders Agreement",
+    "summary": "Shareholders' Agreement Acme AI Limited · Series B Parties: Founders, Atlantic Bridge Growth Fund III LP, Sequoia Capital Global Growth Fund IV, Enterprise Ireland Seed & Venture C Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "Shareholders' Agreement\n\nAcme AI Limited · Series B\n\nParties: Founders, Atlantic Bridge Growth Fund III LP, Sequoia Capital Global Growth Fund IV, Enterprise Ireland Seed & Venture Capital Scheme, and the Company\n\nBackground\n\n(A) Acme AI Limited is a private company limited by sh…",
+        "source_reference": "Shareholders_Agreement_Acme_AI_Ltd_v4_SIGNED.pdf"
+      }
+    ],
+    "obligations": [],
+    "risks": [],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "green",
+    "suggested_summary": "Shareholders' Agreement Acme AI Limited · Series B Parties: Founders, Atlantic Bridge Growth Fund III LP, Sequoia Capital Global Growth Fund IV, Enterprise Ireland Seed & Venture C Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "No immediate red flags from document review."
+  },
+  "doc-ai-013": {
+    "documentId": "doc-ai-013",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "Series_B_Term_Sheet_Executed_2024.pdf",
+    "document_type": "Term Sheet",
+    "summary": "Series B Term Sheet Investment: €28,500,000 Pre-money: €112,000,000 Post-money: €140,500,000 Lead: Atlantic Bridge Growth Fund III LP Liquidation preference: 1x non-participating B Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "Series B Term Sheet\n\nInvestment: €28,500,000\n\nPre-money: €112,000,000\n\nPost-money: €140,500,000\n\nLead: Atlantic Bridge Growth Fund III LP\n\nLiquidation preference: 1x non-participating\n\nBoard: 2 founder, 2 investor, 1 independent",
+        "source_reference": "Series_B_Term_Sheet_Executed_2024.pdf"
+      }
+    ],
+    "obligations": [],
+    "risks": [
+      {
+        "risk": "Standard diligence follow-up recommended",
+        "severity": "medium",
+        "explanation": "Review Capitalisation — Term Sheet provisions for change-of-control, liability caps, and disclosure schedule alignment.",
+        "source_reference": "Series_B_Term_Sheet_Executed_2024.pdf"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "amber",
+    "suggested_summary": "Series B Term Sheet Investment: €28,500,000 Pre-money: €112,000,000 Post-money: €140,500,000 Lead: Atlantic Bridge Growth Fund III LP Liquidation preference: 1x non-participating B Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "Confirm against disclosure letter and management responses."
+  },
+  "doc-ai-014": {
+    "documentId": "doc-ai-014",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "Investors_Rights_Agreement_2024_SIGNED.pdf",
+    "document_type": "Investor Rights",
+    "summary": "Investors' Rights Agreement Background (A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "Investors' Rights Agreement\n\nBackground\n\n(A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. 678901) whose registered office is at 3rd Floor, The Merchants Building, Sir John Rogerson's Quay, Dublin 2, D02 X576, Ireland.\n\n(…",
+        "source_reference": "Investors_Rights_Agreement_2024_SIGNED.pdf"
+      }
+    ],
+    "obligations": [],
+    "risks": [
+      {
+        "risk": "Standard diligence follow-up recommended",
+        "severity": "medium",
+        "explanation": "Review Capitalisation — Investor Rights provisions for change-of-control, liability caps, and disclosure schedule alignment.",
+        "source_reference": "Investors_Rights_Agreement_2024_SIGNED.pdf"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "amber",
+    "suggested_summary": "Investors' Rights Agreement Background (A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "Confirm against disclosure letter and management responses."
+  },
+  "doc-ai-015": {
+    "documentId": "doc-ai-015",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "ESOP_Plan_2024_Rules_FINAL.pdf",
+    "document_type": "ESOP",
+    "summary": "Employee Share Option Plan 2024 Background (A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "Employee Share Option Plan 2024\n\nBackground\n\n(A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. 678901) whose registered office is at 3rd Floor, The Merchants Building, Sir John Rogerson's Quay, Dublin 2, D02 X576, Ireland…",
+        "source_reference": "ESOP_Plan_2024_Rules_FINAL.pdf"
+      }
+    ],
+    "obligations": [],
+    "risks": [
+      {
+        "risk": "Standard diligence follow-up recommended",
+        "severity": "medium",
+        "explanation": "Review Capitalisation — ESOP provisions for change-of-control, liability caps, and disclosure schedule alignment.",
+        "source_reference": "ESOP_Plan_2024_Rules_FINAL.pdf"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "amber",
+    "suggested_summary": "Employee Share Option Plan 2024 Background (A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "Confirm against disclosure letter and management responses."
+  },
+  "doc-ai-016": {
+    "documentId": "doc-ai-016",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "Cap_Table_Acme_AI_Ltd_Post_Series_B_2025.xlsx",
+    "document_type": "Cap Table",
+    "summary": "Acme AI Limited — Cap Table | As at 30 September 2025 | Shareholder | Class | Shares | % FD Siobhán O'Connell | Ordinary | 8,200,000 | 18.2% Elena Vasquez | Ordinary | 6,100,000 | Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "Acme AI Limited — Cap Table | \nAs at 30 September 2025 | \nShareholder | Class | Shares | % FD\nSiobhán O'Connell | Ordinary | 8,200,000 | 18.2%\nElena Vasquez | Ordinary | 6,100,000 | 13.5%\nAtlantic Bridge Growth Fund III | Series B Preferred | 5,800,000 | 12.9%\nSequoia Capital Glo…",
+        "source_reference": "Cap_Table_Acme_AI_Ltd_Post_Series_B_2025.xlsx"
+      }
+    ],
+    "obligations": [],
+    "risks": [],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "green",
+    "suggested_summary": "Acme AI Limited — Cap Table | As at 30 September 2025 | Shareholder | Class | Shares | % FD Siobhán O'Connell | Ordinary | 8,200,000 | 18.2% Elena Vasquez | Ordinary | 6,100,000 | Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "No immediate red flags from document review."
+  },
+  "doc-ai-017": {
+    "documentId": "doc-ai-017",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "Convertible_Note_Side_Letter_Investor_1_2023.pdf",
+    "document_type": "Convertibles",
+    "summary": "Convertible Note Side Letter — Investor 1 MFN provisions, information rights, pro-rata for next round. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "Convertible Note Side Letter — Investor 1\n\nMFN provisions, information rights, pro-rata for next round. Principal €500,000.",
+        "source_reference": "Convertible_Note_Side_Letter_Investor_1_2023.pdf"
+      }
+    ],
+    "obligations": [],
+    "risks": [
+      {
+        "risk": "Standard diligence follow-up recommended",
+        "severity": "medium",
+        "explanation": "Review Capitalisation — Convertibles provisions for change-of-control, liability caps, and disclosure schedule alignment.",
+        "source_reference": "Convertible_Note_Side_Letter_Investor_1_2023.pdf"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "amber",
+    "suggested_summary": "Convertible Note Side Letter — Investor 1 MFN provisions, information rights, pro-rata for next round. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "Confirm against disclosure letter and management responses."
+  },
+  "doc-ai-018": {
+    "documentId": "doc-ai-018",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "Convertible_Note_Side_Letter_Investor_2_2023.pdf",
+    "document_type": "Convertibles",
+    "summary": "Convertible Note Side Letter — Investor 2 MFN provisions, information rights, pro-rata for next round. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "Convertible Note Side Letter — Investor 2\n\nMFN provisions, information rights, pro-rata for next round. Principal €500,000.",
+        "source_reference": "Convertible_Note_Side_Letter_Investor_2_2023.pdf"
+      }
+    ],
+    "obligations": [],
+    "risks": [
+      {
+        "risk": "Standard diligence follow-up recommended",
+        "severity": "medium",
+        "explanation": "Review Capitalisation — Convertibles provisions for change-of-control, liability caps, and disclosure schedule alignment.",
+        "source_reference": "Convertible_Note_Side_Letter_Investor_2_2023.pdf"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "amber",
+    "suggested_summary": "Convertible Note Side Letter — Investor 2 MFN provisions, information rights, pro-rata for next round. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "Confirm against disclosure letter and management responses."
+  },
+  "doc-ai-019": {
+    "documentId": "doc-ai-019",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "Convertible_Note_Side_Letter_Investor_3_2023.pdf",
+    "document_type": "Convertibles",
+    "summary": "Convertible Note Side Letter — Investor 3 MFN provisions, information rights, pro-rata for next round. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "Convertible Note Side Letter — Investor 3\n\nMFN provisions, information rights, pro-rata for next round. Principal €500,000.",
+        "source_reference": "Convertible_Note_Side_Letter_Investor_3_2023.pdf"
+      }
+    ],
+    "obligations": [],
+    "risks": [
+      {
+        "risk": "Standard diligence follow-up recommended",
+        "severity": "medium",
+        "explanation": "Review Capitalisation — Convertibles provisions for change-of-control, liability caps, and disclosure schedule alignment.",
+        "source_reference": "Convertible_Note_Side_Letter_Investor_3_2023.pdf"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "amber",
+    "suggested_summary": "Convertible Note Side Letter — Investor 3 MFN provisions, information rights, pro-rata for next round. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "Confirm against disclosure letter and management responses."
+  },
+  "doc-ai-020": {
+    "documentId": "doc-ai-020",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "Convertible_Note_Side_Letter_Investor_4_2023.pdf",
+    "document_type": "Convertibles",
+    "summary": "Convertible Note Side Letter — Investor 4 MFN provisions, information rights, pro-rata for next round. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "Convertible Note Side Letter — Investor 4\n\nMFN provisions, information rights, pro-rata for next round. Principal €500,000.",
+        "source_reference": "Convertible_Note_Side_Letter_Investor_4_2023.pdf"
+      }
+    ],
+    "obligations": [],
+    "risks": [
+      {
+        "risk": "Standard diligence follow-up recommended",
+        "severity": "medium",
+        "explanation": "Review Capitalisation — Convertibles provisions for change-of-control, liability caps, and disclosure schedule alignment.",
+        "source_reference": "Convertible_Note_Side_Letter_Investor_4_2023.pdf"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "amber",
+    "suggested_summary": "Convertible Note Side Letter — Investor 4 MFN provisions, information rights, pro-rata for next round. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "Confirm against disclosure letter and management responses."
+  },
+  "doc-ai-021": {
+    "documentId": "doc-ai-021",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "Audited_Financial_Statements_FY2024_FINAL.pdf",
+    "document_type": "Financials",
+    "summary": "Audited Accounts FY2024 Deloitte Ireland LLP unqualified opinion. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "Audited Accounts FY2024\n\nDeloitte Ireland LLP unqualified opinion. Revenue €14.8m.\n\nDetailed schedules available in data room annex.",
+        "source_reference": "Audited_Financial_Statements_FY2024_FINAL.pdf"
+      }
+    ],
+    "obligations": [],
+    "risks": [
+      {
+        "risk": "Standard diligence follow-up recommended",
+        "severity": "medium",
+        "explanation": "Review Financials provisions for change-of-control, liability caps, and disclosure schedule alignment.",
+        "source_reference": "Audited_Financial_Statements_FY2024_FINAL.pdf"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "amber",
+    "suggested_summary": "Audited Accounts FY2024 Deloitte Ireland LLP unqualified opinion. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "Confirm against disclosure letter and management responses."
+  },
+  "doc-ai-022": {
+    "documentId": "doc-ai-022",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "Management_Accounts_Q3_2025.pdf",
+    "document_type": "Financials",
+    "summary": "Management Accounts Q3 2025 ARR €18.2m, gross margin 78%, burn €620k/month. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "Management Accounts Q3 2025\n\nARR €18.2m, gross margin 78%, burn €620k/month.\n\nDetailed schedules available in data room annex.",
+        "source_reference": "Management_Accounts_Q3_2025.pdf"
+      }
+    ],
+    "obligations": [],
+    "risks": [
+      {
+        "risk": "Standard diligence follow-up recommended",
+        "severity": "medium",
+        "explanation": "Review Financials provisions for change-of-control, liability caps, and disclosure schedule alignment.",
+        "source_reference": "Management_Accounts_Q3_2025.pdf"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "amber",
+    "suggested_summary": "Management Accounts Q3 2025 ARR €18.2m, gross margin 78%, burn €620k/month. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "Confirm against disclosure letter and management responses."
+  },
+  "doc-ai-023": {
+    "documentId": "doc-ai-023",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "Annual_Budget_FY2026_Approved.pdf",
+    "document_type": "Financials",
+    "summary": "Budget FY2026 Board-approved 10 September 2025. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "Budget FY2026\n\nBoard-approved 10 September 2025.\n\nDetailed schedules available in data room annex.",
+        "source_reference": "Annual_Budget_FY2026_Approved.pdf"
+      }
+    ],
+    "obligations": [],
+    "risks": [
+      {
+        "risk": "Standard diligence follow-up recommended",
+        "severity": "medium",
+        "explanation": "Review Financials provisions for change-of-control, liability caps, and disclosure schedule alignment.",
+        "source_reference": "Annual_Budget_FY2026_Approved.pdf"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "amber",
+    "suggested_summary": "Budget FY2026 Board-approved 10 September 2025. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "Confirm against disclosure letter and management responses."
+  },
+  "doc-ai-024": {
+    "documentId": "doc-ai-024",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "Cash_Flow_Forecast_24_Months.xlsx",
+    "document_type": "Financials",
+    "summary": "xlsx | Month | Cash In | Cash Out | Balance Oct-25 | 1,420,000 | 1,890,000 | 8,200,000 Nov-25 | 1,380,000 | 1,920,000 | 7,660,000 Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "xlsx | \nMonth | Cash In | Cash Out | Balance\nOct-25 | 1,420,000 | 1,890,000 | 8,200,000\nNov-25 | 1,380,000 | 1,920,000 | 7,660,000",
+        "source_reference": "Cash_Flow_Forecast_24_Months.xlsx"
+      }
+    ],
+    "obligations": [],
+    "risks": [
+      {
+        "risk": "Standard diligence follow-up recommended",
+        "severity": "medium",
+        "explanation": "Review Financials provisions for change-of-control, liability caps, and disclosure schedule alignment.",
+        "source_reference": "Cash_Flow_Forecast_24_Months.xlsx"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "amber",
+    "suggested_summary": "xlsx | Month | Cash In | Cash Out | Balance Oct-25 | 1,420,000 | 1,890,000 | 8,200,000 Nov-25 | 1,380,000 | 1,920,000 | 7,660,000 Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "Confirm against disclosure letter and management responses."
+  },
+  "doc-ai-025": {
+    "documentId": "doc-ai-025",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "Debt_Schedule_2025.pdf",
+    "document_type": "Financials",
+    "summary": "Debt Schedule SVB Ireland term loan €2m, security over IP. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "Debt Schedule\n\nSVB Ireland term loan €2m, security over IP.\n\nDetailed schedules available in data room annex.",
+        "source_reference": "Debt_Schedule_2025.pdf"
+      }
+    ],
+    "obligations": [],
+    "risks": [
+      {
+        "risk": "Standard diligence follow-up recommended",
+        "severity": "medium",
+        "explanation": "Review Financials provisions for change-of-control, liability caps, and disclosure schedule alignment.",
+        "source_reference": "Debt_Schedule_2025.pdf"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "amber",
+    "suggested_summary": "Debt Schedule SVB Ireland term loan €2m, security over IP. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "Confirm against disclosure letter and management responses."
+  },
+  "doc-ai-026": {
+    "documentId": "doc-ai-026",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "Intercompany_Balances_2025.pdf",
+    "document_type": "Financials",
+    "summary": "Intercompany UK subsidiary recharge €1.2m annually. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "Intercompany\n\nUK subsidiary recharge €1.2m annually.\n\nDetailed schedules available in data room annex.",
+        "source_reference": "Intercompany_Balances_2025.pdf"
+      }
+    ],
+    "obligations": [],
+    "risks": [
+      {
+        "risk": "Standard diligence follow-up recommended",
+        "severity": "medium",
+        "explanation": "Review Financials provisions for change-of-control, liability caps, and disclosure schedule alignment.",
+        "source_reference": "Intercompany_Balances_2025.pdf"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "amber",
+    "suggested_summary": "Intercompany UK subsidiary recharge €1.2m annually. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "Confirm against disclosure letter and management responses."
+  },
+  "doc-ai-027": {
+    "documentId": "doc-ai-027",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "Auditor_Management_Letter_FY2024.pdf",
+    "document_type": "Financials",
+    "summary": "Management Letter Two control recommendations on revenue recognition. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "Management Letter\n\nTwo control recommendations on revenue recognition.\n\nDetailed schedules available in data room annex.",
+        "source_reference": "Auditor_Management_Letter_FY2024.pdf"
+      }
+    ],
+    "obligations": [],
+    "risks": [
+      {
+        "risk": "Standard diligence follow-up recommended",
+        "severity": "medium",
+        "explanation": "Review Financials provisions for change-of-control, liability caps, and disclosure schedule alignment.",
+        "source_reference": "Auditor_Management_Letter_FY2024.pdf"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "amber",
+    "suggested_summary": "Management Letter Two control recommendations on revenue recognition. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "Confirm against disclosure letter and management responses."
+  },
+  "doc-ai-028": {
+    "documentId": "doc-ai-028",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "Bank_Reconciliation_Summary_Sep_2025.xlsx",
+    "document_type": "Financials",
+    "summary": "xlsx | Month | Cash In | Cash Out | Balance Oct-25 | 1,420,000 | 1,890,000 | 8,200,000 Nov-25 | 1,380,000 | 1,920,000 | 7,660,000 Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "xlsx | \nMonth | Cash In | Cash Out | Balance\nOct-25 | 1,420,000 | 1,890,000 | 8,200,000\nNov-25 | 1,380,000 | 1,920,000 | 7,660,000",
+        "source_reference": "Bank_Reconciliation_Summary_Sep_2025.xlsx"
+      }
+    ],
+    "obligations": [],
+    "risks": [
+      {
+        "risk": "Standard diligence follow-up recommended",
+        "severity": "medium",
+        "explanation": "Review Financials provisions for change-of-control, liability caps, and disclosure schedule alignment.",
+        "source_reference": "Bank_Reconciliation_Summary_Sep_2025.xlsx"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "amber",
+    "suggested_summary": "xlsx | Month | Cash In | Cash Out | Balance Oct-25 | 1,420,000 | 1,890,000 | 8,200,000 Nov-25 | 1,380,000 | 1,920,000 | 7,660,000 Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "Confirm against disclosure letter and management responses."
+  },
+  "doc-ai-029": {
+    "documentId": "doc-ai-029",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "Master_SaaS_Agreement_Amazon_Web_Services_EMEA_SARL_Executed.pdf",
+    "document_type": "MSA",
+    "summary": "Master Services Agreement Acme AI Limited and Amazon Web Services EMEA SARL Between Acme AI Limited and Amazon Web Services EMEA SARL Background (A) Acme AI Limited is a private co Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "Master Services Agreement\n\nAcme AI Limited and Amazon Web Services EMEA SARL\n\nBetween Acme AI Limited and Amazon Web Services EMEA SARL\n\nBackground\n\n(A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. 678901) whose register…",
+        "source_reference": "Master_SaaS_Agreement_Amazon_Web_Services_EMEA_SARL_Executed.pdf"
+      }
+    ],
+    "obligations": [],
+    "risks": [
+      {
+        "risk": "Standard diligence follow-up recommended",
+        "severity": "medium",
+        "explanation": "Review Commercial — MSA provisions for change-of-control, liability caps, and disclosure schedule alignment.",
+        "source_reference": "Master_SaaS_Agreement_Amazon_Web_Services_EMEA_SARL_Executed.pdf"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "amber",
+    "suggested_summary": "Master Services Agreement Acme AI Limited and Amazon Web Services EMEA SARL Between Acme AI Limited and Amazon Web Services EMEA SARL Background (A) Acme AI Limited is a private co Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "Confirm against disclosure letter and management responses."
+  },
+  "doc-ai-030": {
+    "documentId": "doc-ai-030",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "Master_SaaS_Agreement_Microsoft_Ireland_Operations_L_Executed.pdf",
+    "document_type": "MSA",
+    "summary": "Master Services Agreement Acme AI Limited and Microsoft Ireland Operations Limited Between Acme AI Limited and Microsoft Ireland Operations Limited Background (A) Acme AI Limited i Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "Master Services Agreement\n\nAcme AI Limited and Microsoft Ireland Operations Limited\n\nBetween Acme AI Limited and Microsoft Ireland Operations Limited\n\nBackground\n\n(A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. 678901)…",
+        "source_reference": "Master_SaaS_Agreement_Microsoft_Ireland_Operations_L_Executed.pdf"
+      }
+    ],
+    "obligations": [],
+    "risks": [
+      {
+        "risk": "Standard diligence follow-up recommended",
+        "severity": "medium",
+        "explanation": "Review Commercial — MSA provisions for change-of-control, liability caps, and disclosure schedule alignment.",
+        "source_reference": "Master_SaaS_Agreement_Microsoft_Ireland_Operations_L_Executed.pdf"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "amber",
+    "suggested_summary": "Master Services Agreement Acme AI Limited and Microsoft Ireland Operations Limited Between Acme AI Limited and Microsoft Ireland Operations Limited Background (A) Acme AI Limited i Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "Confirm against disclosure letter and management responses."
+  },
+  "doc-ai-031": {
+    "documentId": "doc-ai-031",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "Master_SaaS_Agreement_Stripe_Payments_Europe_Limited_Executed.pdf",
+    "document_type": "MSA",
+    "summary": "Master Services Agreement Acme AI Limited and Stripe Payments Europe, Limited Between Acme AI Limited and Stripe Payments Europe, Limited Background (A) Acme AI Limited is a privat Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "Master Services Agreement\n\nAcme AI Limited and Stripe Payments Europe, Limited\n\nBetween Acme AI Limited and Stripe Payments Europe, Limited\n\nBackground\n\n(A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. 678901) whose regi…",
+        "source_reference": "Master_SaaS_Agreement_Stripe_Payments_Europe_Limited_Executed.pdf"
+      }
+    ],
+    "obligations": [],
+    "risks": [
+      {
+        "risk": "Standard diligence follow-up recommended",
+        "severity": "medium",
+        "explanation": "Review Commercial — MSA provisions for change-of-control, liability caps, and disclosure schedule alignment.",
+        "source_reference": "Master_SaaS_Agreement_Stripe_Payments_Europe_Limited_Executed.pdf"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "amber",
+    "suggested_summary": "Master Services Agreement Acme AI Limited and Stripe Payments Europe, Limited Between Acme AI Limited and Stripe Payments Europe, Limited Background (A) Acme AI Limited is a privat Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "Confirm against disclosure letter and management responses."
+  },
+  "doc-ai-032": {
+    "documentId": "doc-ai-032",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "Master_SaaS_Agreement_Salesforce_UK_Limited_Executed.pdf",
+    "document_type": "MSA",
+    "summary": "Master Services Agreement Acme AI Limited and Salesforce UK Limited Between Acme AI Limited and Salesforce UK Limited Background (A) Acme AI Limited is a private company limited by Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "Master Services Agreement\n\nAcme AI Limited and Salesforce UK Limited\n\nBetween Acme AI Limited and Salesforce UK Limited\n\nBackground\n\n(A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. 678901) whose registered office is at…",
+        "source_reference": "Master_SaaS_Agreement_Salesforce_UK_Limited_Executed.pdf"
+      }
+    ],
+    "obligations": [],
+    "risks": [
+      {
+        "risk": "Standard diligence follow-up recommended",
+        "severity": "medium",
+        "explanation": "Review Commercial — MSA provisions for change-of-control, liability caps, and disclosure schedule alignment.",
+        "source_reference": "Master_SaaS_Agreement_Salesforce_UK_Limited_Executed.pdf"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "amber",
+    "suggested_summary": "Master Services Agreement Acme AI Limited and Salesforce UK Limited Between Acme AI Limited and Salesforce UK Limited Background (A) Acme AI Limited is a private company limited by Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "Confirm against disclosure letter and management responses."
+  },
+  "doc-ai-033": {
+    "documentId": "doc-ai-033",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "Master_SaaS_Agreement_HubSpot_Ireland_Ltd_Executed.pdf",
+    "document_type": "MSA",
+    "summary": "Master Services Agreement Acme AI Limited and HubSpot Ireland Ltd Between Acme AI Limited and HubSpot Ireland Ltd Background (A) Acme AI Limited is a private company limited by sha Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "Master Services Agreement\n\nAcme AI Limited and HubSpot Ireland Ltd\n\nBetween Acme AI Limited and HubSpot Ireland Ltd\n\nBackground\n\n(A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. 678901) whose registered office is at 3rd…",
+        "source_reference": "Master_SaaS_Agreement_HubSpot_Ireland_Ltd_Executed.pdf"
+      }
+    ],
+    "obligations": [],
+    "risks": [
+      {
+        "risk": "Standard diligence follow-up recommended",
+        "severity": "medium",
+        "explanation": "Review Commercial — MSA provisions for change-of-control, liability caps, and disclosure schedule alignment.",
+        "source_reference": "Master_SaaS_Agreement_HubSpot_Ireland_Ltd_Executed.pdf"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "amber",
+    "suggested_summary": "Master Services Agreement Acme AI Limited and HubSpot Ireland Ltd Between Acme AI Limited and HubSpot Ireland Ltd Background (A) Acme AI Limited is a private company limited by sha Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "Confirm against disclosure letter and management responses."
+  },
+  "doc-ai-034": {
+    "documentId": "doc-ai-034",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "Master_SaaS_Agreement_Snowflake_Computing_UK_Ltd_Executed.pdf",
+    "document_type": "MSA",
+    "summary": "Master Services Agreement Acme AI Limited and Snowflake Computing UK Ltd Between Acme AI Limited and Snowflake Computing UK Ltd Background (A) Acme AI Limited is a private company Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "Master Services Agreement\n\nAcme AI Limited and Snowflake Computing UK Ltd\n\nBetween Acme AI Limited and Snowflake Computing UK Ltd\n\nBackground\n\n(A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. 678901) whose registered off…",
+        "source_reference": "Master_SaaS_Agreement_Snowflake_Computing_UK_Ltd_Executed.pdf"
+      }
+    ],
+    "obligations": [],
+    "risks": [
+      {
+        "risk": "Standard diligence follow-up recommended",
+        "severity": "medium",
+        "explanation": "Review Commercial — MSA provisions for change-of-control, liability caps, and disclosure schedule alignment.",
+        "source_reference": "Master_SaaS_Agreement_Snowflake_Computing_UK_Ltd_Executed.pdf"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "amber",
+    "suggested_summary": "Master Services Agreement Acme AI Limited and Snowflake Computing UK Ltd Between Acme AI Limited and Snowflake Computing UK Ltd Background (A) Acme AI Limited is a private company Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "Confirm against disclosure letter and management responses."
+  },
+  "doc-ai-035": {
+    "documentId": "doc-ai-035",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "Master_SaaS_Agreement_Globex_Financial_Services_plc_Executed.pdf",
+    "document_type": "MSA",
+    "summary": "Master Services Agreement Acme AI Limited and Globex Financial Services plc Between Acme AI Limited and Globex Financial Services plc Background (A) Acme AI Limited is a private co Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "Master Services Agreement\n\nAcme AI Limited and Globex Financial Services plc\n\nBetween Acme AI Limited and Globex Financial Services plc\n\nBackground\n\n(A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. 678901) whose register…",
+        "source_reference": "Master_SaaS_Agreement_Globex_Financial_Services_plc_Executed.pdf"
+      }
+    ],
+    "obligations": [],
+    "risks": [
+      {
+        "risk": "Standard diligence follow-up recommended",
+        "severity": "medium",
+        "explanation": "Review Commercial — MSA provisions for change-of-control, liability caps, and disclosure schedule alignment.",
+        "source_reference": "Master_SaaS_Agreement_Globex_Financial_Services_plc_Executed.pdf"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "amber",
+    "suggested_summary": "Master Services Agreement Acme AI Limited and Globex Financial Services plc Between Acme AI Limited and Globex Financial Services plc Background (A) Acme AI Limited is a private co Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "Confirm against disclosure letter and management responses."
+  },
+  "doc-ai-036": {
+    "documentId": "doc-ai-036",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "Master_SaaS_Agreement_Continental_Reinsurance_AG_Executed.pdf",
+    "document_type": "MSA",
+    "summary": "Master Services Agreement Acme AI Limited and Continental Reinsurance AG Between Acme AI Limited and Continental Reinsurance AG Background (A) Acme AI Limited is a private company Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "Master Services Agreement\n\nAcme AI Limited and Continental Reinsurance AG\n\nBetween Acme AI Limited and Continental Reinsurance AG\n\nBackground\n\n(A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. 678901) whose registered off…",
+        "source_reference": "Master_SaaS_Agreement_Continental_Reinsurance_AG_Executed.pdf"
+      }
+    ],
+    "obligations": [],
+    "risks": [
+      {
+        "risk": "Standard diligence follow-up recommended",
+        "severity": "medium",
+        "explanation": "Review Commercial — MSA provisions for change-of-control, liability caps, and disclosure schedule alignment.",
+        "source_reference": "Master_SaaS_Agreement_Continental_Reinsurance_AG_Executed.pdf"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "amber",
+    "suggested_summary": "Master Services Agreement Acme AI Limited and Continental Reinsurance AG Between Acme AI Limited and Continental Reinsurance AG Background (A) Acme AI Limited is a private company Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "Confirm against disclosure letter and management responses."
+  },
+  "doc-ai-037": {
+    "documentId": "doc-ai-037",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "Employment_Contract_Dr__Siobh_n_O_Connell_SIGNED.pdf",
+    "document_type": "Executive",
+    "summary": "Contract of Employment Dr. Siobhán O'Connell — Chief Executive Officer Background (A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "Contract of Employment\n\nDr. Siobhán O'Connell — Chief Executive Officer\n\nBackground\n\n(A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. 678901) whose registered office is at 3rd Floor, The Merchants Building, Sir John Roge…",
+        "source_reference": "Employment_Contract_Dr__Siobh_n_O_Connell_SIGNED.pdf"
+      }
+    ],
+    "obligations": [],
+    "risks": [
+      {
+        "risk": "Standard diligence follow-up recommended",
+        "severity": "medium",
+        "explanation": "Review Employment — Executive provisions for change-of-control, liability caps, and disclosure schedule alignment.",
+        "source_reference": "Employment_Contract_Dr__Siobh_n_O_Connell_SIGNED.pdf"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "amber",
+    "suggested_summary": "Contract of Employment Dr. Siobhán O'Connell — Chief Executive Officer Background (A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "Confirm against disclosure letter and management responses."
+  },
+  "doc-ai-038": {
+    "documentId": "doc-ai-038",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "Employment_Contract_James_Murphy_SIGNED.pdf",
+    "document_type": "Executive",
+    "summary": "Contract of Employment James Murphy — Chief Financial Officer Background (A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "Contract of Employment\n\nJames Murphy — Chief Financial Officer\n\nBackground\n\n(A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. 678901) whose registered office is at 3rd Floor, The Merchants Building, Sir John Rogerson's Qu…",
+        "source_reference": "Employment_Contract_James_Murphy_SIGNED.pdf"
+      }
+    ],
+    "obligations": [],
+    "risks": [
+      {
+        "risk": "Standard diligence follow-up recommended",
+        "severity": "medium",
+        "explanation": "Review Employment — Executive provisions for change-of-control, liability caps, and disclosure schedule alignment.",
+        "source_reference": "Employment_Contract_James_Murphy_SIGNED.pdf"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "amber",
+    "suggested_summary": "Contract of Employment James Murphy — Chief Financial Officer Background (A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "Confirm against disclosure letter and management responses."
+  },
+  "doc-ai-039": {
+    "documentId": "doc-ai-039",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "Employment_Contract_Elena_Vasquez_SIGNED.pdf",
+    "document_type": "Executive",
+    "summary": "Contract of Employment Elena Vasquez — Chief Technology Officer Background (A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "Contract of Employment\n\nElena Vasquez — Chief Technology Officer\n\nBackground\n\n(A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. 678901) whose registered office is at 3rd Floor, The Merchants Building, Sir John Rogerson's…",
+        "source_reference": "Employment_Contract_Elena_Vasquez_SIGNED.pdf"
+      }
+    ],
+    "obligations": [],
+    "risks": [
+      {
+        "risk": "Standard diligence follow-up recommended",
+        "severity": "medium",
+        "explanation": "Review Employment — Executive provisions for change-of-control, liability caps, and disclosure schedule alignment.",
+        "source_reference": "Employment_Contract_Elena_Vasquez_SIGNED.pdf"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "amber",
+    "suggested_summary": "Contract of Employment Elena Vasquez — Chief Technology Officer Background (A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "Confirm against disclosure letter and management responses."
+  },
+  "doc-ai-040": {
+    "documentId": "doc-ai-040",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "Employment_Contract_Niamh_Kelly_SIGNED.pdf",
+    "document_type": "Executive",
+    "summary": "Contract of Employment Niamh Kelly — Head of Engineering Background (A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "Contract of Employment\n\nNiamh Kelly — Head of Engineering\n\nBackground\n\n(A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. 678901) whose registered office is at 3rd Floor, The Merchants Building, Sir John Rogerson's Quay, D…",
+        "source_reference": "Employment_Contract_Niamh_Kelly_SIGNED.pdf"
+      }
+    ],
+    "obligations": [],
+    "risks": [
+      {
+        "risk": "Standard diligence follow-up recommended",
+        "severity": "medium",
+        "explanation": "Review Employment — Executive provisions for change-of-control, liability caps, and disclosure schedule alignment.",
+        "source_reference": "Employment_Contract_Niamh_Kelly_SIGNED.pdf"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "amber",
+    "suggested_summary": "Contract of Employment Niamh Kelly — Head of Engineering Background (A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "Confirm against disclosure letter and management responses."
+  },
+  "doc-ai-041": {
+    "documentId": "doc-ai-041",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "Employment_Contract_David_Chen_SIGNED.pdf",
+    "document_type": "Executive",
+    "summary": "Contract of Employment David Chen — VP Sales, EMEA Background (A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "Contract of Employment\n\nDavid Chen — VP Sales, EMEA\n\nBackground\n\n(A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. 678901) whose registered office is at 3rd Floor, The Merchants Building, Sir John Rogerson's Quay, Dublin…",
+        "source_reference": "Employment_Contract_David_Chen_SIGNED.pdf"
+      }
+    ],
+    "obligations": [],
+    "risks": [
+      {
+        "risk": "Standard diligence follow-up recommended",
+        "severity": "medium",
+        "explanation": "Review Employment — Executive provisions for change-of-control, liability caps, and disclosure schedule alignment.",
+        "source_reference": "Employment_Contract_David_Chen_SIGNED.pdf"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "amber",
+    "suggested_summary": "Contract of Employment David Chen — VP Sales, EMEA Background (A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "Confirm against disclosure letter and management responses."
+  },
+  "doc-ai-042": {
+    "documentId": "doc-ai-042",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "Employment_Contract_Aoife_Ryan_SIGNED.pdf",
+    "document_type": "Executive",
+    "summary": "Contract of Employment Aoife Ryan — General Counsel Background (A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "Contract of Employment\n\nAoife Ryan — General Counsel\n\nBackground\n\n(A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. 678901) whose registered office is at 3rd Floor, The Merchants Building, Sir John Rogerson's Quay, Dublin…",
+        "source_reference": "Employment_Contract_Aoife_Ryan_SIGNED.pdf"
+      }
+    ],
+    "obligations": [],
+    "risks": [
+      {
+        "risk": "Standard diligence follow-up recommended",
+        "severity": "medium",
+        "explanation": "Review Employment — Executive provisions for change-of-control, liability caps, and disclosure schedule alignment.",
+        "source_reference": "Employment_Contract_Aoife_Ryan_SIGNED.pdf"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "amber",
+    "suggested_summary": "Contract of Employment Aoife Ryan — General Counsel Background (A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "Confirm against disclosure letter and management responses."
+  },
+  "doc-ai-043": {
+    "documentId": "doc-ai-043",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "Employee_Handbook_2025_FINAL.pdf",
+    "document_type": "Policies",
+    "summary": "Employee Handbook Acme AI Limited — Privacy Policy (EU/UK) Last updated: 1 January 2025. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "Employee Handbook\n\nAcme AI Limited — Privacy Policy (EU/UK)\n\nLast updated: 1 January 2025. Controller: Acme AI Limited, 3rd Floor, The Merchants Building, Sir John Rogerson's Quay, Dublin 2, D02 X576, Ireland. Data Protection Officer: privacy@acmeai.example.\n\nThis policy explains…",
+        "source_reference": "Employee_Handbook_2025_FINAL.pdf"
+      }
+    ],
+    "obligations": [],
+    "risks": [
+      {
+        "risk": "Standard diligence follow-up recommended",
+        "severity": "medium",
+        "explanation": "Review Employment — Policies provisions for change-of-control, liability caps, and disclosure schedule alignment.",
+        "source_reference": "Employee_Handbook_2025_FINAL.pdf"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "amber",
+    "suggested_summary": "Employee Handbook Acme AI Limited — Privacy Policy (EU/UK) Last updated: 1 January 2025. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "Confirm against disclosure letter and management responses."
+  },
+  "doc-ai-044": {
+    "documentId": "doc-ai-044",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "Remote_Working_Policy_2024.pdf",
+    "document_type": "Policies",
+    "summary": "Remote Working Policy Hybrid policy up to 3 days remote. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "Remote Working Policy\n\nHybrid policy up to 3 days remote.",
+        "source_reference": "Remote_Working_Policy_2024.pdf"
+      }
+    ],
+    "obligations": [],
+    "risks": [
+      {
+        "risk": "Standard diligence follow-up recommended",
+        "severity": "medium",
+        "explanation": "Review Employment — Policies provisions for change-of-control, liability caps, and disclosure schedule alignment.",
+        "source_reference": "Remote_Working_Policy_2024.pdf"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "amber",
+    "suggested_summary": "Remote Working Policy Hybrid policy up to 3 days remote. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "Confirm against disclosure letter and management responses."
+  },
+  "doc-ai-045": {
+    "documentId": "doc-ai-045",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "Anti_Bribery_and_Corruption_Policy.pdf",
+    "document_type": "Policies",
+    "summary": "ABC Policy Zero tolerance. Gifts over €50 require approval. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "ABC Policy\n\nZero tolerance. Gifts over €50 require approval.",
+        "source_reference": "Anti_Bribery_and_Corruption_Policy.pdf"
+      }
+    ],
+    "obligations": [],
+    "risks": [
+      {
+        "risk": "Standard diligence follow-up recommended",
+        "severity": "medium",
+        "explanation": "Review Employment — Policies provisions for change-of-control, liability caps, and disclosure schedule alignment.",
+        "source_reference": "Anti_Bribery_and_Corruption_Policy.pdf"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "amber",
+    "suggested_summary": "ABC Policy Zero tolerance. Gifts over €50 require approval. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "Confirm against disclosure letter and management responses."
+  },
+  "doc-ai-046": {
+    "documentId": "doc-ai-046",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "Whistleblowing_Protected_Disclosures.pdf",
+    "document_type": "Policies",
+    "summary": "Whistleblowing Protected Disclosures Act 2014 procedures. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "Whistleblowing\n\nProtected Disclosures Act 2014 procedures.",
+        "source_reference": "Whistleblowing_Protected_Disclosures.pdf"
+      }
+    ],
+    "obligations": [],
+    "risks": [
+      {
+        "risk": "Standard diligence follow-up recommended",
+        "severity": "medium",
+        "explanation": "Review Employment — Policies provisions for change-of-control, liability caps, and disclosure schedule alignment.",
+        "source_reference": "Whistleblowing_Protected_Disclosures.pdf"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "amber",
+    "suggested_summary": "Whistleblowing Protected Disclosures Act 2014 procedures. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "Confirm against disclosure letter and management responses."
+  },
+  "doc-ai-047": {
+    "documentId": "doc-ai-047",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "Pension_Scheme_Summary_2025.pdf",
+    "document_type": "Policies",
+    "summary": "Pension 6% employer contribution. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "Pension\n\n6% employer contribution.",
+        "source_reference": "Pension_Scheme_Summary_2025.pdf"
+      }
+    ],
+    "obligations": [],
+    "risks": [
+      {
+        "risk": "Standard diligence follow-up recommended",
+        "severity": "medium",
+        "explanation": "Review Employment — Policies provisions for change-of-control, liability caps, and disclosure schedule alignment.",
+        "source_reference": "Pension_Scheme_Summary_2025.pdf"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "amber",
+    "suggested_summary": "Pension 6% employer contribution. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "Confirm against disclosure letter and management responses."
+  },
+  "doc-ai-048": {
+    "documentId": "doc-ai-048",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "Bonus_Plan_Executives_2025.pdf",
+    "document_type": "Policies",
+    "summary": "Bonus Plan Discretionary up to 30% base. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "Bonus Plan\n\nDiscretionary up to 30% base.",
+        "source_reference": "Bonus_Plan_Executives_2025.pdf"
+      }
+    ],
+    "obligations": [],
+    "risks": [
+      {
+        "risk": "Standard diligence follow-up recommended",
+        "severity": "medium",
+        "explanation": "Review Employment — Policies provisions for change-of-control, liability caps, and disclosure schedule alignment.",
+        "source_reference": "Bonus_Plan_Executives_2025.pdf"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "amber",
+    "suggested_summary": "Bonus Plan Discretionary up to 30% base. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "Confirm against disclosure letter and management responses."
+  },
+  "doc-ai-049": {
+    "documentId": "doc-ai-049",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "IP_Assignment_Deed_Founders_SIGNED.pdf",
+    "document_type": "Intellectual Property",
+    "summary": "IP Assignment Deed Founders SIGNED Background (A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "IP Assignment Deed Founders SIGNED\n\nBackground\n\n(A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. 678901) whose registered office is at 3rd Floor, The Merchants Building, Sir John Rogerson's Quay, Dublin 2, D02 X576, Irel…",
+        "source_reference": "IP_Assignment_Deed_Founders_SIGNED.pdf"
+      }
+    ],
+    "obligations": [],
+    "risks": [
+      {
+        "risk": "Standard diligence follow-up recommended",
+        "severity": "medium",
+        "explanation": "Review Intellectual Property provisions for change-of-control, liability caps, and disclosure schedule alignment.",
+        "source_reference": "IP_Assignment_Deed_Founders_SIGNED.pdf"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "amber",
+    "suggested_summary": "IP Assignment Deed Founders SIGNED Background (A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "Confirm against disclosure letter and management responses."
+  },
+  "doc-ai-050": {
+    "documentId": "doc-ai-050",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "Trademark_Registration_ACME_AI_EUIPO.pdf",
+    "document_type": "Intellectual Property",
+    "summary": "Trademark Registration ACME AI EUIPO Background (A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "Trademark Registration ACME AI EUIPO\n\nBackground\n\n(A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. 678901) whose registered office is at 3rd Floor, The Merchants Building, Sir John Rogerson's Quay, Dublin 2, D02 X576, Ir…",
+        "source_reference": "Trademark_Registration_ACME_AI_EUIPO.pdf"
+      }
+    ],
+    "obligations": [],
+    "risks": [
+      {
+        "risk": "Standard diligence follow-up recommended",
+        "severity": "medium",
+        "explanation": "Review Intellectual Property provisions for change-of-control, liability caps, and disclosure schedule alignment.",
+        "source_reference": "Trademark_Registration_ACME_AI_EUIPO.pdf"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "amber",
+    "suggested_summary": "Trademark Registration ACME AI EUIPO Background (A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "Confirm against disclosure letter and management responses."
+  },
+  "doc-ai-051": {
+    "documentId": "doc-ai-051",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "Patent_Application_Document_Embeddings_EP2024.pdf",
+    "document_type": "Intellectual Property",
+    "summary": "Patent Application Document Embeddings EP2024 Background (A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "Patent Application Document Embeddings EP2024\n\nBackground\n\n(A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. 678901) whose registered office is at 3rd Floor, The Merchants Building, Sir John Rogerson's Quay, Dublin 2, D02…",
+        "source_reference": "Patent_Application_Document_Embeddings_EP2024.pdf"
+      }
+    ],
+    "obligations": [],
+    "risks": [
+      {
+        "risk": "Standard diligence follow-up recommended",
+        "severity": "medium",
+        "explanation": "Review Intellectual Property provisions for change-of-control, liability caps, and disclosure schedule alignment.",
+        "source_reference": "Patent_Application_Document_Embeddings_EP2024.pdf"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "amber",
+    "suggested_summary": "Patent Application Document Embeddings EP2024 Background (A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "Confirm against disclosure letter and management responses."
+  },
+  "doc-ai-052": {
+    "documentId": "doc-ai-052",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "Open_Source_Software_Policy_2024.pdf",
+    "document_type": "Intellectual Property",
+    "summary": "Open Source Software Policy 2024 Background (A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "Open Source Software Policy 2024\n\nBackground\n\n(A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. 678901) whose registered office is at 3rd Floor, The Merchants Building, Sir John Rogerson's Quay, Dublin 2, D02 X576, Irelan…",
+        "source_reference": "Open_Source_Software_Policy_2024.pdf"
+      }
+    ],
+    "obligations": [],
+    "risks": [
+      {
+        "risk": "Standard diligence follow-up recommended",
+        "severity": "medium",
+        "explanation": "Review Intellectual Property provisions for change-of-control, liability caps, and disclosure schedule alignment.",
+        "source_reference": "Open_Source_Software_Policy_2024.pdf"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "amber",
+    "suggested_summary": "Open Source Software Policy 2024 Background (A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "Confirm against disclosure letter and management responses."
+  },
+  "doc-ai-053": {
+    "documentId": "doc-ai-053",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "IP_Licence_In_University_Collab_2022.pdf",
+    "document_type": "Intellectual Property",
+    "summary": "IP Licence In University Collab 2022 Background (A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "IP Licence In University Collab 2022\n\nBackground\n\n(A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. 678901) whose registered office is at 3rd Floor, The Merchants Building, Sir John Rogerson's Quay, Dublin 2, D02 X576, Ir…",
+        "source_reference": "IP_Licence_In_University_Collab_2022.pdf"
+      }
+    ],
+    "obligations": [],
+    "risks": [
+      {
+        "risk": "Standard diligence follow-up recommended",
+        "severity": "medium",
+        "explanation": "Review Intellectual Property provisions for change-of-control, liability caps, and disclosure schedule alignment.",
+        "source_reference": "IP_Licence_In_University_Collab_2022.pdf"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "amber",
+    "suggested_summary": "IP Licence In University Collab 2022 Background (A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "Confirm against disclosure letter and management responses."
+  },
+  "doc-ai-054": {
+    "documentId": "doc-ai-054",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "IP_Licence_Out_Partner_OEM_2023.pdf",
+    "document_type": "Intellectual Property",
+    "summary": "IP Licence Out Partner OEM 2023 Background (A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "IP Licence Out Partner OEM 2023\n\nBackground\n\n(A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. 678901) whose registered office is at 3rd Floor, The Merchants Building, Sir John Rogerson's Quay, Dublin 2, D02 X576, Ireland…",
+        "source_reference": "IP_Licence_Out_Partner_OEM_2023.pdf"
+      }
+    ],
+    "obligations": [],
+    "risks": [
+      {
+        "risk": "Standard diligence follow-up recommended",
+        "severity": "medium",
+        "explanation": "Review Intellectual Property provisions for change-of-control, liability caps, and disclosure schedule alignment.",
+        "source_reference": "IP_Licence_Out_Partner_OEM_2023.pdf"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "amber",
+    "suggested_summary": "IP Licence Out Partner OEM 2023 Background (A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "Confirm against disclosure letter and management responses."
+  },
+  "doc-ai-055": {
+    "documentId": "doc-ai-055",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "Contractor_IP_Assignment_Template.pdf",
+    "document_type": "Intellectual Property",
+    "summary": "Contractor IP Assignment Template Background (A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "Contractor IP Assignment Template\n\nBackground\n\n(A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. 678901) whose registered office is at 3rd Floor, The Merchants Building, Sir John Rogerson's Quay, Dublin 2, D02 X576, Irela…",
+        "source_reference": "Contractor_IP_Assignment_Template.pdf"
+      }
+    ],
+    "obligations": [],
+    "risks": [
+      {
+        "risk": "Standard diligence follow-up recommended",
+        "severity": "medium",
+        "explanation": "Review Intellectual Property provisions for change-of-control, liability caps, and disclosure schedule alignment.",
+        "source_reference": "Contractor_IP_Assignment_Template.pdf"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "amber",
+    "suggested_summary": "Contractor IP Assignment Template Background (A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "Confirm against disclosure letter and management responses."
+  },
+  "doc-ai-056": {
+    "documentId": "doc-ai-056",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "Trade_Secrets_Protection_Protocol.pdf",
+    "document_type": "Intellectual Property",
+    "summary": "Trade Secrets Protection Protocol Background (A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "Trade Secrets Protection Protocol\n\nBackground\n\n(A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. 678901) whose registered office is at 3rd Floor, The Merchants Building, Sir John Rogerson's Quay, Dublin 2, D02 X576, Irela…",
+        "source_reference": "Trade_Secrets_Protection_Protocol.pdf"
+      }
+    ],
+    "obligations": [],
+    "risks": [
+      {
+        "risk": "Standard diligence follow-up recommended",
+        "severity": "medium",
+        "explanation": "Review Intellectual Property provisions for change-of-control, liability caps, and disclosure schedule alignment.",
+        "source_reference": "Trade_Secrets_Protection_Protocol.pdf"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "amber",
+    "suggested_summary": "Trade Secrets Protection Protocol Background (A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "Confirm against disclosure letter and management responses."
+  },
+  "doc-ai-057": {
+    "documentId": "doc-ai-057",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "Letter_Before_Action_DataForge_Ltd_2025.pdf",
+    "document_type": "Litigation",
+    "summary": "Letter Before Action — DataForge Ltd We act for DataForge Ltd which alleges misappropriation of trade secrets relating to vector embedding pipelines. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "Letter Before Action — DataForge Ltd\n\nWe act for DataForge Ltd which alleges misappropriation of trade secrets relating to vector embedding pipelines. Demands cessation and €450,000 damages. Response due 28 days.\n\nPrepared by Company counsel. Privileged material excluded.",
+        "source_reference": "Letter_Before_Action_DataForge_Ltd_2025.pdf"
+      }
+    ],
+    "obligations": [],
+    "risks": [
+      {
+        "risk": "Material exposure requiring partner sign-off",
+        "severity": "high",
+        "explanation": "Content in Letter_Before_Action_DataForge_Ltd_2025.pdf indicates elevated legal or commercial risk for the transaction.",
+        "source_reference": "Letter_Before_Action_DataForge_Ltd_2025.pdf"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "red",
+    "suggested_summary": "Letter Before Action — DataForge Ltd We act for DataForge Ltd which alleges misappropriation of trade secrets relating to vector embedding pipelines. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "Escalate to partner — confirm disclosure schedule and warranty coverage."
+  },
+  "doc-ai-058": {
+    "documentId": "doc-ai-058",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "Settlement_Agreement_Former_CTO_NDA_Breach_SIGNED.pdf",
+    "document_type": "Litigation",
+    "summary": "Settlement Agreement — Former Contractor Settled for €85,000 plus undertakings. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "Settlement Agreement — Former Contractor\n\nSettled for €85,000 plus undertakings. Mutual release except fraud. Confidentiality and 18-month non-compete in Ireland/UK.\n\nPrepared by Company counsel. Privileged material excluded.",
+        "source_reference": "Settlement_Agreement_Former_CTO_NDA_Breach_SIGNED.pdf"
+      }
+    ],
+    "obligations": [],
+    "risks": [
+      {
+        "risk": "Material exposure requiring partner sign-off",
+        "severity": "high",
+        "explanation": "Content in Settlement_Agreement_Former_CTO_NDA_Breach_SIGNED.pdf indicates elevated legal or commercial risk for the transaction.",
+        "source_reference": "Settlement_Agreement_Former_CTO_NDA_Breach_SIGNED.pdf"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "red",
+    "suggested_summary": "Settlement Agreement — Former Contractor Settled for €85,000 plus undertakings. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "Escalate to partner — confirm disclosure schedule and warranty coverage."
+  },
+  "doc-ai-059": {
+    "documentId": "doc-ai-059",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "Arbitration_Notice_Hosting_Services_Dispute.pdf",
+    "document_type": "Litigation",
+    "summary": "Notice of Arbitration — Hosting Services ICC arbitration seated in London regarding SLA credits dispute with legacy hosting vendor. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "Notice of Arbitration — Hosting Services\n\nICC arbitration seated in London regarding SLA credits dispute with legacy hosting vendor. Claim €120,000.\n\nPrepared by Company counsel. Privileged material excluded.",
+        "source_reference": "Arbitration_Notice_Hosting_Services_Dispute.pdf"
+      }
+    ],
+    "obligations": [],
+    "risks": [
+      {
+        "risk": "Material exposure requiring partner sign-off",
+        "severity": "high",
+        "explanation": "Content in Arbitration_Notice_Hosting_Services_Dispute.pdf indicates elevated legal or commercial risk for the transaction.",
+        "source_reference": "Arbitration_Notice_Hosting_Services_Dispute.pdf"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "red",
+    "suggested_summary": "Notice of Arbitration — Hosting Services ICC arbitration seated in London regarding SLA credits dispute with legacy hosting vendor. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "Escalate to partner — confirm disclosure schedule and warranty coverage."
+  },
+  "doc-ai-060": {
+    "documentId": "doc-ai-060",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "Litigation_Memo_Matter_2023_CLOSED.pdf",
+    "document_type": "Memo",
+    "summary": "Litigation Memo 2023 Closed matter. No material exposure. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "Litigation Memo 2023\n\nClosed matter. No material exposure.",
+        "source_reference": "Litigation_Memo_Matter_2023_CLOSED.pdf"
+      }
+    ],
+    "obligations": [],
+    "risks": [
+      {
+        "risk": "Material exposure requiring partner sign-off",
+        "severity": "high",
+        "explanation": "Content in Litigation_Memo_Matter_2023_CLOSED.pdf indicates elevated legal or commercial risk for the transaction.",
+        "source_reference": "Litigation_Memo_Matter_2023_CLOSED.pdf"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "red",
+    "suggested_summary": "Litigation Memo 2023 Closed matter. No material exposure. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "Escalate to partner — confirm disclosure schedule and warranty coverage."
+  },
+  "doc-ai-061": {
+    "documentId": "doc-ai-061",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "Litigation_Memo_Matter_2024_CLOSED.pdf",
+    "document_type": "Memo",
+    "summary": "Litigation Memo 2024 Closed matter. No material exposure. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "Litigation Memo 2024\n\nClosed matter. No material exposure.",
+        "source_reference": "Litigation_Memo_Matter_2024_CLOSED.pdf"
+      }
+    ],
+    "obligations": [],
+    "risks": [
+      {
+        "risk": "Material exposure requiring partner sign-off",
+        "severity": "high",
+        "explanation": "Content in Litigation_Memo_Matter_2024_CLOSED.pdf indicates elevated legal or commercial risk for the transaction.",
+        "source_reference": "Litigation_Memo_Matter_2024_CLOSED.pdf"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "red",
+    "suggested_summary": "Litigation Memo 2024 Closed matter. No material exposure. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "Escalate to partner — confirm disclosure schedule and warranty coverage."
+  },
+  "doc-ai-062": {
+    "documentId": "doc-ai-062",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "Litigation_Memo_Matter_2025_CLOSED.pdf",
+    "document_type": "Memo",
+    "summary": "Litigation Memo 2025 Closed matter. No material exposure. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "Litigation Memo 2025\n\nClosed matter. No material exposure.",
+        "source_reference": "Litigation_Memo_Matter_2025_CLOSED.pdf"
+      }
+    ],
+    "obligations": [],
+    "risks": [
+      {
+        "risk": "Material exposure requiring partner sign-off",
+        "severity": "high",
+        "explanation": "Content in Litigation_Memo_Matter_2025_CLOSED.pdf indicates elevated legal or commercial risk for the transaction.",
+        "source_reference": "Litigation_Memo_Matter_2025_CLOSED.pdf"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "red",
+    "suggested_summary": "Litigation Memo 2025 Closed matter. No material exposure. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "Escalate to partner — confirm disclosure schedule and warranty coverage."
+  },
+  "doc-ai-063": {
+    "documentId": "doc-ai-063",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "Litigation_Memo_Matter_2026_CLOSED.pdf",
+    "document_type": "Memo",
+    "summary": "Litigation Memo 2026 Closed matter. No material exposure. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "Litigation Memo 2026\n\nClosed matter. No material exposure.",
+        "source_reference": "Litigation_Memo_Matter_2026_CLOSED.pdf"
+      }
+    ],
+    "obligations": [],
+    "risks": [
+      {
+        "risk": "Material exposure requiring partner sign-off",
+        "severity": "high",
+        "explanation": "Content in Litigation_Memo_Matter_2026_CLOSED.pdf indicates elevated legal or commercial risk for the transaction.",
+        "source_reference": "Litigation_Memo_Matter_2026_CLOSED.pdf"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "red",
+    "suggested_summary": "Litigation Memo 2026 Closed matter. No material exposure. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "Escalate to partner — confirm disclosure schedule and warranty coverage."
+  },
+  "doc-ai-064": {
+    "documentId": "doc-ai-064",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "Litigation_Memo_Matter_2027_CLOSED.pdf",
+    "document_type": "Memo",
+    "summary": "Litigation Memo 2027 Closed matter. No material exposure. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "Litigation Memo 2027\n\nClosed matter. No material exposure.",
+        "source_reference": "Litigation_Memo_Matter_2027_CLOSED.pdf"
+      }
+    ],
+    "obligations": [],
+    "risks": [
+      {
+        "risk": "Material exposure requiring partner sign-off",
+        "severity": "high",
+        "explanation": "Content in Litigation_Memo_Matter_2027_CLOSED.pdf indicates elevated legal or commercial risk for the transaction.",
+        "source_reference": "Litigation_Memo_Matter_2027_CLOSED.pdf"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "red",
+    "suggested_summary": "Litigation Memo 2027 Closed matter. No material exposure. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "Escalate to partner — confirm disclosure schedule and warranty coverage."
+  },
+  "doc-ai-065": {
+    "documentId": "doc-ai-065",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "Privacy_Policy_Customers_2025_FINAL.pdf",
+    "document_type": "Data Protection / GDPR",
+    "summary": "Privacy Policy Customers 2025 FINAL Acme AI Limited — Privacy Policy (EU/UK) Last updated: 1 January 2025. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "Privacy Policy Customers 2025 FINAL\n\nAcme AI Limited — Privacy Policy (EU/UK)\n\nLast updated: 1 January 2025. Controller: Acme AI Limited, 3rd Floor, The Merchants Building, Sir John Rogerson's Quay, Dublin 2, D02 X576, Ireland. Data Protection Officer: privacy@acmeai.example.\n\nTh…",
+        "source_reference": "Privacy_Policy_Customers_2025_FINAL.pdf"
+      }
+    ],
+    "obligations": [],
+    "risks": [
+      {
+        "risk": "Standard diligence follow-up recommended",
+        "severity": "medium",
+        "explanation": "Review Data Protection / GDPR provisions for change-of-control, liability caps, and disclosure schedule alignment.",
+        "source_reference": "Privacy_Policy_Customers_2025_FINAL.pdf"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "amber",
+    "suggested_summary": "Privacy Policy Customers 2025 FINAL Acme AI Limited — Privacy Policy (EU/UK) Last updated: 1 January 2025. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "Confirm against disclosure letter and management responses."
+  },
+  "doc-ai-066": {
+    "documentId": "doc-ai-066",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "Data_Processing_Agreement_Template_2025.pdf",
+    "document_type": "Data Protection / GDPR",
+    "summary": "Data Processing Agreement Template 2025 6. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "Data Processing Agreement Template 2025\n\n6. Confidentiality\n\nEach party shall keep Confidential Information secret and use it only for purposes of this Agreement. Confidential Information may be disclosed to employees, advisers and contractors on a need-to-know basis subject to e…",
+        "source_reference": "Data_Processing_Agreement_Template_2025.pdf"
+      }
+    ],
+    "obligations": [],
+    "risks": [
+      {
+        "risk": "Standard diligence follow-up recommended",
+        "severity": "medium",
+        "explanation": "Review Data Protection / GDPR provisions for change-of-control, liability caps, and disclosure schedule alignment.",
+        "source_reference": "Data_Processing_Agreement_Template_2025.pdf"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "amber",
+    "suggested_summary": "Data Processing Agreement Template 2025 6. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "Confirm against disclosure letter and management responses."
+  },
+  "doc-ai-067": {
+    "documentId": "doc-ai-067",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "DPIA_Document_Intelligence_v3.pdf",
+    "document_type": "Data Protection / GDPR",
+    "summary": "DPIA Document Intelligence v3 High-risk processing assessed. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "DPIA Document Intelligence v3\n\nHigh-risk processing assessed. Mitigations implemented.",
+        "source_reference": "DPIA_Document_Intelligence_v3.pdf"
+      }
+    ],
+    "obligations": [],
+    "risks": [
+      {
+        "risk": "Standard diligence follow-up recommended",
+        "severity": "medium",
+        "explanation": "Review Data Protection / GDPR provisions for change-of-control, liability caps, and disclosure schedule alignment.",
+        "source_reference": "DPIA_Document_Intelligence_v3.pdf"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "amber",
+    "suggested_summary": "DPIA Document Intelligence v3 High-risk processing assessed. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "Confirm against disclosure letter and management responses."
+  },
+  "doc-ai-068": {
+    "documentId": "doc-ai-068",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "Record_of_Processing_Activities_2025.pdf",
+    "document_type": "Data Protection / GDPR",
+    "summary": "Record of Processing Activities 2025 ROPA maintained per Article 30. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "Record of Processing Activities 2025\n\nROPA maintained per Article 30.",
+        "source_reference": "Record_of_Processing_Activities_2025.pdf"
+      }
+    ],
+    "obligations": [],
+    "risks": [
+      {
+        "risk": "Standard diligence follow-up recommended",
+        "severity": "medium",
+        "explanation": "Review Data Protection / GDPR provisions for change-of-control, liability caps, and disclosure schedule alignment.",
+        "source_reference": "Record_of_Processing_Activities_2025.pdf"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "amber",
+    "suggested_summary": "Record of Processing Activities 2025 ROPA maintained per Article 30. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "Confirm against disclosure letter and management responses."
+  },
+  "doc-ai-069": {
+    "documentId": "doc-ai-069",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "Cookie_Policy_Website_2025.pdf",
+    "document_type": "Data Protection / GDPR",
+    "summary": "Cookie Policy Website 2025 ePrivacy compliant banner. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "Cookie Policy Website 2025\n\nePrivacy compliant banner.",
+        "source_reference": "Cookie_Policy_Website_2025.pdf"
+      }
+    ],
+    "obligations": [],
+    "risks": [
+      {
+        "risk": "Standard diligence follow-up recommended",
+        "severity": "medium",
+        "explanation": "Review Data Protection / GDPR provisions for change-of-control, liability caps, and disclosure schedule alignment.",
+        "source_reference": "Cookie_Policy_Website_2025.pdf"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "amber",
+    "suggested_summary": "Cookie Policy Website 2025 ePrivacy compliant banner. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "Confirm against disclosure letter and management responses."
+  },
+  "doc-ai-070": {
+    "documentId": "doc-ai-070",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "Subprocessor_Register_2025.pdf",
+    "document_type": "Data Protection / GDPR",
+    "summary": "Subprocessor Register 2025 AWS, Azure, Stripe, Intercom listed. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "Subprocessor Register 2025\n\nAWS, Azure, Stripe, Intercom listed.",
+        "source_reference": "Subprocessor_Register_2025.pdf"
+      }
+    ],
+    "obligations": [],
+    "risks": [
+      {
+        "risk": "Standard diligence follow-up recommended",
+        "severity": "medium",
+        "explanation": "Review Data Protection / GDPR provisions for change-of-control, liability caps, and disclosure schedule alignment.",
+        "source_reference": "Subprocessor_Register_2025.pdf"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "amber",
+    "suggested_summary": "Subprocessor Register 2025 AWS, Azure, Stripe, Intercom listed. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "Confirm against disclosure letter and management responses."
+  },
+  "doc-ai-071": {
+    "documentId": "doc-ai-071",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "Data_Breach_Register.pdf",
+    "document_type": "Data Protection / GDPR",
+    "summary": "Data Breach Register Two minor incidents 2024, no DPC notification required. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "Data Breach Register\n\nTwo minor incidents 2024, no DPC notification required.",
+        "source_reference": "Data_Breach_Register.pdf"
+      }
+    ],
+    "obligations": [],
+    "risks": [
+      {
+        "risk": "Standard diligence follow-up recommended",
+        "severity": "medium",
+        "explanation": "Review Data Protection / GDPR provisions for change-of-control, liability caps, and disclosure schedule alignment.",
+        "source_reference": "Data_Breach_Register.pdf"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "amber",
+    "suggested_summary": "Data Breach Register Two minor incidents 2024, no DPC notification required. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "Confirm against disclosure letter and management responses."
+  },
+  "doc-ai-072": {
+    "documentId": "doc-ai-072",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "SCCs_Module_Two_2021_Executed.pdf",
+    "document_type": "Data Protection / GDPR",
+    "summary": "SCCs Module Two 2021 Executed Standard Contractual Clauses with US parent vendors. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "SCCs Module Two 2021 Executed\n\nStandard Contractual Clauses with US parent vendors.",
+        "source_reference": "SCCs_Module_Two_2021_Executed.pdf"
+      }
+    ],
+    "obligations": [],
+    "risks": [
+      {
+        "risk": "Standard diligence follow-up recommended",
+        "severity": "medium",
+        "explanation": "Review Data Protection / GDPR provisions for change-of-control, liability caps, and disclosure schedule alignment.",
+        "source_reference": "SCCs_Module_Two_2021_Executed.pdf"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "amber",
+    "suggested_summary": "SCCs Module Two 2021 Executed Standard Contractual Clauses with US parent vendors. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "Confirm against disclosure letter and management responses."
+  },
+  "doc-ai-073": {
+    "documentId": "doc-ai-073",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "Tax_Clearance_Certificate_2025.pdf",
+    "document_type": "Tax",
+    "summary": "Tax Clearance Certificate 2025 Background (A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "Tax Clearance Certificate 2025\n\nBackground\n\n(A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. 678901) whose registered office is at 3rd Floor, The Merchants Building, Sir John Rogerson's Quay, Dublin 2, D02 X576, Ireland.…",
+        "source_reference": "Tax_Clearance_Certificate_2025.pdf"
+      }
+    ],
+    "obligations": [],
+    "risks": [],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "green",
+    "suggested_summary": "Tax Clearance Certificate 2025 Background (A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "No immediate red flags from document review."
+  },
+  "doc-ai-074": {
+    "documentId": "doc-ai-074",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "Corporation_Tax_Returns_FY2024.pdf",
+    "document_type": "Tax",
+    "summary": "Corporation Tax Returns FY2024 Background (A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "Corporation Tax Returns FY2024\n\nBackground\n\n(A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. 678901) whose registered office is at 3rd Floor, The Merchants Building, Sir John Rogerson's Quay, Dublin 2, D02 X576, Ireland.…",
+        "source_reference": "Corporation_Tax_Returns_FY2024.pdf"
+      }
+    ],
+    "obligations": [],
+    "risks": [
+      {
+        "risk": "Standard diligence follow-up recommended",
+        "severity": "medium",
+        "explanation": "Review Tax provisions for change-of-control, liability caps, and disclosure schedule alignment.",
+        "source_reference": "Corporation_Tax_Returns_FY2024.pdf"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "amber",
+    "suggested_summary": "Corporation Tax Returns FY2024 Background (A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "Confirm against disclosure letter and management responses."
+  },
+  "doc-ai-075": {
+    "documentId": "doc-ai-075",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "VAT_Registration_Details.pdf",
+    "document_type": "Tax",
+    "summary": "VAT Registration Details Background (A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "VAT Registration Details\n\nBackground\n\n(A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. 678901) whose registered office is at 3rd Floor, The Merchants Building, Sir John Rogerson's Quay, Dublin 2, D02 X576, Ireland.\n\n(B)…",
+        "source_reference": "VAT_Registration_Details.pdf"
+      }
+    ],
+    "obligations": [],
+    "risks": [
+      {
+        "risk": "Standard diligence follow-up recommended",
+        "severity": "medium",
+        "explanation": "Review Tax provisions for change-of-control, liability caps, and disclosure schedule alignment.",
+        "source_reference": "VAT_Registration_Details.pdf"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "amber",
+    "suggested_summary": "VAT Registration Details Background (A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "Confirm against disclosure letter and management responses."
+  },
+  "doc-ai-076": {
+    "documentId": "doc-ai-076",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "Transfer_Pricing_Memo_2024.pdf",
+    "document_type": "Tax",
+    "summary": "Transfer Pricing Memo 2024 Background (A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "Transfer Pricing Memo 2024\n\nBackground\n\n(A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. 678901) whose registered office is at 3rd Floor, The Merchants Building, Sir John Rogerson's Quay, Dublin 2, D02 X576, Ireland.\n\n(B…",
+        "source_reference": "Transfer_Pricing_Memo_2024.pdf"
+      }
+    ],
+    "obligations": [],
+    "risks": [
+      {
+        "risk": "Standard diligence follow-up recommended",
+        "severity": "medium",
+        "explanation": "Review Tax provisions for change-of-control, liability caps, and disclosure schedule alignment.",
+        "source_reference": "Transfer_Pricing_Memo_2024.pdf"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "amber",
+    "suggested_summary": "Transfer Pricing Memo 2024 Background (A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "Confirm against disclosure letter and management responses."
+  },
+  "doc-ai-077": {
+    "documentId": "doc-ai-077",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "PAYE_Summary_2025.pdf",
+    "document_type": "Tax",
+    "summary": "PAYE Summary 2025 Background (A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "PAYE Summary 2025\n\nBackground\n\n(A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. 678901) whose registered office is at 3rd Floor, The Merchants Building, Sir John Rogerson's Quay, Dublin 2, D02 X576, Ireland.\n\n(B) The Com…",
+        "source_reference": "PAYE_Summary_2025.pdf"
+      }
+    ],
+    "obligations": [],
+    "risks": [
+      {
+        "risk": "Standard diligence follow-up recommended",
+        "severity": "medium",
+        "explanation": "Review Tax provisions for change-of-control, liability caps, and disclosure schedule alignment.",
+        "source_reference": "PAYE_Summary_2025.pdf"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "amber",
+    "suggested_summary": "PAYE Summary 2025 Background (A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "Confirm against disclosure letter and management responses."
+  },
+  "doc-ai-078": {
+    "documentId": "doc-ai-078",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "R_and_D_Tax_Credit_Claim_2024.pdf",
+    "document_type": "Tax",
+    "summary": "R and D Tax Credit Claim 2024 Background (A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "R and D Tax Credit Claim 2024\n\nBackground\n\n(A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. 678901) whose registered office is at 3rd Floor, The Merchants Building, Sir John Rogerson's Quay, Dublin 2, D02 X576, Ireland.…",
+        "source_reference": "R_and_D_Tax_Credit_Claim_2024.pdf"
+      }
+    ],
+    "obligations": [],
+    "risks": [
+      {
+        "risk": "Material exposure requiring partner sign-off",
+        "severity": "high",
+        "explanation": "Content in R_and_D_Tax_Credit_Claim_2024.pdf indicates elevated legal or commercial risk for the transaction.",
+        "source_reference": "R_and_D_Tax_Credit_Claim_2024.pdf"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "red",
+    "suggested_summary": "R and D Tax Credit Claim 2024 Background (A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "Escalate to partner — confirm disclosure schedule and warranty coverage."
+  },
+  "doc-ai-079": {
+    "documentId": "doc-ai-079",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "Withholding_Tax_Summary.pdf",
+    "document_type": "Tax",
+    "summary": "Withholding Tax Summary Background (A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "Withholding Tax Summary\n\nBackground\n\n(A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. 678901) whose registered office is at 3rd Floor, The Merchants Building, Sir John Rogerson's Quay, Dublin 2, D02 X576, Ireland.\n\n(B) T…",
+        "source_reference": "Withholding_Tax_Summary.pdf"
+      }
+    ],
+    "obligations": [],
+    "risks": [
+      {
+        "risk": "Standard diligence follow-up recommended",
+        "severity": "medium",
+        "explanation": "Review Tax provisions for change-of-control, liability caps, and disclosure schedule alignment.",
+        "source_reference": "Withholding_Tax_Summary.pdf"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "amber",
+    "suggested_summary": "Withholding Tax Summary Background (A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "Confirm against disclosure letter and management responses."
+  },
+  "doc-ai-080": {
+    "documentId": "doc-ai-080",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "Tax_Due_Diligence_Memo_Arthur_Cox.pdf",
+    "document_type": "Tax",
+    "summary": "Tax Due Diligence Memo Arthur Cox Background (A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "Tax Due Diligence Memo Arthur Cox\n\nBackground\n\n(A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. 678901) whose registered office is at 3rd Floor, The Merchants Building, Sir John Rogerson's Quay, Dublin 2, D02 X576, Irela…",
+        "source_reference": "Tax_Due_Diligence_Memo_Arthur_Cox.pdf"
+      }
+    ],
+    "obligations": [],
+    "risks": [
+      {
+        "risk": "Standard diligence follow-up recommended",
+        "severity": "medium",
+        "explanation": "Review Tax provisions for change-of-control, liability caps, and disclosure schedule alignment.",
+        "source_reference": "Tax_Due_Diligence_Memo_Arthur_Cox.pdf"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "amber",
+    "suggested_summary": "Tax Due Diligence Memo Arthur Cox Background (A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "Confirm against disclosure letter and management responses."
+  },
+  "doc-ai-081": {
+    "documentId": "doc-ai-081",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "D_and_O_Policy_2025_Certificate.pdf",
+    "document_type": "Insurance",
+    "summary": "D and O Policy 2025 Certificate Background (A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "D and O Policy 2025 Certificate\n\nBackground\n\n(A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. 678901) whose registered office is at 3rd Floor, The Merchants Building, Sir John Rogerson's Quay, Dublin 2, D02 X576, Ireland…",
+        "source_reference": "D_and_O_Policy_2025_Certificate.pdf"
+      }
+    ],
+    "obligations": [],
+    "risks": [],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "green",
+    "suggested_summary": "D and O Policy 2025 Certificate Background (A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "No immediate red flags from document review."
+  },
+  "doc-ai-082": {
+    "documentId": "doc-ai-082",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "Cyber_Insurance_Policy_2025.pdf",
+    "document_type": "Insurance",
+    "summary": "Cyber Insurance Policy 2025 Background (A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "Cyber Insurance Policy 2025\n\nBackground\n\n(A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. 678901) whose registered office is at 3rd Floor, The Merchants Building, Sir John Rogerson's Quay, Dublin 2, D02 X576, Ireland.\n\n(…",
+        "source_reference": "Cyber_Insurance_Policy_2025.pdf"
+      }
+    ],
+    "obligations": [],
+    "risks": [
+      {
+        "risk": "Standard diligence follow-up recommended",
+        "severity": "medium",
+        "explanation": "Review Insurance provisions for change-of-control, liability caps, and disclosure schedule alignment.",
+        "source_reference": "Cyber_Insurance_Policy_2025.pdf"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "amber",
+    "suggested_summary": "Cyber Insurance Policy 2025 Background (A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "Confirm against disclosure letter and management responses."
+  },
+  "doc-ai-083": {
+    "documentId": "doc-ai-083",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "Professional_Indemnity_2025.pdf",
+    "document_type": "Insurance",
+    "summary": "Professional Indemnity 2025 Background (A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "Professional Indemnity 2025\n\nBackground\n\n(A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. 678901) whose registered office is at 3rd Floor, The Merchants Building, Sir John Rogerson's Quay, Dublin 2, D02 X576, Ireland.\n\n(…",
+        "source_reference": "Professional_Indemnity_2025.pdf"
+      }
+    ],
+    "obligations": [],
+    "risks": [
+      {
+        "risk": "Standard diligence follow-up recommended",
+        "severity": "medium",
+        "explanation": "Review Insurance provisions for change-of-control, liability caps, and disclosure schedule alignment.",
+        "source_reference": "Professional_Indemnity_2025.pdf"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "amber",
+    "suggested_summary": "Professional Indemnity 2025 Background (A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "Confirm against disclosure letter and management responses."
+  },
+  "doc-ai-084": {
+    "documentId": "doc-ai-084",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "Employers_Liability_2025.pdf",
+    "document_type": "Insurance",
+    "summary": "Employers Liability 2025 Background (A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "Employers Liability 2025\n\nBackground\n\n(A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. 678901) whose registered office is at 3rd Floor, The Merchants Building, Sir John Rogerson's Quay, Dublin 2, D02 X576, Ireland.\n\n(B)…",
+        "source_reference": "Employers_Liability_2025.pdf"
+      }
+    ],
+    "obligations": [],
+    "risks": [
+      {
+        "risk": "Standard diligence follow-up recommended",
+        "severity": "medium",
+        "explanation": "Review Insurance provisions for change-of-control, liability caps, and disclosure schedule alignment.",
+        "source_reference": "Employers_Liability_2025.pdf"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "amber",
+    "suggested_summary": "Employers Liability 2025 Background (A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "Confirm against disclosure letter and management responses."
+  },
+  "doc-ai-085": {
+    "documentId": "doc-ai-085",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "Property_Insurance_Dublin_Office.pdf",
+    "document_type": "Insurance",
+    "summary": "Property Insurance Dublin Office Background (A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "Property Insurance Dublin Office\n\nBackground\n\n(A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. 678901) whose registered office is at 3rd Floor, The Merchants Building, Sir John Rogerson's Quay, Dublin 2, D02 X576, Irelan…",
+        "source_reference": "Property_Insurance_Dublin_Office.pdf"
+      }
+    ],
+    "obligations": [],
+    "risks": [
+      {
+        "risk": "Standard diligence follow-up recommended",
+        "severity": "medium",
+        "explanation": "Review Insurance provisions for change-of-control, liability caps, and disclosure schedule alignment.",
+        "source_reference": "Property_Insurance_Dublin_Office.pdf"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "amber",
+    "suggested_summary": "Property Insurance Dublin Office Background (A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "Confirm against disclosure letter and management responses."
+  },
+  "doc-ai-086": {
+    "documentId": "doc-ai-086",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "Insurance_Claims_History_5_Years.pdf",
+    "document_type": "Insurance",
+    "summary": "Insurance Claims History 5 Years Background (A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "Insurance Claims History 5 Years\n\nBackground\n\n(A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. 678901) whose registered office is at 3rd Floor, The Merchants Building, Sir John Rogerson's Quay, Dublin 2, D02 X576, Irelan…",
+        "source_reference": "Insurance_Claims_History_5_Years.pdf"
+      }
+    ],
+    "obligations": [],
+    "risks": [
+      {
+        "risk": "Material exposure requiring partner sign-off",
+        "severity": "high",
+        "explanation": "Content in Insurance_Claims_History_5_Years.pdf indicates elevated legal or commercial risk for the transaction.",
+        "source_reference": "Insurance_Claims_History_5_Years.pdf"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "red",
+    "suggested_summary": "Insurance Claims History 5 Years Background (A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "Escalate to partner — confirm disclosure schedule and warranty coverage."
+  },
+  "doc-ai-087": {
+    "documentId": "doc-ai-087",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "AML_KYC_Policy_2024_FINAL.pdf",
+    "document_type": "Regulatory / Compliance",
+    "summary": "AML KYC Policy 2024 FINAL Background (A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "AML KYC Policy 2024 FINAL\n\nBackground\n\n(A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. 678901) whose registered office is at 3rd Floor, The Merchants Building, Sir John Rogerson's Quay, Dublin 2, D02 X576, Ireland.\n\n(B)…",
+        "source_reference": "AML_KYC_Policy_2024_FINAL.pdf"
+      }
+    ],
+    "obligations": [],
+    "risks": [
+      {
+        "risk": "Material exposure requiring partner sign-off",
+        "severity": "high",
+        "explanation": "Content in AML_KYC_Policy_2024_FINAL.pdf indicates elevated legal or commercial risk for the transaction.",
+        "source_reference": "AML_KYC_Policy_2024_FINAL.pdf"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "red",
+    "suggested_summary": "AML KYC Policy 2024 FINAL Background (A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "Escalate to partner — confirm disclosure schedule and warranty coverage."
+  },
+  "doc-ai-088": {
+    "documentId": "doc-ai-088",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "Export_Control_Memo_US_EAR.pdf",
+    "document_type": "Regulatory / Compliance",
+    "summary": "Export Control Memo US EAR Background (A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "Export Control Memo US EAR\n\nBackground\n\n(A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. 678901) whose registered office is at 3rd Floor, The Merchants Building, Sir John Rogerson's Quay, Dublin 2, D02 X576, Ireland.\n\n(B…",
+        "source_reference": "Export_Control_Memo_US_EAR.pdf"
+      }
+    ],
+    "obligations": [],
+    "risks": [
+      {
+        "risk": "Material exposure requiring partner sign-off",
+        "severity": "high",
+        "explanation": "Content in Export_Control_Memo_US_EAR.pdf indicates elevated legal or commercial risk for the transaction.",
+        "source_reference": "Export_Control_Memo_US_EAR.pdf"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "red",
+    "suggested_summary": "Export Control Memo US EAR Background (A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "Escalate to partner — confirm disclosure schedule and warranty coverage."
+  },
+  "doc-ai-089": {
+    "documentId": "doc-ai-089",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "Regulatory_Compliance_Certificate_2025.pdf",
+    "document_type": "Regulatory / Compliance",
+    "summary": "Regulatory Compliance Certificate 2025 Background (A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "Regulatory Compliance Certificate 2025\n\nBackground\n\n(A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. 678901) whose registered office is at 3rd Floor, The Merchants Building, Sir John Rogerson's Quay, Dublin 2, D02 X576,…",
+        "source_reference": "Regulatory_Compliance_Certificate_2025.pdf"
+      }
+    ],
+    "obligations": [],
+    "risks": [
+      {
+        "risk": "Material exposure requiring partner sign-off",
+        "severity": "high",
+        "explanation": "Content in Regulatory_Compliance_Certificate_2025.pdf indicates elevated legal or commercial risk for the transaction.",
+        "source_reference": "Regulatory_Compliance_Certificate_2025.pdf"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "red",
+    "suggested_summary": "Regulatory Compliance Certificate 2025 Background (A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "Escalate to partner — confirm disclosure schedule and warranty coverage."
+  },
+  "doc-ai-090": {
+    "documentId": "doc-ai-090",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "AI_Act_Readiness_Assessment_2025.pdf",
+    "document_type": "Regulatory / Compliance",
+    "summary": "AI Act Readiness Assessment 2025 Background (A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "AI Act Readiness Assessment 2025\n\nBackground\n\n(A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. 678901) whose registered office is at 3rd Floor, The Merchants Building, Sir John Rogerson's Quay, Dublin 2, D02 X576, Irelan…",
+        "source_reference": "AI_Act_Readiness_Assessment_2025.pdf"
+      }
+    ],
+    "obligations": [],
+    "risks": [
+      {
+        "risk": "Material exposure requiring partner sign-off",
+        "severity": "high",
+        "explanation": "Content in AI_Act_Readiness_Assessment_2025.pdf indicates elevated legal or commercial risk for the transaction.",
+        "source_reference": "AI_Act_Readiness_Assessment_2025.pdf"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "red",
+    "suggested_summary": "AI Act Readiness Assessment 2025 Background (A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "Escalate to partner — confirm disclosure schedule and warranty coverage."
+  },
+  "doc-ai-091": {
+    "documentId": "doc-ai-091",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "Competition_Law_Compliance_Guidelines.pdf",
+    "document_type": "Regulatory / Compliance",
+    "summary": "Competition Law Compliance Guidelines Background (A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "Competition Law Compliance Guidelines\n\nBackground\n\n(A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. 678901) whose registered office is at 3rd Floor, The Merchants Building, Sir John Rogerson's Quay, Dublin 2, D02 X576, I…",
+        "source_reference": "Competition_Law_Compliance_Guidelines.pdf"
+      }
+    ],
+    "obligations": [],
+    "risks": [
+      {
+        "risk": "Material exposure requiring partner sign-off",
+        "severity": "high",
+        "explanation": "Content in Competition_Law_Compliance_Guidelines.pdf indicates elevated legal or commercial risk for the transaction.",
+        "source_reference": "Competition_Law_Compliance_Guidelines.pdf"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "red",
+    "suggested_summary": "Competition Law Compliance Guidelines Background (A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "Escalate to partner — confirm disclosure schedule and warranty coverage."
+  },
+  "doc-ai-092": {
+    "documentId": "doc-ai-092",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "Sanctions_Screening_Procedure.pdf",
+    "document_type": "Regulatory / Compliance",
+    "summary": "Sanctions Screening Procedure Background (A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "Sanctions Screening Procedure\n\nBackground\n\n(A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. 678901) whose registered office is at 3rd Floor, The Merchants Building, Sir John Rogerson's Quay, Dublin 2, D02 X576, Ireland.…",
+        "source_reference": "Sanctions_Screening_Procedure.pdf"
+      }
+    ],
+    "obligations": [],
+    "risks": [
+      {
+        "risk": "Material exposure requiring partner sign-off",
+        "severity": "high",
+        "explanation": "Content in Sanctions_Screening_Procedure.pdf indicates elevated legal or commercial risk for the transaction.",
+        "source_reference": "Sanctions_Screening_Procedure.pdf"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "red",
+    "suggested_summary": "Sanctions Screening Procedure Background (A) Acme AI Limited is a private company limited by shares incorporated in Ireland (Company Registration No. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "Escalate to partner — confirm disclosure schedule and warranty coverage."
+  },
+  "doc-ai-093": {
+    "documentId": "doc-ai-093",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "Board_Pack_M_and_A_Readiness_Notes_Oct_2025.txt",
+    "document_type": "Internal Memo",
+    "summary": "CONFIDENTIAL — Acme AI Board Pack Notes M&A readiness: Northwind Technologies, Inc. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "CONFIDENTIAL — Acme AI Board Pack Notes\n\nM&A readiness: Northwind Technologies, Inc. preliminary approach received. Counsel to prepare clean team. Data room index aligned with Arthur Cox checklist.\n\nKey risks flagged: DataForge litigation, Globex change-of-control clause, SVB cov…",
+        "source_reference": "Board_Pack_M_and_A_Readiness_Notes_Oct_2025.txt"
+      }
+    ],
+    "obligations": [],
+    "risks": [
+      {
+        "risk": "Standard diligence follow-up recommended",
+        "severity": "medium",
+        "explanation": "Review Corporate — Internal Memo provisions for change-of-control, liability caps, and disclosure schedule alignment.",
+        "source_reference": "Board_Pack_M_and_A_Readiness_Notes_Oct_2025.txt"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "amber",
+    "suggested_summary": "CONFIDENTIAL — Acme AI Board Pack Notes M&A readiness: Northwind Technologies, Inc. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "Confirm against disclosure letter and management responses."
+  },
+  "doc-ai-094": {
+    "documentId": "doc-ai-094",
+    "matterId": "matter-acme",
+    "analyzedAt": "2026-06-08T12:00:00.000Z",
+    "fileName": "Commercial_Contracts_Summary_Memo_REDLINE.txt",
+    "document_type": "Summary Memo",
+    "summary": "Top 10 customer contracts represent 38% ARR. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "key_clauses": [
+      {
+        "name": "Key extract",
+        "text": "Top 10 customer contracts represent 38% ARR. Globex MSA includes termination for change of control without consent. Recommend waiver or renegotiation pre-signing.",
+        "source_reference": "Commercial_Contracts_Summary_Memo_REDLINE.txt"
+      }
+    ],
+    "obligations": [],
+    "risks": [
+      {
+        "risk": "Standard diligence follow-up recommended",
+        "severity": "medium",
+        "explanation": "Review Commercial — Summary Memo provisions for change-of-control, liability caps, and disclosure schedule alignment.",
+        "source_reference": "Commercial_Contracts_Summary_Memo_REDLINE.txt"
+      }
+    ],
+    "entities": [
+      {
+        "name": "Acme AI Limited",
+        "role": "Target",
+        "jurisdiction": "Ireland"
+      }
+    ],
+    "suggested_diligence_flag": "amber",
+    "suggested_summary": "Top 10 customer contracts represent 38% ARR. Relevant to the Acme AI Limited Series B acquisition diligence.",
+    "suggested_pertinent_notes": "Confirm against disclosure letter and management responses."
+  }
+}

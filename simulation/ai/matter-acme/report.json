@@ -1,0 +1,62 @@
+{
+  "matterId": "matter-acme",
+  "matterName": "Project Northwind / Acme AI Ltd",
+  "generatedAt": "2026-06-08T12:00:00.000Z",
+  "riskCount": 12,
+  "report": {
+    "title": "Legal Due Diligence Report — Acme AI Limited (Simulation)",
+    "executive_summary": "We have completed a documentary review of the Acme AI Limited virtual data room (94 documents) in connection with the proposed Series B acquisition. The target is an Irish-incorporated enterprise AI SaaS business with established governance, recent board approvals for the funding round, and no fundamental corporate defects. Key areas for negotiation are customer concentration, an active Globex litigation reserve, change-of-control consents in commercial contracts, and standard employment/IP confirmations. This report is based on fictional simulation materials for demonstration purposes only.",
+    "sections": [
+      {
+        "heading": "Corporate & Governance",
+        "body": "Certificate of incorporation, amended constitution (Sept 2024), and statutory registers are in order. Board minutes through 2025 evidence quorum, conflict management (Sequoia nominee abstention), and resolutions approving Series B, constitution amendments, and option pool increases. Subsidiary chart shows Irish holdco with UK and US trading subsidiaries — confirm intercompany charges and director appointments."
+      },
+      {
+        "heading": "Commercial",
+        "body": "Customer and supplier contracts are indexed with a summary memo highlighting assignment restrictions and SLA credits. Top-three customers represent 41% ARR. Recommend customer call summaries and disclosure schedule cross-check for top ten MSAs."
+      },
+      {
+        "heading": "Employment & Pensions",
+        "body": "85 FTE workforce; no unionisation. Executive employment agreements and option schedules reviewed — vesting profiles for CEO/CFO/CTO documented. Standard confirmatory steps: IP assignment audits, WARN/OSA compliance for US subsidiary."
+      },
+      {
+        "heading": "Intellectual Property",
+        "body": "Registered and unregistered IP schedule filed. Open-source policy and third-party component register present. Verify chain of title for core model weights and training data representations in reps."
+      },
+      {
+        "heading": "Property & Facilities",
+        "body": "Dublin HQ lease expires 2031 with renewal option; SF satellite office sublease reviewed. No material environmental reports required for office footprint."
+      },
+      {
+        "heading": "Litigation & Regulatory",
+        "body": "Two active matters on register; Globex dispute largest exposure (€400k–€750k reserved). GDPR pack and SOC 2 bridge letter available. No material regulatory investigations noted."
+      },
+      {
+        "heading": "Tax",
+        "body": "Irish CT returns and transfer pricing memo for UK/US intercompany services. R&D credit documentation present — confirm utilisation post-change of control."
+      },
+      {
+        "heading": "Recommendations",
+        "body": "Proceed to confirmatory diligence subject to: (1) customer consent schedule, (2) litigation warranty and escrow, (3) employment/IP bring-down certificates, (4) management accounts to budget reconciliation."
+      }
+    ],
+    "red_flags": [
+      {
+        "item": "Globex litigation reserve",
+        "severity": "high",
+        "recommendation": "Obtain external counsel memo; consider specific indemnity or purchase price adjustment."
+      },
+      {
+        "item": "Customer concentration",
+        "severity": "high",
+        "recommendation": "Model churn sensitivity; verify contract term and renewal dates for top accounts."
+      },
+      {
+        "item": "MSA change-of-control consents",
+        "severity": "medium",
+        "recommendation": "Prepare consent solicitation plan as closing condition."
+      }
+    ],
+    "conclusion": "Subject to the qualifications above, the simulation data room supports proceeding to definitive documentation. All content is fictional and for product demonstration only — not legal advice."
+  }
+}

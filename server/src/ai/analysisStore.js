@@ -1,6 +1,12 @@
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
+import { isSimulationMatter } from "../matterStore.js";
+import {
+  getAllDemoDocumentAnalyses,
+  getDemoDocumentAnalysis,
+  getDemoMatterSynthesis,
+} from "./demoAi.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ANALYSES_DIR = path.resolve(__dirname, "../../../data/analyses");
@@ -36,18 +42,23 @@ export function saveDocumentAnalysis(matterId, documentId, analysis) {
 
 export function getDocumentAnalysis(matterId, documentId) {
   const p = docPath(matterId, documentId);
-  if (!fs.existsSync(p)) return null;
-  return JSON.parse(fs.readFileSync(p, "utf8"));
+  if (fs.existsSync(p)) return JSON.parse(fs.readFileSync(p, "utf8"));
+  if (isSimulationMatter(matterId)) return getDemoDocumentAnalysis(matterId, documentId);
+  return null;
 }
 
 export function getAllDocumentAnalyses(matterId) {
   const dir = matterDir(matterId);
-  if (!fs.existsSync(dir)) return {};
   const out = {};
-  for (const f of fs.readdirSync(dir)) {
-    if (!f.endsWith(".json") || f.startsWith("_")) continue;
-    const data = JSON.parse(fs.readFileSync(path.join(dir, f), "utf8"));
-    out[data.documentId] = data;
+  if (fs.existsSync(dir)) {
+    for (const f of fs.readdirSync(dir)) {
+      if (!f.endsWith(".json") || f.startsWith("_")) continue;
+      const data = JSON.parse(fs.readFileSync(path.join(dir, f), "utf8"));
+      out[data.documentId] = data;
+    }
+  }
+  if (isSimulationMatter(matterId)) {
+    return { ...getAllDemoDocumentAnalyses(matterId), ...out };
   }
   return out;
 }
@@ -65,6 +76,7 @@ export function saveMatterSynthesis(matterId, synthesis) {
 
 export function getMatterSynthesis(matterId) {
   const p = matterMetaPath(matterId);
-  if (!fs.existsSync(p)) return null;
-  return JSON.parse(fs.readFileSync(p, "utf8"));
+  if (fs.existsSync(p)) return JSON.parse(fs.readFileSync(p, "utf8"));
+  if (isSimulationMatter(matterId)) return getDemoMatterSynthesis(matterId);
+  return null;
 }

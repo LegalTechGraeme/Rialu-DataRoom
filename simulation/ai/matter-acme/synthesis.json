@@ -1,0 +1,129 @@
+{
+  "matterId": "matter-acme",
+  "synthesizedAt": "2026-06-08T12:00:00.000Z",
+  "executive_summary": "Acme AI Limited is an Irish SaaS target with a clean corporate constitution, recent Series B board approvals, and a 94-document data room spanning corporate, commercial, employment, IP, property, and litigation. Cross-document review surfaces moderate commercial and employment/IP follow-ups, one active litigation reserve, and strong recurring revenue metrics (€18.2m ARR, 118% NRR). No fatal structural issues identified; valuation sensitivity lies in customer concentration (top three = 41% ARR) and DACH sales cycle lengthening.",
+  "top_risks": [
+    {
+      "risk": "Customer concentration — top three customers represent 41% ARR",
+      "severity": "high",
+      "explanation": "Globex (18%), Initech (14%), and Umbrella (9%) create revenue dependency; confirm MAE definitions and customer consent thresholds in MSAs.",
+      "document_ids": [
+        "doc-ai-041"
+      ],
+      "document_names": [
+        "Customer_Concentration_Analysis_Q3_2025.xlsx"
+      ],
+      "source_references": [
+        "Commercial — Customer analysis"
+      ]
+    },
+    {
+      "risk": "Active litigation — Globex dispute reserved €400k–€750k",
+      "severity": "high",
+      "explanation": "Litigation register shows open matter; verify insurance, warranty disclosure, and escrow treatment.",
+      "document_ids": [
+        "doc-ai-055"
+      ],
+      "document_names": [
+        "Litigation_Register_2025.pdf"
+      ],
+      "source_references": [
+        "Litigation — Register"
+      ]
+    },
+    {
+      "risk": "Change-of-control and assignment restrictions in key MSAs",
+      "severity": "medium",
+      "explanation": "Commercial contracts summary memo flags consent requirements across enterprise MSAs; map to closing condition list.",
+      "document_ids": [
+        "doc-ai-028"
+      ],
+      "document_names": [
+        "Commercial_Contracts_Summary_Memo_REDLINE.txt"
+      ],
+      "source_references": [
+        "Commercial — Summary memo"
+      ]
+    },
+    {
+      "risk": "Employment — executive option vesting and IP assignment completeness",
+      "severity": "medium",
+      "explanation": "Executive agreements and option schedule require confirmation that invention assignment and non-compete terms are enforceable in Ireland and UK.",
+      "document_ids": [
+        "doc-ai-048"
+      ],
+      "document_names": [
+        "Executive_Employment_Agreements_Summary.pdf"
+      ],
+      "source_references": [
+        "Employment — Executive"
+      ]
+    },
+    {
+      "risk": "GDPR / data processing — sub-processor list and SCCs",
+      "severity": "medium",
+      "explanation": "Privacy pack references EU hosting; confirm DPA chain and transfer mechanisms for US inference sub-processors.",
+      "document_ids": [
+        "doc-ai-062"
+      ],
+      "document_names": [
+        "Data_Protection_Pack_2025.pdf"
+      ],
+      "source_references": [
+        "Regulatory — Privacy"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "description": "Board minutes reference 22-month cash runway while management accounts show accelerated hiring in H2 — reconcile with FY2025 budget.",
+      "documents": [
+        "Board_Minutes_2024_09_15_FINAL.pdf",
+        "FY2025_Budget_Board_Approved.xlsx"
+      ],
+      "severity": "medium"
+    },
+    {
+      "description": "Constitution preferred share rights vs. cap table option pool — verify 4% pool increase was filed.",
+      "documents": [
+        "Constitution_Acme_AI_Ltd_Amended_2024_v3_SIGNED.pdf",
+        "Cap_Table_Series_B_Post_Close.xlsx"
+      ],
+      "severity": "low"
+    }
+  ],
+  "entities_map": [
+    {
+      "name": "Acme AI Limited",
+      "relationship": "Target",
+      "documents": [
+        "Certificate_of_Incorporation",
+        "Constitution"
+      ]
+    },
+    {
+      "name": "Sequoia Capital",
+      "relationship": "Investor / board nominee",
+      "documents": [
+        "Board minutes",
+        "Shareholders agreement"
+      ]
+    },
+    {
+      "name": "Globex Industries",
+      "relationship": "Major customer / litigation counterparty",
+      "documents": [
+        "MSA",
+        "Litigation register"
+      ]
+    }
+  ],
+  "themes": [
+    "Corporate clean-up complete post-Series B",
+    "Commercial MSAs — consent and assignment",
+    "Employment & IP — executive equity",
+    "Customer concentration",
+    "Litigation reserve",
+    "Data protection & hosting"
+  ]
+}

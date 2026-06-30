@@ -1,0 +1,125 @@
+{
+  "responses": [
+    {
+      "match": [
+        "top risk",
+        "main risk",
+        "biggest risk",
+        "key risk"
+      ],
+      "response": {
+        "answer": "The top cross-document risks for Acme AI are: (1) customer concentration — top three customers at 41% ARR; (2) active Globex litigation with €400k–€750k reserve; (3) change-of-control consent requirements across enterprise MSAs; and (4) employment/IP confirmation on executive equity. None appear fatal but items 1–2 should be on the IC agenda.",
+        "structured_points": [
+          "Customer concentration: 41% ARR in top three accounts",
+          "Litigation: Globex dispute reserved €400k–€750k",
+          "Commercial: MSA assignment and consent clauses",
+          "Employment: executive option vesting and IP assignments"
+        ],
+        "citations": [
+          {
+            "document_id": "doc-ai-041",
+            "document_name": "Customer_Concentration_Analysis_Q3_2025.xlsx",
+            "source_reference": "Commercial analysis",
+            "excerpt": "Top 3 customers = 41% ARR"
+          },
+          {
+            "document_id": "doc-ai-055",
+            "document_name": "Litigation_Register_2025.pdf",
+            "source_reference": "Litigation register",
+            "excerpt": "Globex dispute €400k–€750k reserved"
+          }
+        ],
+        "confidence": "high"
+      }
+    },
+    {
+      "match": [
+        "employment",
+        "liabilit",
+        "workforce",
+        "option",
+        "fte"
+      ],
+      "response": {
+        "answer": "Employment diligence shows 85 FTE (Engineering 42, Sales 18, G&A 25), no unionised staff. Executive option schedules show CEO at ~70% vested, CFO ~55%. Follow-up: confirm invention assignment deeds, restrictive covenants enforceability in Ireland/UK, and US WARN compliance for the San Francisco office.",
+        "structured_points": [
+          "85 FTE — no unions",
+          "Executive option vesting profiles documented",
+          "IP assignment and non-compete confirmation needed"
+        ],
+        "citations": [
+          {
+            "document_id": "doc-ai-048",
+            "document_name": "Executive_Employment_Agreements_Summary.pdf",
+            "source_reference": "Employment pack",
+            "excerpt": "CEO/CFO/CTO equity and vesting"
+          }
+        ],
+        "confidence": "high"
+      }
+    },
+    {
+      "match": [
+        "change of control",
+        "assignment",
+        "contract",
+        "msa",
+        "commercial"
+      ],
+      "response": {
+        "answer": "The commercial contracts summary memo flags change-of-control and assignment restrictions across several enterprise MSAs. Recommend a consent matrix tied to revenue weighting and a closing condition for material customer consents (>10% ARR).",
+        "structured_points": [
+          "Multiple MSAs require consent on change of control",
+          "Commercial summary memo identifies restricted contracts",
+          "Prepare consent solicitation plan pre-signing"
+        ],
+        "citations": [
+          {
+            "document_id": "doc-ai-028",
+            "document_name": "Commercial_Contracts_Summary_Memo_REDLINE.txt",
+            "source_reference": "Commercial memo",
+            "excerpt": "Change of control and assignment restrictions noted"
+          }
+        ],
+        "confidence": "medium"
+      }
+    },
+    {
+      "match": [
+        "valuation",
+        "deal",
+        "price",
+        "arr",
+        "revenue"
+      ],
+      "response": {
+        "answer": "Valuation sensitivities from the data room include: €18.2m ARR (42% YoY), 118% net revenue retention, but customer concentration at 41% for top three accounts and lengthening enterprise sales cycles in DACH. Litigation reserve for Globex may also affect net debt / working capital adjustments.",
+        "structured_points": [
+          "€18.2m ARR, 118% NRR — strong fundamentals",
+          "Customer concentration may compress multiple",
+          "DACH sales cycle lengthening — pipeline risk",
+          "Litigation reserve — adjustment item"
+        ],
+        "citations": [
+          {
+            "document_id": "doc-ai-004",
+            "document_name": "Board_Minutes_2024_09_15_FINAL.pdf",
+            "source_reference": "Board minutes",
+            "excerpt": "ARR €18.2m, NRR 118%"
+          }
+        ],
+        "confidence": "medium"
+      }
+    }
+  ],
+  "fallback": {
+    "answer": "Based on the Acme AI simulation data room, I can help with risks, employment, commercial contracts, litigation, and valuation themes. Try asking about top risks, employment liabilities, change-of-control clauses, or deal valuation drivers. All responses are drawn from pre-analyzed demo materials.",
+    "structured_points": [
+      "94-document fictional Acme AI Ltd matter",
+      "Cross-document synthesis available",
+      "Citations reference simulation files only"
+    ],
+    "citations": [],
+    "confidence": "low"
+  }
+}

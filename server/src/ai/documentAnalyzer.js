@@ -3,6 +3,8 @@ import { DOCUMENT_ANALYSIS_SYSTEM } from "./prompts.js";
 import { extractTextFromFile } from "./textExtract.js";
 import { getCatalogAnalysisText } from "./simulationCatalogText.js";
 import { saveDocumentAnalysis, getDocumentAnalysis } from "./analysisStore.js";
+import { isSimulationMatter } from "../matterStore.js";
+import { getDemoDocumentAnalysis, hasDemoAiBundle } from "./demoAi.js";
 
 /**
  * @param {{ id: string; fileName: string; categoryLabel: string; mimeType: string }} doc
@@ -14,6 +16,12 @@ export async function analyzeDocument(doc, absPath, matterId, force = false) {
   if (!force) {
     const existing = getDocumentAnalysis(matterId, doc.id);
     if (existing?.analyzedAt) return existing;
+  }
+
+  if (isSimulationMatter(matterId) && hasDemoAiBundle(matterId)) {
+    const demo = getDemoDocumentAnalysis(matterId, doc.id);
+    if (!demo) throw new Error("No demo analysis for this document");
+    return saveDocumentAnalysis(matterId, doc.id, demo);
   }
 
   let text = await extractTextFromFile(absPath, doc.mimeType);

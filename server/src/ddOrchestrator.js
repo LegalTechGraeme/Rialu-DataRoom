@@ -6,6 +6,9 @@ import { getDocuments, getMatter, updateDocumentStatusFromReview } from "./matte
 import { upsertDocumentReview } from "./reviewStore.js";
 import { reclassifyDocument } from "./uploadService.js";
 import { isGroqConfigured, GROQ_ANALYZE_DELAY_MS } from "./config.js";
+import { isSimulationMatter } from "./matterStore.js";
+import { hasDemoAiBundle } from "./ai/demoAi.js";
+import { startDemoFullReview } from "./demoFullReview.js";
 import {
   createJob,
   updateJob,
@@ -46,6 +49,10 @@ export function getFullReviewStatus(matterId) {
  * @param {{ classify?: boolean; analyze?: boolean; synthesize?: boolean; applyReviews?: boolean }} options
  */
 export async function startFullReview(matterId, options = {}) {
+  if (isSimulationMatter(matterId) && hasDemoAiBundle(matterId)) {
+    return startDemoFullReview(matterId, options);
+  }
+
   if (!isGroqConfigured()) {
     throw new Error("Groq API not configured — add GROQ_API_KEY to server/.env");
   }

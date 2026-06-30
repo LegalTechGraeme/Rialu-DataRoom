@@ -34,6 +34,13 @@ export function DiligenceReportPage() {
       .catch((e: unknown) => {
         if (!cancelled) setError(e instanceof Error ? e.message : "Failed to load report");
       });
+    if (matterId === "matter-acme") {
+      generateReport(matterId)
+        .then((memo) => {
+          if (!cancelled) setAiReport(memo);
+        })
+        .catch(() => {});
+    }
     return () => {
       cancelled = true;
     };

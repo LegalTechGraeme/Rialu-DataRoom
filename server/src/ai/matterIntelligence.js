@@ -5,6 +5,8 @@ import {
   getMatterSynthesis,
   saveMatterSynthesis,
 } from "./analysisStore.js";
+import { isSimulationMatter } from "../matterStore.js";
+import { getDemoMatterSynthesis, hasDemoAiBundle } from "./demoAi.js";
 
 /**
  * @param {string} matterId
@@ -15,6 +17,12 @@ export async function synthesizeMatter(matterId, documents, force = false) {
   if (!force) {
     const existing = getMatterSynthesis(matterId);
     if (existing?.synthesizedAt) return existing;
+  }
+
+  if (isSimulationMatter(matterId) && hasDemoAiBundle(matterId)) {
+    const demo = getDemoMatterSynthesis(matterId);
+    if (!demo) throw new Error("No demo synthesis for this matter");
+    return saveMatterSynthesis(matterId, demo);
   }
 
   const analyses = getAllDocumentAnalyses(matterId);

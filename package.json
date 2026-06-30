@@ -14,7 +14,8 @@
     "build": "npm run build -w client",
     "start:server": "npm run start -w server",
     "simulate:generate": "npm run simulate:generate -w server",
-    "dataroom:generate": "npm run dataroom:generate -w server"
+    "dataroom:generate": "npm run dataroom:generate -w server",
+    "demo-ai:generate": "node server/scripts/generate-demo-ai-bundle.mjs"
   },
   "devDependencies": {
     "concurrently": "^9.1.0"
